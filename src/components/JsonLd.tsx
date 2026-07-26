@@ -8,7 +8,7 @@ export default function JsonLd() {
     url: "https://jakubdigital.cz",
     email: "jakub@jakubdigital.cz",
     areaServed: { "@type": "Country", name: "CZ" },
-    priceRange: "15 000 - 50 000 Kč",
+    priceRange: "od 15 000 Kč",
   };
 
   return (

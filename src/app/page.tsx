@@ -19,7 +19,7 @@ const SERVICES = [
   {
     title: "Správa sociálních sítí",
     desc: "Vaše profily na LinkedIn a Facebooku pod dohledem. Pravidelný obsah, který vaše klienty osloví — ne odradí. Každý příspěvek má smysl a váš rukopis.",
-    price: "od 3 000 Kč / měsíc",
+    price: "od 5 000 Kč / měsíc",
     timeframe: "průběžně",
     features: [
       "Profesionální nastavení profilů",
