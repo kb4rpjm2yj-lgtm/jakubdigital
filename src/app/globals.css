@@ -22,6 +22,7 @@
 
   body {
     @apply bg-warm-ivory text-ink font-body;
+    text-wrap: pretty;
   }
 }
 
