@@ -1,12 +1,6 @@
 import SparkParticles from "@/components/SparkParticles";
-
-const NAV_ITEMS = [
-  { label: "Služby", href: "#sluzby" },
-  { label: "Pro koho", href: "#pro-koho" },
-  { label: "Jak pracuji", href: "#jak-pracuji" },
-  { label: "Kdo jsem", href: "#kdo-jsem" },
-  { label: "Kontakt", href: "#kontakt" },
-];
+import Nav from "@/components/Nav";
+import ContactForm from "@/components/ContactForm";
 
 const SERVICES = [
   {
@@ -130,36 +124,6 @@ const FAQ = [
     a: "Samozřejmě. Po předání webu mi můžete kdykoliv napsat nebo zavolat. Potřebujete něco změnit? Doplníme. Něco nefunguje? Opravím. Nejde o jednorázovou službu, ale o dlouhodobou spolupráci.",
   },
 ];
-
-function Nav() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-midnight-teal/95 backdrop-blur-sm border-b border-antique-brass/10">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-white text-lg font-display tracking-tight">
-          <span className="text-antique-brass">Jakub</span>{" "}
-          <span className="font-light">Digital</span>
-        </a>
-        <div className="hidden md:flex items-center gap-8">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm text-steel-grey hover:text-antique-brass transition-colors duration-300"
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href="#kontakt"
-            className="text-sm px-4 py-2 bg-antique-brass text-white rounded-lg hover:bg-antique-brass/90 transition-colors duration-300"
-          >
-            Domluvit konzultaci
-          </a>
-        </div>
-      </div>
-    </nav>
-  );
-}
 
 function Hero() {
   return (
@@ -485,71 +449,7 @@ function Contact() {
             </div>
           </div>
           <div>
-            <form className="space-y-5">
-              <div>
-                <label htmlFor="jmeno" className="block text-sm text-ink mb-1.5">
-                  Jméno a příjmení
-                </label>
-                <input
-                  type="text"
-                  id="jmeno"
-                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
-                  placeholder="např. Jan Novák"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm text-ink mb-1.5">
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
-                  placeholder="jan@novak.cz"
-                />
-              </div>
-              <div>
-                <label htmlFor="telefon" className="block text-sm text-ink mb-1.5">
-                  Telefon (nepovinné)
-                </label>
-                <input
-                  type="tel"
-                  id="telefon"
-                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
-                  placeholder="+420 777 123 456"
-                />
-              </div>
-              <div>
-                <label htmlFor="profese" className="block text-sm text-ink mb-1.5">
-                  Vaše profese
-                </label>
-                <select
-                  id="profese"
-                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
-                >
-                  <option value="">Vyberte...</option>
-                  <option value="advokat">Advokát / notář</option>
-                  <option value="realtor">Realitní makléř</option>
-                  <option value="politik">Politik / veřejná osoba</option>
-                  <option value="podnikatel">Malý podnikatel</option>
-                  <option value="jine">Jiné</option>
-                </select>
-              </div>
-              <label className="flex items-start gap-3 text-xs text-steel-grey">
-                <input
-                  type="checkbox"
-                  className="mt-0.5 accent-antique-brass"
-                />
-                Odesláním souhlasíte se zpracováním osobních údajů pro účely
-                domluvení konzultace.
-              </label>
-              <button
-                type="submit"
-                className="w-full py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:bg-antique-brass/90 transition-all duration-300"
-              >
-                Domluvit konzultaci zdarma
-              </button>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
