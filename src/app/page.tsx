@@ -151,7 +151,7 @@ function Nav() {
           ))}
           <a
             href="#kontakt"
-            className="text-sm px-4 py-2 bg-antique-brass text-white rounded-sm hover:bg-antique-brass/90 transition-colors duration-300"
+            className="text-sm px-4 py-2 bg-antique-brass text-white rounded-lg hover:bg-antique-brass/90 transition-colors duration-300"
           >
             Domluvit konzultaci
           </a>
@@ -182,13 +182,13 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-3">
             <a
               href="#kontakt"
-              className="inline-flex items-center justify-center px-8 py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase hover:bg-antique-brass/90 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:bg-antique-brass/90 transition-all duration-300"
             >
               Domluvit konzultaci zdarma
             </a>
             <a
               href="#sluzby"
-              className="inline-flex items-center justify-center px-8 py-4 border border-antique-brass/40 text-antique-brass font-body font-medium text-sm tracking-wide uppercase hover:border-antique-brass/80 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-4 border border-antique-brass/40 text-antique-brass font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:border-antique-brass/80 transition-all duration-300"
             >
               Co nabízím
             </a>
@@ -219,7 +219,7 @@ function Hero() {
 
 function Services() {
   return (
-    <section id="sluzby" className="py-24 md:py-32 bg-white">
+    <section id="sluzby" className="reveal py-24 md:py-32 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
           <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-4 font-body">
@@ -235,7 +235,7 @@ function Services() {
           {SERVICES.map((service, i) => (
             <div
               key={service.title}
-              className="group bg-warm-ivory p-8 flex flex-col hover:bg-white hover:shadow-lg transition-all duration-500"
+              className="group bg-warm-ivory p-8 flex flex-col rounded-xl shadow-card-resting card-hover hover:bg-white"
             >
               <span className="text-steel-grey text-xs tracking-[0.2em] uppercase mb-2 font-body">
                 {String(i + 1).padStart(2, "0")}
@@ -276,7 +276,7 @@ function Services() {
 
 function Audience() {
   return (
-    <section id="pro-koho" className="py-24 md:py-32 bg-warm-ivory">
+    <section id="pro-koho" className="reveal py-24 md:py-32 bg-warm-ivory bg-dot-pattern">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
           <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-4 font-body">
@@ -292,7 +292,7 @@ function Audience() {
           {AUDIENCES.map((a) => (
             <div
               key={a.title}
-              className="flex gap-5 p-6 bg-white hover:shadow-md transition-all duration-300 group"
+              className="flex gap-5 p-6 bg-white rounded-xl shadow-card-resting card-hover group"
             >
               <span className="text-2xl shrink-0 mt-1">{a.icon}</span>
               <div>
@@ -309,7 +309,7 @@ function Audience() {
 
 function Process() {
   return (
-    <section id="jak-pracuji" className="py-24 md:py-32 bg-white">
+    <section id="jak-pracuji" className="reveal py-24 md:py-32 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
           <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-4 font-body">
@@ -341,7 +341,7 @@ function Process() {
 
 function About() {
   return (
-    <section id="kdo-jsem" className="py-24 md:py-32 bg-midnight-teal">
+    <section id="kdo-jsem" className="reveal py-24 md:py-32 bg-midnight-teal">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-5 gap-12 items-start">
           <div className="md:col-span-2">
@@ -373,7 +373,7 @@ function About() {
               a za cenu, která dává smysl. Za tím, co dělám, si stojím.
             </p>
           </div>
-          <div className="md:col-span-3 bg-white/5 p-8 md:p-10">
+          <div className="md:col-span-3 bg-white/5 p-8 md:p-10 rounded-xl border border-white/10">
             <p className="text-antique-brass text-xs tracking-[0.2em] uppercase mb-6 font-body">
               Reference
             </p>
@@ -421,7 +421,7 @@ function FAQSection() {
   };
 
   return (
-    <section className="py-24 md:py-32 bg-warm-ivory">
+    <section className="reveal py-24 md:py-32 bg-warm-ivory bg-dot-pattern">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
@@ -457,7 +457,7 @@ function FAQSection() {
 
 function Contact() {
   return (
-    <section id="kontakt" className="py-24 md:py-32 bg-white">
+    <section id="kontakt" className="reveal py-24 md:py-32 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
@@ -493,7 +493,7 @@ function Contact() {
                 <input
                   type="text"
                   id="jmeno"
-                  className="w-full px-4 py-3 bg-warm-ivory border-0 text-ink text-sm focus:outline-none focus:ring-1 focus:ring-antique-brass transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
                   placeholder="např. Jan Novák"
                 />
               </div>
@@ -504,7 +504,7 @@ function Contact() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 bg-warm-ivory border-0 text-ink text-sm focus:outline-none focus:ring-1 focus:ring-antique-brass transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
                   placeholder="jan@novak.cz"
                 />
               </div>
@@ -515,7 +515,7 @@ function Contact() {
                 <input
                   type="tel"
                   id="telefon"
-                  className="w-full px-4 py-3 bg-warm-ivory border-0 text-ink text-sm focus:outline-none focus:ring-1 focus:ring-antique-brass transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
                   placeholder="+420 777 123 456"
                 />
               </div>
@@ -525,7 +525,7 @@ function Contact() {
                 </label>
                 <select
                   id="profese"
-                  className="w-full px-4 py-3 bg-warm-ivory border-0 text-ink text-sm focus:outline-none focus:ring-1 focus:ring-antique-brass transition-all duration-300"
+                  className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300"
                 >
                   <option value="">Vyberte...</option>
                   <option value="advokat">Advokát / notář</option>
@@ -545,7 +545,7 @@ function Contact() {
               </label>
               <button
                 type="submit"
-                className="w-full py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase hover:bg-antique-brass/90 transition-all duration-300"
+                className="w-full py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:bg-antique-brass/90 transition-all duration-300"
               >
                 Domluvit konzultaci zdarma
               </button>
@@ -592,17 +592,11 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <div className="section-divider-skew" />
         <Services />
-        <div className="section-divider" />
         <Audience />
-        <div className="section-divider-skew" />
         <Process />
-        <div className="section-divider" />
         <About />
-        <div className="section-divider-skew" />
         <FAQSection />
-        <div className="section-divider" />
         <Contact />
       </main>
       <Footer />
