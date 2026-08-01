@@ -17,9 +17,20 @@
 }
 
 @layer base {
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     @apply bg-warm-white text-ink font-body;
     text-wrap: pretty;
+  }
+
+  /* Fraunces na tmavém pozadí — těžší řez pro čitelnost */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
   }
 
   ::selection {
@@ -35,6 +46,21 @@
   summary:focus-visible {
     outline: 2px solid var(--color-signal-orange);
     outline-offset: 3px;
+  }
+
+  /* Deaktivní kótovací text — minimální velikost 11px, vyżší kontrast */
+  .dim-label {
+    font-size: 0.6875rem; /* 11px minimum */
+    letter-spacing: 0.15em;
+  }
+
+  /* Na tmavém pozadí — zajisti čitelný kontrast */
+  .text-muted-dark {
+    color: rgba(237, 234, 228, 0.5); /* warm-white at 50% na grafitu */
+  }
+
+  .text-muted-light {
+    color: rgba(31, 36, 40, 0.5); /* ink at 50% na warm-white */
   }
 }
 

@@ -4,11 +4,10 @@ export default function Services() {
   return (
     <section id="sluzby" className="reveal scroll-mt-16 py-24 md:py-32 bg-warm-white">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Technické záhlaví */}
         <div className="flex items-center gap-3 mb-3">
           <span className="dim-node" />
-          <span className="dim-line-h w-16" />
-          <p className="font-mono text-[11px] tracking-[0.25em] text-callout/60">
+          <span className="dim-line-h w-12" />
+          <p className="font-mono text-xs tracking-[0.18em] text-callout/65 font-medium">
             POZ. 01–0{SERVICES.length}
           </p>
         </div>
@@ -20,27 +19,25 @@ export default function Services() {
               className="blueprint-card group flex flex-col transition-all duration-300"
             >
               <div className="p-8 flex flex-col h-full">
-                {/* Číslo pozice */}
                 <div className="flex items-center gap-2 mb-5">
-                  <span className="font-mono text-[10px] tracking-[0.2em] text-signal-orange/60">
+                  <span className="font-mono text-xs tracking-[0.15em] text-signal-orange/65 font-medium">
                     POZ. 0{i + 1}
                   </span>
-                  <span className="dim-line-h w-8" />
+                  <span className="dim-line-h w-6" />
                 </div>
 
-                <h3 className="font-display text-2xl text-ink mb-3">
+                <h3 className="font-display text-2xl text-ink mb-3 font-semibold">
                   {s.title}
                 </h3>
 
-                <p className="text-ink/60 text-sm leading-relaxed mb-6">
+                <p className="text-ink/65 text-sm leading-relaxed mb-6">
                   {s.desc}
                 </p>
 
-                {/* Features */}
-                <ul className="space-y-2.5 mb-8 text-sm text-ink/70 flex-1">
+                <ul className="space-y-2.5 mb-8 text-sm text-ink/75 flex-1">
                   {s.features.map((f) => (
                     <li key={f} className="flex items-start gap-2.5">
-                      <span className="text-signal-orange mt-1 shrink-0 font-mono text-[10px]">
+                      <span className="text-signal-orange mt-1 shrink-0 font-mono text-xs">
                         ──
                       </span>
                       <span>{f}</span>
@@ -48,28 +45,26 @@ export default function Services() {
                   ))}
                 </ul>
 
-                {/* Kótovaná cena */}
                 <div className="pt-5 space-y-2">
                   <div className="flex items-center gap-1">
-                    <span className="font-mono text-[10px] text-callout/40">├</span>
-                    <span className="dim-line-h w-4" />
+                    <span className="font-mono text-xs text-callout/45">├</span>
+                    <span className="dim-line-h w-3" />
                     <span className="dim-node" />
-                    <span className="font-display text-2xl text-ink ml-1">
+                    <span className="font-display text-2xl text-ink ml-1 font-semibold">
                       {s.price}
                     </span>
                     <span className="dim-node" />
-                    <span className="dim-line-h w-4" />
-                    <span className="font-mono text-[10px] text-callout/40">┤</span>
+                    <span className="dim-line-h w-3" />
+                    <span className="font-mono text-xs text-callout/45">┤</span>
                   </div>
-                  <p className="font-mono text-[10px] tracking-[0.12em] text-callout/50 ml-1">
+                  <p className="font-mono text-xs tracking-[0.1em] text-callout/55 ml-1 font-medium">
                     {s.timeframe}
                   </p>
                 </div>
 
-                {/* CTA */}
                 <a
                   href="#kontakt"
-                  className="mt-5 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.15em] text-signal-orange group-hover:text-ink/80 transition-colors"
+                  className="mt-5 inline-flex items-center gap-2 font-mono text-xs tracking-[0.12em] text-signal-orange group-hover:text-ink/80 transition-colors font-medium"
                 >
                   <span className="dim-node group-hover:bg-signal-orange transition-colors" />
                   <span>{s.cta} →</span>

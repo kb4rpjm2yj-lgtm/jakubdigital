@@ -23,7 +23,7 @@ const inter = Inter({
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500"],
+  weight: "variable",
   variable: "--font-jetbrains",
   display: "swap",
   preload: true,
