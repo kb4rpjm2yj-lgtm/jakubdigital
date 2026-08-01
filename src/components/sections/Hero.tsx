@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="hero-surface min-h-screen flex items-center pt-16 overflow-hidden relative">
       {/* Generované blueprint pozadí */}
       <div
-        className="absolute inset-0 z-0 opacity-25 pointer-events-none"
+        className="absolute inset-0 z-0 opacity-20 pointer-events-none"
         style={{
           backgroundImage: "url(/hero-blueprint.png)",
           backgroundSize: "cover",
@@ -24,7 +24,7 @@ export default function Hero() {
       />
 
       {/* Wireframe ilustrace — vpravo */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] max-w-[700px] h-[80%] z-0 pointer-events-none opacity-20 hidden lg:block">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[48%] max-w-[760px] h-[78%] z-0 pointer-events-none opacity-45 hidden lg:block">
         <img
           src="/hero-wireframe.png"
           alt=""
@@ -65,7 +65,7 @@ export default function Hero() {
             <span className="dim-node" />
             <span className="dim-line-v h-10" />
           </div>
-          <p className="text-warm-white/75 text-base md:text-lg max-w-xl leading-relaxed">
+          <p className="text-warm-white/90 text-base md:text-lg max-w-xl leading-relaxed font-medium">
             {HERO_SUBTITLE}
           </p>
         </div>
@@ -82,15 +82,15 @@ export default function Hero() {
 
           {/* Technická kóta ceny */}
           <div className="flex items-center gap-0">
-            <span className="font-mono text-xs text-callout/50">├</span>
+            <span className="font-mono text-xs text-warm-white/55">├</span>
             <span className="dim-line-h w-5" />
             <span className="dim-node mx-0.5" />
-            <span className="font-mono text-lg tracking-[0.1em] text-warm-white/85 font-medium">
+            <span className="font-mono text-lg tracking-[0.1em] text-warm-white font-medium">
               {HERO_PRICE}
             </span>
             <span className="dim-node mx-0.5" />
             <span className="dim-line-h w-5" />
-            <span className="font-mono text-xs text-callout/50">┤</span>
+            <span className="font-mono text-xs text-warm-white/55">┤</span>
             <span className="ml-3 font-mono text-xs tracking-[0.15em] text-signal-orange/80 font-medium">
               KONEČNÁ
             </span>
@@ -101,19 +101,19 @@ export default function Hero() {
         <div className="font-mono text-xs animate-fade-in-up animate-delay-3">
           <div className="flex items-center gap-2 mb-2">
             <span className="dim-node" />
-            <span className="text-xs tracking-[0.15em] text-callout/65 font-medium">
+            <span className="text-xs tracking-[0.15em] text-warm-white/65 font-medium">
               KAPACITA / {month.toUpperCase()}
             </span>
           </div>
           <div className="flex items-center gap-0 text-2xl tracking-[0.25em] ml-0.5">
             {Array.from({ length: total }).map((_, i) => (
               <span key={i} className="flex items-center gap-0">
-                {i > 0 && <span className="text-callout/20 mx-0.5">─</span>}
+                {i > 0 && <span className="text-warm-white/25 mx-0.5">─</span>}
                 <span
                   className={
                     i < occupied
                       ? "text-signal-orange capacity-active"
-                      : "text-callout/30"
+                      : "text-warm-white/35"
                   }
                 >
                   ●
@@ -123,7 +123,7 @@ export default function Hero() {
           </div>
           <div className="flex gap-5 mt-2 ml-0.5 text-xs tracking-[0.12em]">
             {Array.from({ length: occupied }).map((_, i) => (
-              <span key={i} className="text-callout/55">
+              <span key={i} className="text-warm-white/60">
                 POZ.{i + 1}
               </span>
             ))}
@@ -132,10 +132,10 @@ export default function Hero() {
             )}
           </div>
           <div className="flex items-center gap-2 mt-2.5">
-            <span className="text-xs text-callout/35">├</span>
+            <span className="text-xs text-warm-white/50">├</span>
             <span className="dim-line-h w-28" />
-            <span className="text-xs text-callout/35">┤</span>
-            <span className="text-xs text-callout/45 tracking-[0.1em]">
+            <span className="text-xs text-warm-white/50">┤</span>
+            <span className="text-xs text-warm-white/55 tracking-[0.1em]">
               max. {total} zakázky / měsíc
             </span>
           </div>

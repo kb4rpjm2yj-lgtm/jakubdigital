@@ -41,9 +41,9 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="flex items-center gap-1.5 font-mono text-xs tracking-[0.12em] text-callout/55 hover:text-signal-orange transition-colors font-medium"
+              className="flex items-center gap-1.5 font-mono text-xs tracking-[0.12em] text-warm-white/70 hover:text-signal-orange transition-colors font-medium"
             >
-              <span className="text-callout/25">0{i + 1}</span>
+              <span className="text-warm-white/40">0{i + 1}</span>
               <span>{l.label}</span>
             </a>
           ))}
@@ -51,7 +51,7 @@ export default function Nav() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-callout/55 hover:text-signal-orange transition-colors"
+          className="md:hidden text-warm-white/75 hover:text-signal-orange transition-colors"
           aria-label="Menu"
         >
           <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
@@ -69,9 +69,9 @@ export default function Nav() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="flex items-center gap-2 font-mono text-xs tracking-[0.12em] text-callout/55 hover:text-signal-orange transition-colors py-1.5 font-medium"
+              className="flex items-center gap-2 font-mono text-xs tracking-[0.12em] text-warm-white/75 hover:text-signal-orange transition-colors py-1.5 font-medium"
             >
-              <span className="text-callout/35">0{i + 1}</span>
+              <span className="text-warm-white/45">0{i + 1}</span>
               <span>{l.label}</span>
             </a>
           ))}

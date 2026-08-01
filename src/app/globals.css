@@ -75,7 +75,7 @@
     linear-gradient(rgba(30, 58, 95, 0.06) 1px, transparent 1px),
     linear-gradient(90deg, rgba(30, 58, 95, 0.06) 1px, transparent 1px),
     /* oranžový glow vpravo nahoře */
-    radial-gradient(ellipse 900px 600px at 85% 15%, rgba(255, 107, 53, 0.07), transparent),
+    radial-gradient(ellipse 900px 600px at 85% 15%, rgba(255, 107, 53, 0.055), transparent),
     var(--color-graphite);
   background-size:
     64px 64px,
