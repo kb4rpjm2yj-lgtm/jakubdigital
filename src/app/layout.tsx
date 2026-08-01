@@ -31,15 +31,15 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jakubdigital.cz"),
-  title: "Jakub Digital | Web, na který se dá zavolat",
+  title: "Jakub Digital | Web, který po spuštění nekončí",
   description:
-    "Jsem Jakub. Postavím web, napíšu texty a starám se dál. Jeden člověk, konečná cena, čtrnáct dnů.",
+    "Jsem Jakub. Postavím web, napíšu texty a starám se dál. 14 900 Kč konečná. Do 14 dnů.",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://jakubdigital.cz" },
   openGraph: {
-    title: "Jakub Digital | Web, na který se dá zavolat",
+    title: "Jakub Digital | Web, který po spuštění nekončí",
     description:
-      "Web, texty a provoz od člověka, kterému můžete zavolat. Jsem Jakub — konečná cena, jasný termín, jeden kontakt.",
+      "Jsem Jakub. Postavím web, napíšu texty a když je potřeba, starám se dál. 14 900 Kč konečná. Do 14 dnů.",
     locale: "cs_CZ",
     type: "website",
     siteName: "Jakub Digital",
