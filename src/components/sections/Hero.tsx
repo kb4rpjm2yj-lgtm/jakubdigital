@@ -24,9 +24,9 @@ export default function Hero() {
       />
 
       {/* Wireframe ilustrace — vpravo */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[48%] max-w-[760px] h-[78%] z-0 pointer-events-none opacity-45 hidden lg:block">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[46%] max-w-[760px] h-[70%] z-0 pointer-events-none opacity-75 mix-blend-screen hidden lg:block">
         <img
-          src="/hero-wireframe.png"
+          src="/hero-devices.png"
           alt=""
           className="w-full h-full object-contain object-right"
           aria-hidden="true"
@@ -55,7 +55,7 @@ export default function Hero() {
         </div>
 
         {/* H1 — tučný Fraunces */}
-        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-warm-white leading-[1.02] mb-8 max-w-5xl font-bold animate-fade-in-up animate-delay-1">
+        <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-7xl text-warm-white leading-[1.02] mb-8 max-w-3xl font-bold animate-fade-in-up animate-delay-1">
           {HERO_H1}
         </h1>
 

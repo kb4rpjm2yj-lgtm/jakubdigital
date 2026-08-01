@@ -79,10 +79,10 @@ export const PROJECTS: Project[] = [
     own: true,
   },
   {
-    name: "Eva Kaprálová — krajská zastupitelka",
+    name: "Mgr. Eva Kaprálová, MBA — krajská zastupitelka a předsedkyně výboru pro vzdělávání",
     href: "https://evakapralova.cz",
     description:
-      "Web a průběžná správa obsahu pro krajskou zastupitelku. Od návrhu po pravidelnou správu sociálních sítí — plánování, texty, grafika a publikování bez její práce navíc.",
+      "Web a průběžná správa obsahu pro krajskou zastupitelku Královéhradeckého kraje. Od návrhu po pravidelnou správu sociálních sítí — plánování, texty, grafika a publikování bez její práce navíc.",
   },
   {
     name: "liberec.online",
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
     own: true,
   },
   {
-    name: "JUDr. Rajchl — digitální podpora kampaně",
+    name: "JUDr. Jindřich Rajchl — digitální podpora kampaně",
     href: "#",
     description:
       "Grafika pro sociální sítě a vedení podcastu během volební kampaně. Denní výstupy, jednotný vizuální styl, pravidelný kontakt s voliči.",
@@ -171,9 +171,9 @@ export const FAQ: FaqItem[] = [
 /* ─── Hero ─── */
 
 export const HERO_EYEBROW = "JAKUB / WEBY · TEXTY · PROVOZ";
-export const HERO_H1 = "Web, na který se dá zavolat";
+export const HERO_H1 = "Web, který po spuštění nekončí.";
 export const HERO_SUBTITLE =
-  "Jsem Jakub. Postavím web, napíšu texty a starám se dál. Jeden člověk, konečná cena, čtrnáct dnů.";
+  "Jsem Jakub. Postavím web, napíšu texty a když je potřeba, starám se dál. 14 900 Kč konečná. Do 14 dnů.";
 export const HERO_CTA_PRIMARY = "Napište mi";
 export const HERO_PRICE = "14 900 Kč";
 
