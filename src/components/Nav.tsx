@@ -29,23 +29,27 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo — technický štítek */}
         <a
           href="#"
-          className="font-mono text-sm tracking-[0.15em] text-signal-orange hover:text-signal-orange/80 transition-colors"
+          className="flex items-center gap-2 group"
         >
-          JAKUB DIGITAL
+          <span className="dim-node group-hover:bg-signal-orange transition-colors" />
+          <span className="font-mono text-xs tracking-[0.18em] text-signal-orange group-hover:text-signal-orange/80 transition-colors">
+            JAKUB DIGITAL
+          </span>
         </a>
 
-        {/* Desktop */}
-        <nav className="hidden md:flex items-center gap-8">
-          {LINKS.map((l) => (
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-6">
+          {LINKS.map((l, i) => (
             <a
               key={l.href}
               href={l.href}
-              className="font-mono text-[11px] tracking-[0.15em] text-warm-white/60 hover:text-signal-orange transition-colors"
+              className="flex items-center gap-1.5 font-mono text-[10px] tracking-[0.15em] text-callout/50 hover:text-signal-orange transition-colors"
             >
-              {l.label}
+              <span className="text-callout/20">0{i + 1}</span>
+              <span>{l.label}</span>
             </a>
           ))}
         </nav>
@@ -53,28 +57,29 @@ export default function Nav() {
         {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-warm-white/60 hover:text-signal-orange transition-colors"
+          className="md:hidden text-callout/50 hover:text-signal-orange transition-colors"
           aria-label="Menu"
         >
-          <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
-            <rect y="0" width="20" height="2" rx="1" fill="currentColor" />
-            <rect y="6" width="20" height="2" rx="1" fill="currentColor" />
-            <rect y="12" width="20" height="2" rx="1" fill="currentColor" />
+          <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
+            <rect y="0" width="18" height="1.5" rx="0.5" fill="currentColor" />
+            <rect y="5" width="18" height="1.5" rx="0.5" fill="currentColor" />
+            <rect y="10" width="18" height="1.5" rx="0.5" fill="currentColor" />
           </svg>
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile */}
       {open && (
-        <nav className="md:hidden bg-graphite border-t border-grid-blue/20 px-6 pb-6 pt-2 space-y-3">
-          {LINKS.map((l) => (
+        <nav className="md:hidden bg-graphite border-t border-grid-blue/20 px-6 pb-6 pt-2 space-y-2">
+          {LINKS.map((l, i) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block font-mono text-[11px] tracking-[0.15em] text-warm-white/60 hover:text-signal-orange transition-colors py-1"
+              className="flex items-center gap-2 font-mono text-[10px] tracking-[0.15em] text-callout/50 hover:text-signal-orange transition-colors py-1.5"
             >
-              {l.label}
+              <span className="text-callout/30">0{i + 1}</span>
+              <span>{l.label}</span>
             </a>
           ))}
         </nav>
