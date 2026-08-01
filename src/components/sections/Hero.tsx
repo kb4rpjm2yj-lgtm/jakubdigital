@@ -42,6 +42,16 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Wireframe ilustrace — vpravo */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[45%] max-w-[700px] h-[80%] z-0 pointer-events-none opacity-25 hidden lg:block">
+        <img
+          src="/hero-wireframe.png"
+          alt=""
+          className="w-full h-full object-contain object-right"
+          aria-hidden="true"
+        />
+      </div>
+
       {/* Hlavní obsah */}
       <div className="max-w-6xl mx-auto px-6 w-full py-20 md:py-32 relative z-10">
         {/* Eyebrow */}
