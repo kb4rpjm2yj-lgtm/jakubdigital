@@ -67,7 +67,7 @@ export default function GdprPage() {
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-display leading-tight mb-6">
               Ochrana osobních údajů
             </h1>
-            <p className="text-steel-grey text-sm leading-relaxed">
+            <p className="text-steel-grey-light text-sm leading-relaxed">
               Informace o tom, jak nakládáme s osobními údaji na webu
               jakubdigital.cz. Platné od 1. 8. 2026.
             </p>
@@ -87,7 +87,7 @@ export default function GdprPage() {
                   {section.paragraphs.map((paragraph, j) => (
                     <p
                       key={j}
-                      className="text-sm text-steel-grey leading-relaxed mb-3 last:mb-0"
+                      className="text-sm text-steel-grey-strong leading-relaxed mb-3 last:mb-0"
                     >
                       {paragraph}
                     </p>
@@ -99,7 +99,7 @@ export default function GdprPage() {
               <p className="text-antique-brass text-xs tracking-[0.2em] uppercase mb-4 font-body">
                 Kontakt
               </p>
-              <p className="text-sm text-steel-grey leading-relaxed mb-4">
+              <p className="text-sm text-steel-grey-strong leading-relaxed mb-4">
                 Máte dotaz ke zpracování osobních údajů? Napište mi:
               </p>
               <a

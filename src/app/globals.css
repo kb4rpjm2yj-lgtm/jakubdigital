@@ -5,7 +5,12 @@
   --color-antique-brass: #B8834A;
   --color-warm-ivory: #F4EFE8;
   --color-ink: #1C2228;
-  --color-steel-grey: #7C8D99;
+  /* Základní ocelová šedá — tmavší než původní #7C8D99 kvůli kontrastu.
+     Pro malé texty na světlém pozadí (AA ≥ 4,5:1) použít steel-grey-strong,
+     na tmavém midnight-teal pozadí steel-grey-light. */
+  --color-steel-grey: #6B7D8A;
+  --color-steel-grey-strong: #5C6E7C;
+  --color-steel-grey-light: #8CA0AE;
   --color-white: #FFFFFF;
 
   /* Fonty se self-hostují přes next/font (layout.tsx) — proměnné
@@ -62,9 +67,10 @@
   padding: 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 1rem;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
+  /* Žádný backdrop-filter — design bez glassmorphism efektů.
+     Mírně vyšší krytí pozadí zajistí čitelnost i bez rozostření. */
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.035));
   box-shadow: 0 24px 65px -36px rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
 }
 
 .card-hover {
@@ -121,21 +127,16 @@
   }
 }
 
-/* FAQ accordion — plynulé otevření i zavření (grid-rows 0fr -> 1fr).
-   Prohlížeče bez podpory interpolace grid tracků zobrazí skokovou změnu. */
+/* FAQ accordion — plynulé otevření i zavření (max-height 0 -> 480px).
+   480px je dostatečné pro nejdelší odpověď; přechod je plynulý v obou směrech. */
 .faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 300ms ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease-out;
 }
 
 details[open] > .faq-answer {
-  grid-template-rows: 1fr;
-}
-
-.faq-answer > * {
-  overflow: hidden;
-  min-height: 0;
+  max-height: 480px;
 }
 
 @media (prefers-reduced-motion: reduce) {

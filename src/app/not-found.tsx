@@ -17,7 +17,7 @@ export default function NotFound() {
               <br />
               <span className="text-antique-brass">neexistuje.</span>
             </h1>
-            <p className="text-lg text-steel-grey leading-relaxed max-w-xl mb-10">
+            <p className="text-lg text-steel-grey-light leading-relaxed max-w-xl mb-10">
               Adresa, kterou jste zadali, na tomto webu není — nebo byla
               přesunuta. Zkuste se vrátit na úvodní stránku, nebo mi napište,
               a já vám poradím.

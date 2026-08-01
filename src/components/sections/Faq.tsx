@@ -15,7 +15,7 @@ export default function Faq() {
         <div className="space-y-0 divide-y divide-antique-brass/10">
           {FAQ.map((item, i) => (
             <details key={i} className="group py-5 open:pb-8">
-              <summary className="flex items-center justify-between gap-6 cursor-pointer text-ink font-display text-lg list-none">
+              <summary className="flex items-center justify-between gap-6 cursor-pointer text-ink font-display text-lg list-none hover:text-antique-brass transition-colors duration-300">
                 {item.q}
                 <span className="text-antique-brass text-2xl font-light leading-none shrink-0 group-open:rotate-45 transition-transform duration-300">
                   +
@@ -23,7 +23,7 @@ export default function Faq() {
               </summary>
               <div className="faq-answer">
                 <div>
-                  <p className="pt-4 text-steel-grey text-sm leading-relaxed pr-8">
+                  <p className="pt-4 text-steel-grey-strong text-sm leading-relaxed pr-8">
                     {item.a}
                   </p>
                 </div>

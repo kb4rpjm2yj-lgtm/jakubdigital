@@ -2,7 +2,7 @@ import { PROCESS } from "@/data/content";
 
 export default function Process() {
   return (
-    <section id="jak-pracuji" className="reveal py-24 md:py-32 bg-white">
+    <section id="jak-pracuji" className="reveal scroll-mt-16 py-24 md:py-32 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-2xl mb-16">
           <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-4 font-body">
@@ -23,7 +23,7 @@ export default function Process() {
                 {step.step}
               </span>
               <h3 className="text-lg text-ink font-display mb-3">{step.title}</h3>
-              <p className="text-sm text-steel-grey leading-relaxed">{step.desc}</p>
+              <p className="text-sm text-steel-grey-strong leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>

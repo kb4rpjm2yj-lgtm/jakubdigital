@@ -16,7 +16,7 @@ export default function JsonLd() {
       "Digitální servis pro profesionály: webové stránky na míru, správa sociálních sítí a podpora provozu. Osobní spolupráce, transparentní ceny a jasné termíny pro advokáty, realitní makléře, politiky a OSVČ po celé České republice.",
     url: "https://jakubdigital.cz",
     email: "jakub@jakubdigital.cz",
-    telephone: "[telefon]", // placeholder — Kuba doplní
+    // telephone: "+420...", // volitelné — doplnit, až Kuba dodá číslo
     logo: "https://jakubdigital.cz/icon.svg",
     image: "https://jakubdigital.cz/opengraph-image",
     priceRange: "$$",

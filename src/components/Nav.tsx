@@ -48,7 +48,7 @@ export default function Nav() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-steel-grey hover:text-antique-brass transition-colors duration-300"
+              className="text-sm text-steel-grey-light hover:text-antique-brass transition-colors duration-300"
             >
               {item.label}
             </Link>
@@ -103,7 +103,7 @@ export default function Nav() {
               key={item.href}
               href={item.href}
               onClick={close}
-              className="text-sm text-steel-grey hover:text-antique-brass transition-colors duration-300"
+              className="text-sm text-steel-grey-light hover:text-antique-brass transition-colors duration-300"
             >
               {item.label}
             </Link>

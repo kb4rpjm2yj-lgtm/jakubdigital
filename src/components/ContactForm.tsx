@@ -65,7 +65,7 @@ export default function ContactForm() {
     return (
       <div className="bg-warm-ivory p-8 text-center rounded-xl" role="status" aria-live="polite">
         <p className="text-antique-brass font-display text-xl mb-2">Děkuji za zprávu.</p>
-        <p className="text-steel-grey text-sm">{CONTACT_SUCCESS}</p>
+        <p className="text-steel-grey-strong text-sm">{CONTACT_SUCCESS}</p>
       </div>
     );
   }
@@ -85,7 +85,7 @@ export default function ContactForm() {
         <input type="email" id="email" name="email" required autoComplete="email" className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300" placeholder="jan@novak.cz" />
       </div>
       <div>
-        <label htmlFor="telefon" className="block text-sm text-ink mb-1.5">Telefon <span className="text-steel-grey">(nepovinné)</span></label>
+        <label htmlFor="telefon" className="block text-sm text-ink mb-1.5">Telefon <span className="text-steel-grey-strong">(nepovinné)</span></label>
         <input type="tel" id="telefon" name="telefon" autoComplete="tel" className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300" placeholder="+420 777 123 456" />
       </div>
       <div>
@@ -103,7 +103,7 @@ export default function ContactForm() {
         <label htmlFor="zprava" className="block text-sm text-ink mb-1.5">S čím potřebujete pomoci?</label>
         <textarea id="zprava" name="zprava" required minLength={10} rows={5} className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300 resize-y" placeholder="Například: Potřebuji nový web pro svou kancelář a rád bych věděl, jak by mohl fungovat." />
       </div>
-      <label className="flex items-start gap-3 text-xs text-steel-grey">
+      <label className="flex items-start gap-3 text-xs text-steel-grey-strong">
         <input type="checkbox" required className="mt-0.5 accent-antique-brass" />
         Údaje použiji jen pro odpověď na váš dotaz a domluvení konzultace.
       </label>
@@ -111,7 +111,7 @@ export default function ContactForm() {
         {status === "loading" ? "Odesílám…" : "Odeslat nezávaznou poptávku"}
       </button>
       {status === "fallback" && (
-        <p className="text-xs text-steel-grey" role="status">
+        <p className="text-xs text-steel-grey-strong" role="status">
           Neotevřela se vám e-mailová aplikace? <a href={mailto} className="text-antique-brass hover:text-antique-brass/80">Otevřít připravený e-mail</a>
         </p>
       )}

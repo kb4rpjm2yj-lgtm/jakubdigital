@@ -2,7 +2,7 @@ import { PROJECTS } from "@/data/content";
 
 export default function References() {
   return (
-    <section id="reference" className="reveal py-24 md:py-32 bg-warm-ivory bg-dot-pattern">
+    <section id="reference" className="reveal scroll-mt-16 py-24 md:py-32 bg-warm-ivory bg-dot-pattern">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div className="max-w-2xl">
@@ -23,7 +23,7 @@ export default function References() {
               key={project.name}
               href={project.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="group bg-white rounded-xl p-7 shadow-card-resting card-hover flex flex-col min-h-60"
             >
               <span className="text-antique-brass text-xs tracking-[0.2em] uppercase font-body mb-auto">
@@ -33,7 +33,7 @@ export default function References() {
                 <h3 className="text-2xl text-ink font-display mb-3 group-hover:text-antique-brass transition-colors">
                   {project.name}
                 </h3>
-                <p className="text-sm leading-relaxed text-steel-grey mb-4">{project.description}</p>
+                <p className="text-sm leading-relaxed text-steel-grey-strong mb-4">{project.description}</p>
                 <p className="text-sm leading-relaxed text-ink/80 mb-5">
                   <span className="text-antique-brass">Co řešil:</span> {project.solved}
                 </p>

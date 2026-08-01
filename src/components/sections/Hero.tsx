@@ -17,17 +17,17 @@ const [h1First, h1Second] = HERO_H1.split(". ");
 export default function Hero() {
   return (
     <section className="hero-surface relative min-h-screen bg-midnight-teal flex items-center overflow-hidden">
-      {/* Dekorativní pozadí — pod SparkParticles (canvas má z-10, obsah z-20) */}
+      {/* Dekorativní pozadí — pod SparkParticles (canvas má z-10, obsah z-20).
+          Nízká opacita (0.2) drží text čitelný — obrázek je tmavý, stačí jako textura. */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 opacity-20"
         style={{
           backgroundImage: `url(${HERO_IMAGE_SRC})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
-      <div aria-hidden="true" className="absolute inset-0 z-0 bg-midnight-teal/70" />
       <SparkParticles />
       <div className="relative z-20 max-w-6xl mx-auto px-6 py-28 md:py-24 w-full">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-20 items-center">
@@ -40,7 +40,7 @@ export default function Hero() {
               <br />
               <span className="text-antique-brass">{h1Second}</span>
             </h1>
-            <p className="text-lg md:text-xl text-steel-grey leading-relaxed max-w-xl mb-10 animate-fade-in-up animate-delay-2">
+            <p className="text-lg md:text-xl text-steel-grey-light leading-relaxed max-w-xl mb-10 animate-fade-in-up animate-delay-2">
               {HERO_SUBTITLE}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-3">
@@ -63,20 +63,20 @@ export default function Hero() {
             <div className="space-y-6">
               <div className="border-l border-antique-brass/60 pl-5">
                 <p className="text-white font-display text-xl mb-1">Důvěra</p>
-                <p className="text-steel-grey text-sm leading-relaxed">Prezentace, která odpovídá kvalitě vaší práce.</p>
+                <p className="text-steel-grey-light text-sm leading-relaxed">Prezentace, která odpovídá kvalitě vaší práce.</p>
               </div>
               <div className="border-l border-antique-brass/60 pl-5">
                 <p className="text-white font-display text-xl mb-1">Viditelnost</p>
-                <p className="text-steel-grey text-sm leading-relaxed">Obsah, který má jasný směr a nepůsobí jako výplň.</p>
+                <p className="text-steel-grey-light text-sm leading-relaxed">Obsah, který má jasný směr a nepůsobí jako výplň.</p>
               </div>
               <div className="border-l border-antique-brass/60 pl-5">
                 <p className="text-white font-display text-xl mb-1">Čas</p>
-                <p className="text-steel-grey text-sm leading-relaxed">Systémy, které zjednoduší rutinu místo přidávání práce.</p>
+                <p className="text-steel-grey-light text-sm leading-relaxed">Systémy, které zjednoduší rutinu místo přidávání práce.</p>
               </div>
             </div>
           </aside>
         </div>
-        <div className="mt-14 pt-7 border-t border-white/10 grid sm:grid-cols-3 gap-4 text-sm text-steel-grey animate-fade-in-up animate-delay-4">
+        <div className="mt-14 pt-7 border-t border-white/10 grid sm:grid-cols-3 gap-4 text-sm text-steel-grey-light animate-fade-in-up animate-delay-4">
           <span><span className="text-antique-brass">01.</span> Úvodní konzultace bez závazku</span>
           <span><span className="text-antique-brass">02.</span> Cena a rozsah vždy předem</span>
           <span><span className="text-antique-brass">03.</span> Osobní spolupráce od začátku do konce</span>
