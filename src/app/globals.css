@@ -24,6 +24,38 @@
     @apply bg-warm-ivory text-ink font-body;
     text-wrap: pretty;
   }
+
+  ::selection {
+    background: var(--color-antique-brass);
+    color: var(--color-white);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--color-antique-brass);
+    outline-offset: 3px;
+  }
+}
+
+.hero-surface {
+  background-image:
+    radial-gradient(circle at 82% 20%, rgba(184, 131, 74, 0.18), transparent 26rem),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(30deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: auto, 52px 52px, 52px 52px;
+}
+
+.hero-panel {
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025));
+  box-shadow: 0 24px 65px -36px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
 }
 
 .card-hover {
@@ -32,6 +64,17 @@
 .card-hover:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-card-hovered);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-panel {
+    animation: float 8s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 .bg-dot-pattern {

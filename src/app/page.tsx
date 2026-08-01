@@ -4,66 +4,87 @@ import ContactForm from "@/components/ContactForm";
 
 const SERVICES = [
   {
-    title: "Webové stránky na míru",
-    desc: "Profesionální web, který dělá dojem dřív, než stihnete říct \"dobrý den\". Postarám se o všechno — texty, SEO, formuláře. Vy se soustředíte na svou práci.",
-    price: "od 19 900 Kč",
-    timeframe: "5–7 pracovních dnů",
+    title: "Web, který buduje důvěru",
+    desc: "Promyšlená prezentace, která jasně říká, proč si vybrat právě vás. Od struktury a textů po spuštění — bez přehazování mezi grafikem, copywriterem a vývojářem.",
+    price: "od 29 900 Kč",
+    timeframe: "obvykle 2–4 týdny",
     features: [
-      "Responsivní design (mobil + počítač)",
-      "Základní SEO optimalizace",
-      "Kontaktní formulář",
-      "Napojení na sociální sítě",
-      "Školení obsluhy (1 hodina)",
+      "Strategie, struktura a texty na míru",
+      "Design pro mobil i počítač",
+      "Technické SEO a měření poptávek",
+      "Kontaktní formulář a jasné výzvy k akci",
+      "Předání, zaškolení a následná podpora",
     ],
   },
   {
-    title: "Správa sociálních sítí",
-    desc: "Vaše profily na LinkedIn a Facebooku pod dohledem. Pravidelný obsah, který vaše klienty osloví — ne odradí. Každý příspěvek má smysl a váš rukopis.",
-    price: "od 5 000 Kč / měsíc",
-    timeframe: "průběžně",
+    title: "Obsah, který drží směr",
+    desc: "Vaše komunikace bude rozpoznatelná, věcná a pravidelná. Z vašich zkušeností vytvořím obsah, který podporuje reputaci a otevírá správné rozhovory.",
+    price: "od 7 900 Kč / měsíc",
+    timeframe: "minimálně na 3 měsíce",
     features: [
-      "Profesionální nastavení profilů",
-      "Obsahový plán na míru",
-      "Pravidelné příspěvky (2–3× týdně)",
-      "Správa komunikace s klienty",
-      "Měsíční přehled výkonu",
+      "Audit a nastavení komunikačního směru",
+      "Měsíční obsahový plán",
+      "Texty a grafické podklady pro příspěvky",
+      "Publikace na vybraných kanálech",
+      "Měsíční vyhodnocení a další doporučení",
     ],
   },
   {
-    title: "Chytrá podpora provozu",
-    desc: "Systém, který odpovídá na dotazy, rezervuje schůzky a připravuje přehledy. Rutinu zařídíme za vás. Vy se věnujete tomu, v čem jste nejlepší.",
-    price: "od 5 000 Kč / měsíc",
-    timeframe: "dle rozsahu",
+    title: "Automatizace, která vrací čas",
+    desc: "Nastavím malé, užitečné systémy pro dotazy, schůzky a přehledy. Ne technologii pro technologii — jen věci, které vám každý týden reálně ušetří práci.",
+    price: "od 14 900 Kč",
+    timeframe: "podle rozsahu řešení",
     features: [
-      "Automatické odpovědi na časté dotazy",
-      "Rezervační systémy a potvrzení",
-      "Pravidelný reporting a přehledy",
-      "Integrace s vašimi nástroji",
-      "Průběžná podpora a úpravy",
+      "Mapa míst, kde zbytečně ztrácíte čas",
+      "Automatické odpovědi a třídění dotazů",
+      "Rezervace, potvrzení a připomínky",
+      "Přehledy, které máte po ruce",
+      "Návazná podpora bez závislosti na agentuře",
     ],
   },
 ];
 
 const AUDIENCES = [
   {
-    title: "Advokáti a notáři",
-    desc: "Víte, jak váš web působí na první pohled? Navrhneme prezentaci, která vzbudí důvěru ještě před prvním hovorem. Každý detail odpovídá vaší profesionalitě.",
+    title: "Právní a poradenské služby",
+    desc: "Důvěra se rozhoduje dřív než při prvním hovoru. Web a komunikaci postavím tak, aby odpovídaly vaší odbornosti, diskrétnosti a úrovni služby.",
     icon: "⚖️",
   },
   {
-    title: "Realitní makléři",
-    desc: "Každá minuta bez odpovědi může být ztracená provize. Postaráme se, aby vaše poptávky dostaly odpověď ihned. Vyřizujete jednání, systém běží za vás.",
+    title: "Reality a finance",
+    desc: "Poptávka nesmí zapadnout a značka musí působit jistě. Pomůžu vám s prezentací, obsahem i drobnými automatizacemi kolem klientské komunikace.",
     icon: "🏠",
   },
   {
-    title: "Politici a veřejné osoby",
-    desc: "Každé vaše slovo je pod drobnohledem. Postaráme se o profily, obsah i komunikaci tak, aby vás nikdo nezaskočil. Máte plnou kontrolu.",
+    title: "Veřejné osobnosti",
+    desc: "Když je každý výstup vidět, záleží na tónu i systému. Nastavím digitální prezentaci a obsah tak, abyste měli klid, přehled a kontrolu.",
     icon: "🏛️",
   },
   {
-    title: "Malí podnikatelé",
-    desc: "Potřebujete web, který funguje, a čas na svou práci. Postavíme online prezentaci, která se o vás stará. Vy se mezitím můžete věnovat zákazníkům.",
+    title: "Menší odborné firmy",
+    desc: "Potřebujete, aby digitál pracoval, i když jste s klienty. Vytvořím jasnou online prezentaci a procesy, které vás nezahltí další administrativou.",
     icon: "💼",
+  },
+];
+
+const PROJECTS = [
+  {
+    name: "Eva Kaprálová",
+    type: "Web a digitální komunikace",
+    href: "https://evakapralova.cz",
+    description: "Osobní prezentace, obsah a dlouhodobá digitální podpora.",
+  },
+  {
+    name: "liberec.online",
+    type: "Občanská platforma",
+    href: "https://liberec.online",
+    description: "Webová platforma, která dává lidem jednoduchý prostor upozornit na místní problémy.",
+  },
+  {
+    name: "AlphaCreator",
+    type: "Autorský digitální projekt",
+    href: "https://alphacreator.cz",
+    description: "Vlastní online projekt propojující obsah, technologii a srozumitelnou prezentaci.",
   },
 ];
 
@@ -127,54 +148,60 @@ const FAQ = [
 
 function Hero() {
   return (
-    <section className="relative min-h-screen bg-midnight-teal flex items-center overflow-hidden">
+    <section className="hero-surface relative min-h-screen bg-midnight-teal flex items-center overflow-hidden">
       <SparkParticles />
-      <div className="relative z-20 max-w-6xl mx-auto px-6 py-24 w-full">
-        <div className="max-w-2xl">
-          <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-6 font-body animate-fade-in-up">
-            Digitální servis pro profesionály
-          </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-display leading-[1.1] mb-8 animate-fade-in-up animate-delay-1">
-            Kvalitní online prezentace
-            <br />
-            <span className="text-antique-brass">bez technických starostí</span>
-          </h1>
-          <p className="text-lg md:text-xl text-steel-grey leading-relaxed max-w-xl mb-10 animate-fade-in-up animate-delay-2">
-            Weby, sociální sítě a chytré procesy pro advokáty, realitní
-            makléře, politiky a malé podnikatele. Česky, na míru a v jasném termínu.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-3">
-            <a
-              href="#kontakt"
-              className="inline-flex items-center justify-center px-8 py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:bg-antique-brass/90 transition-all duration-300"
-            >
-              Domluvit konzultaci zdarma
-            </a>
-            <a
-              href="#sluzby"
-              className="inline-flex items-center justify-center px-8 py-4 border border-antique-brass/40 text-antique-brass font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:border-antique-brass/80 transition-all duration-300"
-            >
-              Co nabízím
-            </a>
+      <div className="relative z-20 max-w-6xl mx-auto px-6 py-28 md:py-24 w-full">
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-20 items-center">
+          <div className="max-w-2xl">
+            <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-6 font-body animate-fade-in-up">
+              Digitální partner pro profesionály
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-display leading-[1.1] mb-8 animate-fade-in-up animate-delay-1">
+              Vaše odbornost
+              <br />
+              <span className="text-antique-brass">si zaslouží být vidět.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-steel-grey leading-relaxed max-w-xl mb-10 animate-fade-in-up animate-delay-2">
+              Web, obsah a automatizace pro lidi, kterým záleží na reputaci,
+              čase a dlouhodobém výsledku. Jedna odpovědná osoba. Žádné technické kolečko navíc.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-3">
+              <a
+                href="#kontakt"
+                className="inline-flex items-center justify-center px-8 py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:bg-antique-brass/90 transition-all duration-300"
+              >
+                Probrat svůj projekt
+              </a>
+              <a
+                href="#reference"
+                className="inline-flex items-center justify-center px-8 py-4 border border-antique-brass/40 text-antique-brass font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:border-antique-brass/80 transition-all duration-300"
+              >
+                Prohlédnout realizace
+              </a>
+            </div>
           </div>
+          <aside className="hidden lg:block hero-panel animate-fade-in-up animate-delay-3" aria-label="Co získáte spoluprací">
+            <p className="text-antique-brass text-xs tracking-[0.2em] uppercase font-body mb-8">Digitál, který má řád</p>
+            <div className="space-y-6">
+              <div className="border-l border-antique-brass/60 pl-5">
+                <p className="text-white font-display text-xl mb-1">Důvěra</p>
+                <p className="text-steel-grey text-sm leading-relaxed">Prezentace, která odpovídá kvalitě vaší práce.</p>
+              </div>
+              <div className="border-l border-antique-brass/60 pl-5">
+                <p className="text-white font-display text-xl mb-1">Viditelnost</p>
+                <p className="text-steel-grey text-sm leading-relaxed">Obsah, který má jasný směr a nepůsobí jako výplň.</p>
+              </div>
+              <div className="border-l border-antique-brass/60 pl-5">
+                <p className="text-white font-display text-xl mb-1">Čas</p>
+                <p className="text-steel-grey text-sm leading-relaxed">Systémy, které zjednoduší rutinu místo přidávání práce.</p>
+              </div>
+            </div>
+          </aside>
         </div>
-        <div className="mt-16 flex flex-wrap gap-6 text-sm text-steel-grey animate-fade-in-up animate-delay-4">
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-antique-brass rounded-full" />
-            Pro advokáty
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-antique-brass rounded-full" />
-            Pro realitní makléře
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-antique-brass rounded-full" />
-            Pro politiky
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-antique-brass rounded-full" />
-            Pro malé podnikatele
-          </span>
+        <div className="mt-14 pt-7 border-t border-white/10 grid sm:grid-cols-3 gap-4 text-sm text-steel-grey animate-fade-in-up animate-delay-4">
+          <span><span className="text-antique-brass">01.</span> Úvodní konzultace bez závazku</span>
+          <span><span className="text-antique-brass">02.</span> Cena a rozsah vždy předem</span>
+          <span><span className="text-antique-brass">03.</span> Osobní spolupráce od začátku do konce</span>
         </div>
       </div>
     </section>
@@ -190,9 +217,9 @@ function Services() {
             Služby
           </p>
           <h2 className="text-3xl md:text-4xl text-ink font-display leading-tight">
-            Přesně to, co potřebujete.
+            Digitál, který pracuje
             <br />
-            <span className="text-steel-grey">Nic navíc.</span>
+            <span className="text-steel-grey">pro vaši pověst i váš čas.</span>
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
@@ -227,7 +254,7 @@ function Services() {
                   href="#kontakt"
                   className="inline-flex items-center gap-2 text-sm text-antique-brass hover:text-antique-brass/80 transition-colors duration-300"
                 >
-                  Zajímá mě tato služba →
+                  Probrat řešení →
                 </a>
               </div>
             </div>
@@ -288,7 +315,7 @@ function Process() {
         <div className="grid md:grid-cols-4 gap-8 relative">
           {/* Connecting line */}
           <div className="hidden md:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-antique-brass/20" />
-          {PROCESS.map((step, i) => (
+          {PROCESS.map((step) => (
             <div key={step.step} className="relative">
               <span className="text-4xl md:text-5xl text-antique-brass/20 font-display font-bold block mb-4">
                 {step.step}
@@ -296,6 +323,50 @@ function Process() {
               <h3 className="text-lg text-ink font-display mb-3">{step.title}</h3>
               <p className="text-sm text-steel-grey leading-relaxed">{step.desc}</p>
             </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Projects() {
+  return (
+    <section id="reference" className="reveal py-24 md:py-32 bg-warm-ivory bg-dot-pattern">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="max-w-2xl">
+            <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-4 font-body">
+              Vybrané projekty
+            </p>
+            <h2 className="text-3xl md:text-4xl text-ink font-display leading-tight">
+              Řešení, která žijí i po předání.
+            </h2>
+          </div>
+          <a href="#kontakt" className="text-sm text-antique-brass hover:text-antique-brass/80 transition-colors">
+            Chci podobně funkční web →
+          </a>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {PROJECTS.map((project, index) => (
+            <a
+              key={project.name}
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+              className="group bg-white rounded-xl p-7 shadow-card-resting card-hover flex flex-col min-h-60"
+            >
+              <span className="text-antique-brass text-xs tracking-[0.2em] uppercase font-body mb-auto">
+                {String(index + 1).padStart(2, "0")} · {project.type}
+              </span>
+              <div className="pt-12">
+                <h3 className="text-2xl text-ink font-display mb-3 group-hover:text-antique-brass transition-colors">
+                  {project.name}
+                </h3>
+                <p className="text-sm leading-relaxed text-steel-grey mb-5">{project.description}</p>
+                <span className="text-sm text-antique-brass">Otevřít projekt ↗</span>
+              </div>
+            </a>
           ))}
         </div>
       </div>
@@ -319,7 +390,7 @@ function About() {
             </h2>
             <div className="w-12 h-px bg-antique-brass/40 mb-6" />
             <p className="text-steel-grey text-sm leading-relaxed mb-4">
-              Deset let se pohybuji v průsečíku technologií, marketingu
+              Dlouhodobě se pohybuji v průsečíku technologií, marketingu
               a byznysu. Za tu dobu jsem zjistil, že většina profesionálů
               potřebuje někoho, kdo převezme starosti s jejich online
               světem — a oni se mohou soustředit na svou práci.
@@ -354,16 +425,16 @@ function About() {
             </blockquote>
             <div className="flex flex-wrap gap-6 text-sm">
               <div>
-                <span className="text-white font-display text-lg">10+</span>
-                <p className="text-steel-grey text-xs mt-1">let zkušeností</p>
+                <span className="text-white font-display text-lg">1:1</span>
+                <p className="text-steel-grey text-xs mt-1">osobní spolupráce</p>
               </div>
               <div>
-                <span className="text-white font-display text-lg">3×</span>
-                <p className="text-steel-grey text-xs mt-1">iOS aplikace na App Store</p>
+                <span className="text-white font-display text-lg">Na míru</span>
+                <p className="text-steel-grey text-xs mt-1">žádné šablonové řešení</p>
               </div>
               <div>
-                <span className="text-white font-display text-lg">99%</span>
-                <p className="text-steel-grey text-xs mt-1">spokojených klientů</p>
+                <span className="text-white font-display text-lg">Jasně</span>
+                <p className="text-steel-grey text-xs mt-1">cena i termín dopředu</p>
               </div>
             </div>
           </div>
@@ -429,23 +500,23 @@ function Contact() {
               Kontakt
             </p>
             <h2 className="text-3xl md:text-4xl text-ink font-display leading-tight mb-6">
-              Domluvte si konzultaci
+              Pojďme zjistit,
               <br />
-              <span className="text-steel-grey">zdarma a nezávazně.</span>
+              <span className="text-steel-grey">co vašemu digitálu chybí.</span>
             </h2>
             <p className="text-steel-grey text-sm leading-relaxed mb-8">
-              Řeknete mi, co potřebujete. Já navrhnu řešení a řeknu cenu.
-              K ničemu se nezavazujete.
+              Během krátké úvodní konzultace si ujasníme cíl, rozsah i priority.
+              Pokud to bude dávat smysl, pošlu vám konkrétní návrh, cenu a termín.
             </p>
             <div className="space-y-4 text-sm">
-              <div className="flex items-center gap-3 text-ink">
+              <a href="mailto:jakub@jakubdigital.cz" className="inline-flex items-center gap-3 text-ink hover:text-antique-brass transition-colors">
                 <span className="text-antique-brass">→</span>
-                <span>Telefon: +420 XXX XXX XXX</span>
-              </div>
-              <div className="flex items-center gap-3 text-ink">
+                <span>jakub@jakubdigital.cz</span>
+              </a>
+              <p className="flex items-center gap-3 text-steel-grey">
                 <span className="text-antique-brass">→</span>
-                <span>E-mail: jakub@jakubdigital.cz</span>
-              </div>
+                Odpověď zpravidla do jednoho pracovního dne.
+              </p>
             </div>
           </div>
           <div>
@@ -477,9 +548,7 @@ function Footer() {
           <p className="text-steel-grey text-xs">
             &copy; {new Date().getFullYear()} Jakub Digital. Všechna práva vyhrazena.
           </p>
-          <p className="text-steel-grey text-xs">
-            IČO: XXX XX XXX &nbsp;·&nbsp; Digitální servis pro profesionály
-          </p>
+          <p className="text-steel-grey text-xs">Digitální servis pro profesionály</p>
         </div>
       </div>
     </footer>
@@ -495,6 +564,7 @@ export default function Home() {
         <Services />
         <Audience />
         <Process />
+        <Projects />
         <About />
         <FAQSection />
         <Contact />

@@ -4,15 +4,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jakubdigital.cz"),
-  title: "Jakub Digital | Digitální servis pro profesionály",
+  title: "Jakub Digital | Weby, obsah a automatizace pro profesionály",
   description:
-    "Weby, sociální sítě a chytré procesy pro advokáty, realitní makléře, politiky a malé podnikatele. Česky, na míru a bez technických starostí.",
+    "Weby, obsah a automatizace pro profesionály, kteří chtějí posílit svou reputaci a ušetřit čas. Osobně, na míru a s jasným plánem.",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://jakubdigital.cz" },
   openGraph: {
-    title: "Jakub Digital | Digitální servis pro profesionály",
+    title: "Jakub Digital | Weby, obsah a automatizace pro profesionály",
     description:
-      "Weby, sociální sítě a chytré procesy pro advokáty, realitní makléře, politiky a malé podnikatele.",
+      "Digitální partner pro profesionály, kterým záleží na reputaci, čase a dlouhodobém výsledku.",
     locale: "cs_CZ",
     type: "website",
   },

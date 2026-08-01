@@ -1,14 +1,14 @@
 export default function JsonLd() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     name: "Jakub Digital",
     description:
-      "Digitální servis pro profesionály - weby, sociální sítě a automatizace",
+      "Weby, obsah a automatizace pro profesionály, kteří chtějí budovat důvěru a šetřit čas.",
     url: "https://jakubdigital.cz",
     email: "jakub@jakubdigital.cz",
     areaServed: { "@type": "Country", name: "CZ" },
-    priceRange: "od 15 000 Kč",
+    priceRange: "$$",
   };
 
   return (

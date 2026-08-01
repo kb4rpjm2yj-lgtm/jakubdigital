@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { label: "Služby", href: "#sluzby" },
   { label: "Pro koho", href: "#pro-koho" },
   { label: "Jak pracuji", href: "#jak-pracuji" },
+  { label: "Reference", href: "#reference" },
   { label: "Kdo jsem", href: "#kdo-jsem" },
   { label: "Kontakt", href: "#kontakt" },
 ];
