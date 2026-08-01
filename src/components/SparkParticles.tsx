@@ -2,6 +2,24 @@
 
 import { useEffect, useRef } from "react";
 
+/**
+ * Mosazná barva jisker se čte z CSS proměnné --color-brass (definovaná
+ * v globals.css, hodnota = token antique-brass), aby se hex hodnota
+ * neopakovala v JS kódu.
+ */
+function hexToRgb(hex: string): [number, number, number] {
+  let value = hex.replace("#", "").trim();
+  if (value.length === 3) {
+    value = value
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  }
+  const parsed = parseInt(value, 16);
+  if (value.length !== 6 || Number.isNaN(parsed)) return [184, 131, 74];
+  return [(parsed >> 16) & 0xff, (parsed >> 8) & 0xff, parsed & 0xff];
+}
+
 export default function SparkParticles() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -12,6 +30,14 @@ export default function SparkParticles() {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
+
+    const [brassR, brassG, brassB] = hexToRgb(
+      getComputedStyle(document.documentElement)
+        .getPropertyValue("--color-brass")
+        .trim() || "#B8834A",
+    );
+    const brass = (alpha: number) =>
+      `rgba(${brassR}, ${brassG}, ${brassB}, ${alpha})`;
 
     let animationId: number;
     let mouseX = 0;
@@ -89,13 +115,13 @@ export default function SparkParticles() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(184, 131, 74, ${p.opacity})`;
+        ctx.fillStyle = brass(p.opacity);
         ctx.fill();
 
         // Glow
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size * 2.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(184, 131, 74, ${p.opacity * 0.15})`;
+        ctx.fillStyle = brass(p.opacity * 0.15);
         ctx.fill();
       }
 

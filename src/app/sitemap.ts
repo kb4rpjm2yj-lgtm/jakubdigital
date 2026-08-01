@@ -8,5 +8,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1.0,
     },
+    {
+      url: "https://jakubdigital.cz/gdpr",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
   ];
 }

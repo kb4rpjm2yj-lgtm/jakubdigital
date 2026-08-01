@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CONTACT_SUCCESS } from "@/data/content";
 
 type FormData = {
   jmeno: string;
@@ -64,7 +65,7 @@ export default function ContactForm() {
     return (
       <div className="bg-warm-ivory p-8 text-center rounded-xl" role="status" aria-live="polite">
         <p className="text-antique-brass font-display text-xl mb-2">Děkuji za zprávu.</p>
-        <p className="text-steel-grey text-sm">Ozvu se vám zpravidla do jednoho pracovního dne.</p>
+        <p className="text-steel-grey text-sm">{CONTACT_SUCCESS}</p>
       </div>
     );
   }

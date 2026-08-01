@@ -36,7 +36,7 @@ export default function OpenGraphImage() {
             fontFamily: "sans-serif",
           }}
         >
-          Digitální servis pro profesionály
+          Weby, obsah a automatizace pro profesionály
         </div>
       </div>
     ),

@@ -1,14 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 const NAV_ITEMS = [
-  { label: "Služby", href: "#sluzby" },
-  { label: "Pro koho", href: "#pro-koho" },
-  { label: "Jak pracuji", href: "#jak-pracuji" },
-  { label: "Reference", href: "#reference" },
-  { label: "Kdo jsem", href: "#kdo-jsem" },
-  { label: "Kontakt", href: "#kontakt" },
+  { label: "Služby", href: "/#sluzby" },
+  { label: "Pro koho", href: "/#pro-koho" },
+  { label: "Jak pracuji", href: "/#jak-pracuji" },
+  { label: "Reference", href: "/#reference" },
+  { label: "Kdo jsem", href: "/#kdo-jsem" },
+  { label: "Kontakt", href: "/#kontakt" },
 ];
 
 export default function Nav() {
@@ -36,28 +37,28 @@ export default function Nav() {
       aria-label="Hlavní navigace"
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-white text-lg font-display tracking-tight">
+        <Link href="/" className="text-white text-lg font-display tracking-tight">
           <span className="text-antique-brass">Jakub</span>{" "}
           <span className="font-light">Digital</span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-sm text-steel-grey hover:text-antique-brass transition-colors duration-300"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#kontakt"
+          <Link
+            href="/#kontakt"
             className="text-sm px-4 py-2 bg-antique-brass text-white rounded-lg hover:bg-antique-brass/90 transition-colors duration-300"
           >
             Domluvit konzultaci
-          </a>
+          </Link>
         </div>
 
         {/* Hamburger — mobile only */}
@@ -98,22 +99,22 @@ export default function Nav() {
       >
         <div className="px-6 pb-8 pt-2 flex flex-col gap-4">
           {NAV_ITEMS.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               onClick={close}
               className="text-sm text-steel-grey hover:text-antique-brass transition-colors duration-300"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#kontakt"
+          <Link
+            href="/#kontakt"
             onClick={close}
             className="inline-flex items-center justify-center px-4 py-3 bg-antique-brass text-white text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-antique-brass/90 transition-colors duration-300"
           >
             Domluvit konzultaci
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

@@ -8,11 +8,20 @@
   --color-steel-grey: #7C8D99;
   --color-white: #FFFFFF;
 
-  --font-display: "Fraunces", serif;
-  --font-body: "Inter", sans-serif;
+  /* Fonty se self-hostují přes next/font (layout.tsx) — proměnné
+     --font-fraunces / --font-inter nastavuje Next.js na <html>. */
+  --font-display: var(--font-fraunces), serif;
+  --font-body: var(--font-inter), sans-serif;
 
   --shadow-card-resting: 0 1px 3px -1px rgba(0,0,0,0.08), 0 1px 2px -1px rgba(0,0,0,0.06);
   --shadow-card-hovered: 0 12px 30px -8px rgba(0,0,0,0.22), 0 6px 12px -4px rgba(0,0,0,0.12);
+}
+
+:root {
+  /* Mosazná barva pro canvas efekty (hodnota tokenu antique-brass).
+     Čte ji SparkParticles přes getComputedStyle, aby se hex hodnota
+     neopakovala v JS kódu. */
+  --color-brass: #B8834A;
 }
 
 @layer base {
@@ -112,6 +121,23 @@
   }
 }
 
+/* FAQ accordion — plynulé otevření i zavření (grid-rows 0fr -> 1fr).
+   Prohlížeče bez podpory interpolace grid tracků zobrazí skokovou změnu. */
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms ease;
+}
+
+details[open] > .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer > * {
+  overflow: hidden;
+  min-height: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up,
   .animate-delay-1,
@@ -120,5 +146,9 @@
   .animate-delay-4,
   .reveal {
     animation: none;
+  }
+
+  .faq-answer {
+    transition: none;
   }
 }
