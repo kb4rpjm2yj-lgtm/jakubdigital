@@ -1,8 +1,9 @@
 import { FAQ } from "@/data/content";
 
 /**
- * Strukturovaná data dle /tmp/jd-seo-final.md (1. 8. 2026):
+ * Strukturovaná data dle /tmp/jd-seo-final.md + ceny dle /tmp/jd-opus-strategy.md (1. 8. 2026):
  * - ProfessionalService (sekce 3) — včetně 4 nabídek s cenami a areaServed.
+ *   Ceny: web 19 900, sítě 5 000, podpora 5 000, Komplet 27 900 (NE 3 000).
  * - FAQPage (sekce 4) — generuje se ze stejného pole FAQ jako accordion,
  *   otázky přesně dle copywritera (bez slova "AI").
  */
@@ -39,10 +40,10 @@ export default function JsonLd() {
         "@type": "Offer",
         name: "Správa sociálních sítí",
         description:
-          "Obsahový plán, texty a grafické podklady, publikace na vybraných kanálech. Cena od 3 000 Kč měsíčně.",
+          "Obsahový plán, texty a grafické podklady, publikace na vybraných kanálech. Cena od 5 000 Kč měsíčně.",
         priceSpecification: {
           "@type": "PriceSpecification",
-          minPrice: 3000,
+          minPrice: 5000,
           priceCurrency: "CZK",
         },
         areaServed: { "@type": "Country", name: "Česká republika" },

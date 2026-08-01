@@ -9,10 +9,10 @@ import {
 } from "@/data/content";
 
 /**
- * HERO_H1 má dvě věty oddělené ". " — první věta bílá, druhá mosazná.
- * Pokud se formát textu změní, upravit i rozdělení níže.
+ * HERO_H1 má věty oddělené ". " — první věta bílá, zbytek mosazný.
+ * Rozdělení je odolné vůči počtu vět (aktuálně tři: „Vypadat dobře. Budit důvěru. Přinášet klienty.").
  */
-const [h1First, h1Second] = HERO_H1.split(". ");
+const [h1First, ...h1Rest] = HERO_H1.split(". ").filter(Boolean);
 
 export default function Hero() {
   return (
@@ -38,7 +38,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-display leading-[1.1] mb-8 animate-fade-in-up animate-delay-1">
               {h1First}.
               <br />
-              <span className="text-antique-brass">{h1Second}</span>
+              <span className="text-antique-brass">{h1Rest.join(". ")}</span>
             </h1>
             <p className="text-lg md:text-xl text-steel-grey-light leading-relaxed max-w-xl mb-10 animate-fade-in-up animate-delay-2">
               {HERO_SUBTITLE}

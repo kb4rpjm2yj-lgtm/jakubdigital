@@ -36,13 +36,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jakubdigital.cz"),
-  title: "Jakub Digital | Weby, obsah a automatizace pro profesionály",
+  title: "Jakub Digital | Weby, sítě a provoz pro profesionály",
   description:
     "Web, obsah a podpora provozu na míru pro advokáty, realitní makléře, politiky a OSVČ. Transparentní ceny, jasné termíny, konzultace zdarma.",
   robots: { index: true, follow: true },
   alternates: { canonical: "https://jakubdigital.cz" },
   openGraph: {
-    title: "Jakub Digital | Weby, obsah a automatizace pro profesionály",
+    title: "Jakub Digital | Weby, sítě a provoz pro profesionály",
     description:
       "Web, obsah a podpora provozu na míru pro advokáty, realitní makléře, politiky a OSVČ. Transparentní ceny, jasné termíny, konzultace zdarma.",
     locale: "cs_CZ",

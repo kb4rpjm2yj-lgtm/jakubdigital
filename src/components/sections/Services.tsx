@@ -60,7 +60,7 @@ export default function Services() {
               className="relative flex flex-col rounded-xl border-2 border-antique-brass bg-warm-ivory p-8 shadow-card-hovered"
             >
               <span className="self-start inline-flex items-center px-3 py-1 rounded-full bg-antique-brass text-white text-[11px] tracking-[0.14em] uppercase font-body mb-5">
-                Nejvýhodnější varianta
+                {bundle.badge ?? "Nejvýhodnější varianta"}
               </span>
               <h3 className="text-xl text-ink font-display mb-3">
                 {bundle.title}

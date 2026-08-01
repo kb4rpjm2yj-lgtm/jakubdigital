@@ -2,7 +2,7 @@
  * Obsahová data webu Jakub Digital.
  *
  * Server-side modul — žádný "use client". Sekce si data importují odtud.
- * Finální marketingové texty dle /tmp/jd-copy-final.md (copywriter, 1. 8. 2026).
+ * Finální marketingové texty a ceny dle /tmp/jd-opus-strategy.md (Opus 5, 1. 8. 2026).
  * Žádný z textů neobsahuje slovo "AI".
  */
 
@@ -13,14 +13,16 @@ export type Service = {
   timeframe: string;
   features: string[];
   cta: string;
+  /** Volitelný badge zvýrazňující kartu (např. "Ušetříte 2 000 Kč" u Kompletu). */
+  badge?: string;
 };
 
 export const SERVICES: Service[] = [
   {
-    title: "Web na míru",
-    desc: "Prezentační web, který vypadá dobře a hlavně funguje. Navrhnu ho podle vaší profese, napíšu texty a spustím v jasném termínu.",
+    title: "Web, který budí důvěru",
+    desc: "Návrh, texty i spuštění v jednom. Stavím podle vaší profese, ne ze šablon. Cenu a termín dostanete písemně.",
     price: "od 19 900 Kč",
-    timeframe: "5–7 pracovních dnů od odsouhlasení návrhu",
+    timeframe: "5–7 pracovních dnů, termín písemně",
     features: [
       "Vlastní návrh na míru vaší profesi",
       "Texty česky, srozumitelně, bez vaty",
@@ -31,38 +33,38 @@ export const SERVICES: Service[] = [
     cta: "Chci web na míru",
   },
   {
-    title: "Správa sociálních sítí",
-    desc: "Pravidelný obsah, na kterém vám záleží — bez toho, abyste u něj trávili večery. Připravím plán, texty i grafiku a vy jen odsouhlasíte.",
-    price: "od 3 000 Kč/měsíc",
-    timeframe: "první výstupy do týdne od odsouhlasení plánu",
+    title: "Sítě bez vaší práce",
+    desc: "Plán, texty a grafika na měsíc dopředu. Vy jen odsouhlasíte. Pravidelnost, kterou klienti vidí — bez vašich večerů.",
+    price: "od 5 000 Kč/měsíc",
+    timeframe: "bez závazku, výpověď kdykoli",
     features: [
       "Plán obsahu na měsíc dopředu",
-      "Texty a grafika pro vaši profesi (LinkedIn, Facebook, Instagram)",
+      "Texty a grafika pro vaši profesi",
       "Publikování a odpovědi na dotazy",
-      "Měsíční přehled, co funguje a co ne",
-      "Žádná vázací smlouva, spolupráci lze kdykoli ukončit",
+      "Měsíční přehled, co funguje",
+      "Žádná vázací smlouva",
     ],
     cta: "Chci spravovat sítě",
   },
   {
-    title: "Chytrá podpora provozu",
-    desc: "Provoz, který běží bez dohledu: e-maily, zálohy, formuláře, propojení nástrojů. Systém za vás udělá opakující se práci, vy se věnujete klientům.",
+    title: "Provoz bez starostí",
+    desc: "Formuláře, přehledy, zálohy a odpovědi zařídí systém. Vy se věnujete klientům. Já hlídám, že vše běží.",
     price: "od 5 000 Kč/měsíc",
-    timeframe: "nastavení do 2 týdnů, poté běžný provoz měsíčně",
+    timeframe: "nastavení do 2 týdnů",
     features: [
-      "Nastavení a propojení nástrojů (e-mail, kalendář, formuláře)",
-      "Automatické odpovědi, připomínky a přehledy",
-      "Zálohy, aktualizace a hlídání provozu",
-      "Jednoduchá evidence bez ručního přepisování",
+      "Nastavení a propojení nástrojů",
+      "Automatické odpovědi a přehledy",
+      "Zálohy, aktualizace, hlídání provozu",
+      "Jednoduchá evidence bez přepisování",
       "Jeden kontakt pro všechno",
     ],
     cta: "Chci podporu provozu",
   },
   {
-    title: "Komplet: web, sítě a podpora",
-    desc: "Rozjezd celého digitálního servisu najednou: web, první měsíc sociálních sítí a první měsíc podpory provozu. Jeden kontakt, jedna cena.",
+    title: "Komplet: web, sítě i provoz",
+    desc: "Vše najednou: web, první měsíc sítí a podpory. Ušetříte 2 000 Kč a máte jednoho člověka na všechno.",
     price: "27 900 Kč",
-    timeframe: "web za 5–7 dnů, sítě a podpora běží hned po spuštění",
+    timeframe: "jednotlivě 29 900 Kč — ušetříte 2 000 Kč",
     features: [
       "Web na míru (hodnota od 19 900 Kč)",
       "První měsíc správy sociálních sítí",
@@ -71,6 +73,7 @@ export const SERVICES: Service[] = [
       "Jeden člověk pro web, sítě i provoz",
     ],
     cta: "Domluvit konzultaci zdarma",
+    badge: "Ušetříte 2 000 Kč",
   },
 ];
 
@@ -83,22 +86,22 @@ export type Audience = {
 export const AUDIENCES: Audience[] = [
   {
     title: "Advokáti a notáři",
-    desc: "Váš web je první dojem, který o vás klient má. Postavím prezentaci, která působí důvěryhodně a přehledně. Správa LinkedIn vám ušetří čas, který patří klientům.",
+    desc: "Klient si vaši kancelář ověří online dřív, než vám zavolá. Když tam najde šablonu, která nevypadá jako vy, zavolá konkurenci.",
     icon: "⚖️",
   },
   {
     title: "Realitní makléři",
-    desc: "Zakázky přicházejí přes důvěru a doporučení. Web a sítě drží vaše nabídky na očích — a systém publikování zajistí pravidelnost bez večerní práce.",
+    desc: "Inzerát prodá nemovitost, ale vy z něj nejste vidět. Bez webu a sítí vás klienti najdou jen náhodou — a pak zapomenou.",
     icon: "🏠",
   },
   {
     title: "Politici a veřejné osoby",
-    desc: "Lidé si ověřují online, koho volí. Připravím prezentaci i obsah, kterému rozumíte, a odpovědi na dotazy vyřídím za vás.",
+    desc: "Voliči vaše jméno googlí každý den. Když najdou jen staré profily a žádné odpovědi, věří méně — a volí někoho jiného.",
     icon: "🏛️",
   },
   {
     title: "OSVČ a malí podnikatelé",
-    desc: "Máte řemeslo, ne čas na techniku. Převezmu web, sítě i provoz, aby vám zbyl čas na práci — a vše vysvětlím česky.",
+    desc: "Večery u webu a sítí jsou večery, kdy nevyděláváte. Přitom stačí, aby to někdo převzal — a vy dělali svou práci.",
     icon: "💼",
   },
 ];
@@ -170,48 +173,47 @@ export type FaqItem = {
 
 export const FAQ: FaqItem[] = [
   {
-    q: "Kolik stojí webové stránky?",
-    a: "Web na míru začíná na 19 900 Kč. V ceně je návrh, texty, napojení formuláře a spuštění. Přesnou cenu dostanete písemně před začátkem práce.",
+    q: "Kolik stojí web?",
+    a: "Od 19 900 Kč: návrh, texty, formulář, spuštění. Přesnou cenu pošlu písemně do dvou dnů od konzultace. Většina webů se zaplatí jednou získanou zakázkou.",
   },
   {
-    q: "Jak dlouho trvá realizace?",
-    a: "Standardně 5 až 7 pracovních dnů od odsouhlasení návrhu. Termín si písemně potvrdíme a držíme se ho. U větších zakázek se domluvíme individuálně.",
+    q: "Jak dlouho to trvá?",
+    a: "5 až 7 pracovních dnů od odsouhlasení návrhu. Termín potvrdím písemně a držím ho. Když ho nedodržím, srazím 10 % z ceny.",
   },
   {
     q: "Musím rozumět technologiím?",
-    a: "Ne. Vše vysvětlím česky a bez zbytečné technické mluvy. Vy se staráte o svou profesi, já o web, sítě a provoz.",
+    a: "Ne. Mluvím česky, bez žargonu. Vy odsouhlasíte návrh, techniku zařídím já.",
   },
   {
-    q: "Proč jeden člověk místo agentury?",
-    a: "U agentury komunikujete s jedním člověkem a práci dělá někdo jiný. U mě mluvíte přímo s tím, kdo váš web staví. Rychlejší domluva a jasná odpovědnost.",
+    q: "Proč vy a ne agentura?",
+    a: "U agentury mluvíte s account managerem, práci dělá někdo jiný. U mě mluvíte s tím, kdo web staví. Odpovídám za výsledek osobně.",
   },
   {
-    q: "Co se děje po spuštění webu?",
-    a: "Web předám s návodem a zaškolením. Můžete ho spravovat sami, nebo se o něj starám v rámci podpory provozu — aktualizace, zálohy, úpravy.",
+    q: "Co když nebudu spokojený?",
+    a: "Konzultace je zdarma a nezávazná. Návrh dostanete písemně, i když si ho necháte udělat jinde. U realizace řešíme připomínky průběžně.",
   },
   {
-    q: "Budu muset obsah řešit sám?",
-    a: "Nechcete-li, nemusíte. V rámci správy sociálních sítí připravím plán, texty i grafiku. Vy jen odsouhlasíte, co se publikuje.",
+    q: "Můžu služby kombinovat?",
+    a: "Ano. Komplet: web, první měsíc sítí a první měsíc podpory za 27 900 Kč. Jednotlivě by to stálo 29 900 Kč.",
   },
   {
     q: "Jak probíhá konzultace?",
-    a: "Třicet minut, online nebo telefonicky. Zeptám se, co potřebujete a co vám dnes chybí. Na konci víte, co dál — a nemusíte nic kupovat.",
+    a: "Třicet minut, osobně nebo online. Řeknete, co řešíte, já navrhnu, kde začít. Do dvou dnů dostanete návrh s cenou.",
   },
   {
     q: "Jak funguje platba?",
-    a: "Polovina ceny jako záloha, zbytek po předání. Cenu a termín potvrdím písemně předem. Žádné skryté náklady.",
+    a: "Polovina jako záloha, zbytek po předání. Cenu a termín potvrdím písemně. Žádné skryté náklady.",
   },
 ];
 
 /* ---------- Hero ---------- */
 
-export const HERO_EYEBROW = "Jakub Digital — digitální servis pro profesionály";
-export const HERO_H1 =
-  "Váš web, sociální sítě a provoz. Jeden člověk, jasný termín.";
+export const HERO_EYEBROW = "Jakub Digital — weby, sítě a provoz";
+export const HERO_H1 = "Vypadat dobře. Budit důvěru. Přinášet klienty.";
 export const HERO_SUBTITLE =
-  "Jsem Jakub Málek. Postavím web, který působí důvěryhodně, a postarám se o sítě i provoz. Vše česky, s jasnou cenou předem a konzultací zdarma.";
+  "Jsem Jakub Málek. Postavím web, který budí důvěru, a postarám se o sítě i provoz. Cena a termín předem, česky, konzultace zdarma.";
 export const HERO_CTA_PRIMARY = "Domluvit konzultaci zdarma";
-export const HERO_CTA_SECONDARY = "Zobrazit služby";
+export const HERO_CTA_SECONDARY = "Podívat se na ceny";
 export const HERO_IMAGE_SRC = "/hero-bg.jpg";
 
 /* ---------- O mně ---------- */
@@ -226,9 +228,9 @@ export type AboutStat = {
 
 export const ABOUT_STATS: AboutStat[] = [
   { value: "10 let", label: "podnikání" },
-  { value: "3 aplikace", label: "v App Store" },
-  { value: "5 dní", label: "nejrychlejší realizace webu od zadání po spuštění" },
-  { value: "25–30 hodin", label: "týdně na vývoj a vlastní projekty" },
+  { value: "3", label: "aplikace v App Store" },
+  { value: "5 dní", label: "od zadání po spuštění" },
+  { value: "25–30 h", label: "týdně na vývoj" },
 ];
 
 /* ---------- Kontakt a patička ---------- */
