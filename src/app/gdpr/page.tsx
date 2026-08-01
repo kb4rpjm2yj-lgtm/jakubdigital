@@ -14,42 +14,38 @@ const SECTIONS = [
   {
     title: "Kdo zpracovává vaše údaje",
     paragraphs: [
-      "Správcem osobních údajů je Jakub Málek, IČO [IČO], provozovatel webu jakubdigital.cz. Veškeré dotazy týkající se ochrany osobních údajů směřujte na e-mail jakub@jakubdigital.cz.",
-      // IČO placeholder — Kuba doplní
+      "Správcem osobních údajů je Jakub Málek, IČO [doplňte], provozovatel webu jakubdigital.cz. Veškeré dotazy směřujte na jakub@jakubdigital.cz.",
     ],
   },
   {
     title: "Jaké údaje zpracováváme",
     paragraphs: [
-      "Prostřednictvím kontaktního formuláře od vás získáváme pouze údaje, které nám sami poskytnete: jméno a příjmení, e-mailovou adresu, telefon (nepovinný), obor a obsah vaší zprávy.",
-      "Osobní údaje třetích osob do formuláře nezadávejte.",
+      "Kontaktním formulářem získáváme pouze údaje, které sami poskytnete: jméno a příjmení, e-mail, telefon (nepovinný), obor a obsah zprávy. Údaje třetích osob do formuláře nezadávejte.",
     ],
   },
   {
     title: "Proč údaje zpracováváme",
     paragraphs: [
-      "Údaje používáme výhradně pro odpověď na vaši poptávku a domluvení úvodní konzultace. Právním základem zpracování je plnění opatření přijímaných před uzavřením smlouvy (čl. 6 odst. 1 písm. b) GDPR) a oprávněný zájem správce na dalším zodpovězení vašich dotazů (čl. 6 odst. 1 písm. f) GDPR).",
-      "Údaje nevyužíváme k automatizovanému rozhodování ani profilování a nepředáváme je třetím stranám pro jejich vlastní marketingové účely.",
+      "Údaje používáme výhradně pro odpověď na poptávku a domluvení konzultace. Právní základ: plnění opatření před uzavřením smlouvy (čl. 6 odst. 1 písm. b) GDPR) a oprávněný zájem (čl. 6 odst. 1 písm. f) GDPR).",
+      "Údaje nepoužíváme k automatizovanému rozhodování ani profilování a nepředáváme je třetím stranám pro jejich marketing.",
     ],
   },
   {
     title: "Komu údaje předáváme",
     paragraphs: [
-      "K doručení e-mailů s vaší poptávkou využíváme e-mailovou službu Resend (společnost Resend, Inc.), která vystupuje jako zpracovatel. Web je hostován na platformě Vercel, Inc., která taktéž zpracovává technické údaje v nezbytném rozsahu.",
-      "S oběma zpracovateli máme uzavřeny odpovídající smlouvy o zpracování osobních údajů; k předávání údajů mimo Evropský hospodářský prostor dochází pouze v rozsahu a za podmínek stanovených GDPR.",
+      "K doručení e-mailů využíváme službu Resend (Resend, Inc.) jako zpracovatele. Web je hostován na platformě Cloudflare Pages.",
     ],
   },
   {
     title: "Jak dlouho údaje uchováváme",
     paragraphs: [
-      "Údaje z kontaktního formuláře uchováváme po dobu vyřízení vaší poptávky a nejdéle 12 měsíců od poslední komunikace. V případě navázání spolupráce se údaje uchovávají po dobu trvání spolupráce a dále po dobu stanovenou právními předpisy.",
+      "Údaje z formuláře uchováváme po dobu vyřízení poptávky, nejdéle 12 měsíců od poslední komunikace. Při navázání spolupráce po dobu trvání vztahu a dle právních předpisů.",
     ],
   },
   {
     title: "Vaše práva",
     paragraphs: [
-      "V souvislosti se zpracováním osobních údajů máte právo na přístup k údajům, jejich opravu, výmaz („právo být zapomenut“), omezení zpracování, námitku proti zpracování a právo na přenositelnost údajů.",
-      "Práva můžete uplatnit e-mailem na adrese jakub@jakubdigital.cz. Odpovíme vám bez zbytečného odkladu, nejpozději do jednoho měsíce. Máte rovněž právo podat stížnost u dozorového úřadu — Úřadu pro ochranu osobních údajů (www.uoou.cz).",
+      "Máte právo na přístup, opravu, výmaz, omezení zpracování, námitku a přenositelnost údajů. Uplatněte je na jakub@jakubdigital.cz — odpovíme do měsíce. Můžete též podat stížnost u ÚOOÚ (www.uoou.cz).",
     ],
   },
 ];
@@ -58,56 +54,53 @@ export default function GdprPage() {
   return (
     <>
       <Nav />
-      <main className="bg-warm-ivory">
-        <section className="bg-midnight-teal pt-32 pb-20 md:pt-40 md:pb-24">
+      <main className="bg-warm-white">
+        <section className="hero-surface pt-32 pb-20 md:pt-40 md:pb-24">
           <div className="max-w-3xl mx-auto px-6">
-            <p className="text-antique-brass text-sm tracking-[0.2em] uppercase mb-4 font-body">
+            <p className="font-mono text-[11px] tracking-[0.25em] text-signal-orange mb-4">
               GDPR
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-display leading-tight mb-6">
+            <h1 className="font-display text-3xl md:text-5xl text-warm-white mb-6">
               Ochrana osobních údajů
             </h1>
-            <p className="text-steel-grey-light text-sm leading-relaxed">
-              Informace o tom, jak nakládáme s osobními údaji na webu
-              jakubdigital.cz. Platné od 1. 8. 2026.
+            <p className="text-warm-white/60 text-sm">
+              Jak nakládáme s údaji na jakubdigital.cz. Platné od 1. 8. 2026.
             </p>
           </div>
         </section>
+
         <section className="py-16 md:py-24">
           <div className="max-w-3xl mx-auto px-6">
             <div className="space-y-12">
-              {SECTIONS.map((section, i) => (
-                <div key={section.title}>
-                  <h2 className="text-2xl text-ink font-display leading-tight mb-4">
-                    <span className="text-antique-brass mr-3">
-                      {String(i + 1).padStart(2, "0")}.
+              {SECTIONS.map((s, i) => (
+                <div key={s.title}>
+                  <h2 className="font-display text-xl text-ink mb-3 flex items-baseline gap-3">
+                    <span className="font-mono text-sm text-signal-orange">
+                      {String(i + 1).padStart(2, "0")}
                     </span>
-                    {section.title}
+                    {s.title}
                   </h2>
-                  {section.paragraphs.map((paragraph, j) => (
-                    <p
-                      key={j}
-                      className="text-sm text-steel-grey-strong leading-relaxed mb-3 last:mb-0"
-                    >
-                      {paragraph}
+                  {s.paragraphs.map((p, j) => (
+                    <p key={j} className="text-ink/60 text-sm leading-relaxed mb-2">
+                      {p}
                     </p>
                   ))}
                 </div>
               ))}
             </div>
-            <div className="mt-16 p-8 bg-white rounded-xl shadow-card-resting">
-              <p className="text-antique-brass text-xs tracking-[0.2em] uppercase mb-4 font-body">
-                Kontakt
+
+            <div className="mt-16 border border-ink/10 p-8">
+              <p className="font-mono text-[10px] tracking-[0.15em] text-callout mb-4">
+                KONTAKT
               </p>
-              <p className="text-sm text-steel-grey-strong leading-relaxed mb-4">
-                Máte dotaz ke zpracování osobních údajů? Napište mi:
+              <p className="text-ink/60 text-sm mb-4">
+                Máte dotaz ke zpracování údajů?
               </p>
               <a
                 href="mailto:jakub@jakubdigital.cz"
-                className="inline-flex items-center gap-3 text-ink hover:text-antique-brass transition-colors"
+                className="font-mono text-xs tracking-[0.12em] text-signal-orange hover:text-signal-orange/70 transition-colors"
               >
-                <span className="text-antique-brass">→</span>
-                <span>jakub@jakubdigital.cz</span>
+                jakub@jakubdigital.cz
               </a>
             </div>
           </div>

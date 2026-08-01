@@ -1,11 +1,9 @@
 import { FAQ } from "@/data/content";
 
 /**
- * Strukturovaná data dle /tmp/jd-seo-final.md + ceny dle /tmp/jd-opus-strategy.md (1. 8. 2026):
- * - ProfessionalService (sekce 3) — včetně 4 nabídek s cenami a areaServed.
- *   Ceny: web 19 900, sítě 5 000, podpora 5 000, Komplet 27 900 (NE 3 000).
- * - FAQPage (sekce 4) — generuje se ze stejného pole FAQ jako accordion,
- *   otázky přesně dle copywritera (bez slova "AI").
+ * Strukturovaná data — nová strategie (srpen 2026).
+ * Ceny: web 14 900, obsah 6 900/měs, provoz 1 490/měs.
+ * Bez oborového omezení i bez "celá ČR".
  */
 export default function JsonLd() {
   const schema = {
@@ -14,63 +12,50 @@ export default function JsonLd() {
     "@id": "https://jakubdigital.cz/#organization",
     name: "Jakub Digital",
     description:
-      "Digitální servis pro profesionály: webové stránky na míru, správa sociálních sítí a podpora provozu. Osobní spolupráce, transparentní ceny a jasné termíny pro advokáty, realitní makléře, politiky a OSVČ po celé České republice.",
+      "Weby, texty a provoz od člověka, kterému můžete zavolat. Jeden kontakt, konečná cena, jasný termín.",
     url: "https://jakubdigital.cz",
     email: "jakub@jakubdigital.cz",
-    // telephone: "+420...", // volitelné — doplnit, až Kuba dodá číslo
     logo: "https://jakubdigital.cz/icon.svg",
     image: "https://jakubdigital.cz/opengraph-image",
     priceRange: "$$",
-    areaServed: { "@type": "Country", name: "Česká republika" },
-    address: { "@type": "PostalAddress", addressCountry: "CZ" },
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "CZ",
+      addressLocality: "Liberec",
+    },
     makesOffer: [
       {
         "@type": "Offer",
-        name: "Webové stránky na míru",
+        name: "Web",
         description:
-          "Promyšlená prezentace od struktury a textů po spuštění a předání. Cena od 19 900 Kč, termín předem.",
+          "Návrh, texty a spuštění webu na míru. Cena 14 900 Kč, do 14 dnů.",
         priceSpecification: {
           "@type": "PriceSpecification",
-          minPrice: 19900,
+          price: 14900,
           priceCurrency: "CZK",
         },
-        areaServed: { "@type": "Country", name: "Česká republika" },
       },
       {
         "@type": "Offer",
-        name: "Správa sociálních sítí",
+        name: "Obsah a sítě",
         description:
-          "Obsahový plán, texty a grafické podklady, publikace na vybraných kanálech. Cena od 5 000 Kč měsíčně.",
+          "Plán obsahu, texty, grafika a publikování. 6 900 Kč měsíčně, bez závazku.",
         priceSpecification: {
           "@type": "PriceSpecification",
-          minPrice: 5000,
+          price: 6900,
           priceCurrency: "CZK",
         },
-        areaServed: { "@type": "Country", name: "Česká republika" },
       },
       {
         "@type": "Offer",
-        name: "Podpora provozu",
+        name: "Provoz",
         description:
-          "Drobné systémy pro dotazy, schůzky a přehledy, které šetří čas. Cena od 5 000 Kč měsíčně.",
+          "Drobné úpravy, zálohy, hlídání provozu. 1 490 Kč měsíčně.",
         priceSpecification: {
           "@type": "PriceSpecification",
-          minPrice: 5000,
+          price: 1490,
           priceCurrency: "CZK",
         },
-        areaServed: { "@type": "Country", name: "Česká republika" },
-      },
-      {
-        "@type": "Offer",
-        name: "Kompletní digitální servis (balíček)",
-        description:
-          "Web na míru + první měsíc správy sociálních sítí + první měsíc podpory provozu za 27 900 Kč.",
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          price: 27900,
-          priceCurrency: "CZK",
-        },
-        areaServed: { "@type": "Country", name: "Česká republika" },
       },
     ],
   };

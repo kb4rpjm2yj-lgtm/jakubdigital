@@ -1,47 +1,30 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-midnight-teal: #162B38;
-  --color-antique-brass: #B8834A;
-  --color-warm-ivory: #F4EFE8;
-  --color-ink: #1C2228;
-  /* Základní ocelová šedá — tmavší než původní #7C8D99 kvůli kontrastu.
-     Pro malé texty na světlém pozadí (AA ≥ 4,5:1) použít steel-grey-strong,
-     na tmavém midnight-teal pozadí steel-grey-light. */
-  --color-steel-grey: #6B7D8A;
-  --color-steel-grey-strong: #5C6E7C;
-  --color-steel-grey-light: #8CA0AE;
-  --color-white: #FFFFFF;
+  --color-graphite: #12161A;
+  --color-grid-blue: #1E3A5F;
+  --color-signal-orange: #FF6B35;
+  --color-signal-orange-dim: rgba(255, 107, 53, 0.12);
+  --color-warm-white: #EDEAE4;
+  --color-ink: #1F2428;
+  --color-callout: #5C6670;
 
-  /* Fonty se self-hostují přes next/font (layout.tsx) — proměnné
-     --font-fraunces / --font-inter nastavuje Next.js na <html>. */
   --font-display: var(--font-fraunces), serif;
   --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
 
-  --shadow-card-resting: 0 1px 3px -1px rgba(0,0,0,0.08), 0 1px 2px -1px rgba(0,0,0,0.06);
-  --shadow-card-hovered: 0 12px 30px -8px rgba(0,0,0,0.22), 0 6px 12px -4px rgba(0,0,0,0.12);
-}
-
-:root {
-  /* Mosazná barva pro canvas efekty (hodnota tokenu antique-brass).
-     Čte ji SparkParticles přes getComputedStyle, aby se hex hodnota
-     neopakovala v JS kódu. */
-  --color-brass: #B8834A;
+  --shadow-card: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
-    @apply bg-warm-ivory text-ink font-body;
+    @apply bg-warm-white text-ink font-body;
     text-wrap: pretty;
   }
 
   ::selection {
-    background: var(--color-antique-brass);
-    color: var(--color-white);
+    background: var(--color-signal-orange);
+    color: var(--color-warm-white);
   }
 
   a:focus-visible,
@@ -50,68 +33,60 @@
   select:focus-visible,
   textarea:focus-visible,
   summary:focus-visible {
-    outline: 2px solid var(--color-antique-brass);
+    outline: 2px solid var(--color-signal-orange);
     outline-offset: 3px;
   }
 }
 
+/* ─── Hero surface ─── */
+
 .hero-surface {
-  background-image:
-    radial-gradient(circle at 82% 20%, rgba(184, 131, 74, 0.18), transparent 26rem),
-    linear-gradient(120deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(30deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: auto, 52px 52px, 52px 52px;
+  background:
+    /* blueprint grid */
+    linear-gradient(rgba(30, 58, 95, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 58, 95, 0.08) 1px, transparent 1px),
+    /* subtle radial glow */
+    radial-gradient(ellipse at 70% 30%, rgba(255, 107, 53, 0.06), transparent 45rem),
+    var(--color-graphite);
+  background-size: 32px 32px, 32px 32px, auto, auto;
 }
 
-.hero-panel {
-  padding: 2.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 1rem;
-  /* Žádný backdrop-filter — design bez glassmorphism efektů.
-     Mírně vyšší krytí pozadí zajistí čitelnost i bez rozostření. */
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.035));
-  box-shadow: 0 24px 65px -36px rgba(0, 0, 0, 0.8);
+/* ─── Kótovací linky ─── */
+
+.dim-line {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--color-signal-orange), transparent);
 }
+
+.dim-line-h {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, var(--color-signal-orange), transparent);
+}
+
+/* ─── Card hover ─── */
 
 .card-hover {
-  transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
+  transition: transform 250ms ease, box-shadow 250ms ease;
 }
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-card-hovered);
+  box-shadow: var(--shadow-card);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .hero-panel {
-    animation: float 8s ease-in-out infinite;
-  }
+/* ─── FAQ accordion ─── */
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease-out;
+}
+details[open] > .faq-answer {
+  max-height: 480px;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.bg-dot-pattern {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.04) 1px, transparent 1px);
-  background-size: 24px 24px;
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-delay-1 { animation-delay: 0.1s; }
-.animate-delay-2 { animation-delay: 0.2s; }
-.animate-delay-3 { animation-delay: 0.3s; }
-.animate-delay-4 { animation-delay: 0.4s; }
+/* ─── Reveal animation ─── */
 
 @keyframes fade-up {
   from { opacity: 0; translate: 0 24px; }
@@ -127,29 +102,23 @@
   }
 }
 
-/* FAQ accordion — plynulé otevření i zavření (max-height 0 -> 480px).
-   480px je dostatečné pro nejdelší odpověď; přechod je plynulý v obou směrech. */
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 400ms ease-out;
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-details[open] > .faq-answer {
-  max-height: 480px;
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in-up,
   .animate-delay-1,
   .animate-delay-2,
   .animate-delay-3,
-  .animate-delay-4,
-  .reveal {
-    animation: none;
-  }
-
-  .faq-answer {
-    transition: none;
-  }
+  .reveal { animation: none; }
+  .faq-answer { transition: none; }
 }

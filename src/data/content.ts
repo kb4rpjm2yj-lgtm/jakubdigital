@@ -1,41 +1,41 @@
 /**
- * Obsahová data webu Jakub Digital.
- *
- * Server-side modul — žádný "use client". Sekce si data importují odtud.
- * Finální marketingové texty a ceny dle /tmp/jd-opus-strategy.md (Opus 5, 1. 8. 2026).
- * Žádný z textů neobsahuje slovo "AI".
+ * Obsahová data — Jakub Digital, nová strategie (srpen 2026).
+ * Server-side modul, žádný "use client".
+ * Ceny konečné, nejsem plátce DPH. Žádné slovo "AI".
  */
 
 export type Service = {
+  id: string;
   title: string;
   desc: string;
   price: string;
   timeframe: string;
   features: string[];
   cta: string;
-  /** Volitelný badge zvýrazňující kartu (např. "Ušetříte 2 000 Kč" u Kompletu). */
-  badge?: string;
 };
 
 export const SERVICES: Service[] = [
   {
-    title: "Web, který budí důvěru",
-    desc: "Návrh, texty i spuštění v jednom. Stavím podle vaší profese, ne ze šablon. Cenu a termín dostanete písemně.",
-    price: "od 19 900 Kč",
-    timeframe: "5–7 pracovních dnů, termín písemně",
+    id: "web",
+    title: "Web",
+    desc: "Sejdeme se nebo si zavoláme. Řeknete mi, co potřebujete a komu to má sloužit. Do dvou dnů máte písemně cenu a rozsah. Pak stavím.",
+    price: "14 900 Kč",
+    timeframe: "do 14 dnů · nedodržím → sleva 10 %",
     features: [
-      "Vlastní návrh na míru vaší profesi",
-      "Texty česky, srozumitelně, bez vaty",
-      "Rychlé načítání a bezchybný mobilní vzhled",
-      "Napojení formuláře, mapy a odkazů na sítě",
-      "Základní úpravy pro vyhledávače v ceně",
+      "Návrh a stavba na míru, ne šablona",
+      "Texty česky, podle vašeho rozhovoru",
+      "Rychlé načítání a bezchybný mobil",
+      "Formulář, mapa, odkazy na sítě",
+      "Základní nastavení pro Google a Seznam",
+      "Zaškolení, ať si zvládnete úpravy sami",
     ],
-    cta: "Chci web na míru",
+    cta: "Chci web",
   },
   {
-    title: "Sítě bez vaší práce",
+    id: "obsah",
+    title: "Obsah a sítě",
     desc: "Plán, texty a grafika na měsíc dopředu. Vy jen odsouhlasíte. Pravidelnost, kterou klienti vidí — bez vašich večerů.",
-    price: "od 5 000 Kč/měsíc",
+    price: "6 900 Kč/měsíc",
     timeframe: "bez závazku, výpověď kdykoli",
     features: [
       "Plán obsahu na měsíc dopředu",
@@ -44,65 +44,58 @@ export const SERVICES: Service[] = [
       "Měsíční přehled, co funguje",
       "Žádná vázací smlouva",
     ],
-    cta: "Chci spravovat sítě",
+    cta: "Chci spravovat obsah",
   },
   {
-    title: "Provoz bez starostí",
-    desc: "Formuláře, přehledy, zálohy a odpovědi zařídí systém. Vy se věnujete klientům. Já hlídám, že vše běží.",
-    price: "od 5 000 Kč/měsíc",
-    timeframe: "nastavení do 2 týdnů",
+    id: "provoz",
+    title: "Provoz",
+    desc: "Web běží, já hlídám. Drobné úpravy do druhého dne, zálohy, přehledy. Jeden kontakt pro všechno.",
+    price: "1 490 Kč/měsíc",
+    timeframe: "úpravy do 2 pracovních dnů",
     features: [
-      "Nastavení a propojení nástrojů",
-      "Automatické odpovědi a přehledy",
-      "Zálohy, aktualizace, hlídání provozu",
-      "Jednoduchá evidence bez přepisování",
+      "Drobné úpravy textů a fotek",
+      "Kontrola dostupnosti",
+      "Aktualizace a zálohy",
+      "Měsíční přehled návštěv",
       "Jeden kontakt pro všechno",
     ],
-    cta: "Chci podporu provozu",
-  },
-  {
-    title: "Komplet: web, sítě i provoz",
-    desc: "Vše najednou: web, první měsíc sítí a podpory. Ušetříte 2 000 Kč a máte jednoho člověka na všechno.",
-    price: "27 900 Kč",
-    timeframe: "jednotlivě 29 900 Kč — ušetříte 2 000 Kč",
-    features: [
-      "Web na míru (hodnota od 19 900 Kč)",
-      "První měsíc správy sociálních sítí",
-      "První měsíc podpory provozu",
-      "Úvodní analýza a nastavení v ceně",
-      "Jeden člověk pro web, sítě i provoz",
-    ],
-    cta: "Domluvit konzultaci zdarma",
-    badge: "Ušetříte 2 000 Kč",
+    cta: "Chci klid",
   },
 ];
 
-export type Audience = {
-  title: string;
-  desc: string;
-  icon: string;
+export type Project = {
+  name: string;
+  href: string;
+  description: string;
+  own?: boolean;
 };
 
-export const AUDIENCES: Audience[] = [
+export const PROJECTS: Project[] = [
   {
-    title: "Advokáti a notáři",
-    desc: "Klient si vaši kancelář ověří online dřív, než vám zavolá. Když tam najde šablonu, která nevypadá jako vy, zavolá konkurenci.",
-    icon: "⚖️",
+    name: "Kalendář alternativy",
+    href: "https://kalendar-alternativy.cz",
+    description:
+      "Celostátní kalendář akcí s filtrováním podle krajů, mapou míst a katalogem osobností. Galerie fotek a videí, newsletter a statistiky. Vlastní administrace, kterou zvládne obsluhovat kdokoliv — bez nutnosti sahat na kód.",
+    own: true,
   },
   {
-    title: "Realitní makléři",
-    desc: "Inzerát prodá nemovitost, ale vy z něj nejste vidět. Bez webu a sítí vás klienti najdou jen náhodou — a pak zapomenou.",
-    icon: "🏠",
+    name: "Eva Kaprálová — krajská zastupitelka",
+    href: "https://evakapralova.cz",
+    description:
+      "Web a průběžná správa obsahu pro krajskou zastupitelku. Od návrhu po pravidelnou správu sociálních sítí — plánování, texty, grafika a publikování bez její práce navíc.",
   },
   {
-    title: "Politici a veřejné osoby",
-    desc: "Voliči vaše jméno googlí každý den. Když najdou jen staré profily a žádné odpovědi, věří méně — a volí někoho jiného.",
-    icon: "🏛️",
+    name: "liberec.online",
+    href: "https://liberec.online",
+    description:
+      "Vlastní projekt pro místní komunitu. Mapa, do které lidé zapisují problémy z blízké fabriky. Postaveno proto, že to nikdo jiný neřešil.",
+    own: true,
   },
   {
-    title: "OSVČ a malí podnikatelé",
-    desc: "Večery u webu a sítí jsou večery, kdy nevyděláváte. Přitom stačí, aby to někdo převzal — a vy dělali svou práci.",
-    icon: "💼",
+    name: "JUDr. Rajchl — digitální podpora kampaně",
+    href: "#",
+    description:
+      "Grafika pro sociální sítě a vedení podcastu během volební kampaně. Denní výstupy, jednotný vizuální styl, pravidelný kontakt s voliči.",
   },
 ];
 
@@ -115,54 +108,23 @@ export type ProcessStep = {
 export const PROCESS: ProcessStep[] = [
   {
     step: "01",
-    title: "Konzultace zdarma",
-    desc: "Třicet minut, online nebo telefonicky. Řeknete mi, co řešíte, já se zeptám na to podstatné. Bez závazku a bez prodejního tlaku.",
+    title: "Konzultace",
+    desc: "Třicet minut, osobně nebo online. Řeknete mi, co řešíte, já se zeptám na to podstatné. Bez závazku, bez tlaku.",
   },
   {
     step: "02",
-    title: "Návrh s cenou do 2 dnů",
-    desc: "Pošlu písemný návrh: co udělám, za kolik a do kdy. Změny probíráme, dokud vám to nesedí.",
+    title: "Návrh do dvou dnů",
+    desc: "Pošlu písemný návrh: co udělám, za kolik a do kdy. Upravujeme, dokud vám to nesedí.",
   },
   {
     step: "03",
-    title: "Realizace",
-    desc: "Pracuji a průběžně hlásím stav. Máte připomínky? Řešíme je rovnou, ne až na konci.",
+    title: "Stavba",
+    desc: "Pracuji a průběžně hlásím stav. Připomínky řešíme rovnou, ne až na konci.",
   },
   {
     step: "04",
-    title: "Předání a podpora",
-    desc: "Web nebo systém předám s návodem a zaškolením. Pak se starám dál, pokud chcete — o provoz, obsah i úpravy.",
-  },
-];
-
-export type Project = {
-  name: string;
-  solved: string;
-  href: string;
-  description: string;
-};
-
-export const PROJECTS: Project[] = [
-  {
-    name: "Eva Kaprálová — krajská zastupitelka (KHK)",
-    solved: "online prezentace a pravidelný obsah pro veřejné působení",
-    href: "https://evakapralova.cz",
-    description:
-      "Potřebovala prezentaci pro veřejné působení, které rozumí a kterou zvládne sama. Postavil jsem web a připravil obsah pro sociální sítě — od plánu po publikování.",
-  },
-  {
-    name: "liberec.online",
-    solved: "web od návrhu po spuštění a provoz",
-    href: "https://liberec.online",
-    description:
-      "Webový projekt, který měl být rychlý, přehledný a spolehlivý. Od návrhu po nasazení jsem měl vše na starosti, včetně provozu a záloh.",
-  },
-  {
-    name: "AlphaCreator",
-    solved: "vývoj aplikace od návrhu po publikaci v App Store",
-    href: "https://alphacreator.cz",
-    description:
-      "Aplikace pro iOS, která prošla celým procesem — od nápadu po publikaci v App Store. Dnes běží samostatně, s pravidelnými aktualizacemi.",
+    title: "Předání",
+    desc: "Web předám s návodem a zaškolením. Pak se starám dál — o provoz, obsah i úpravy.",
   },
 ];
 
@@ -173,53 +135,57 @@ export type FaqItem = {
 
 export const FAQ: FaqItem[] = [
   {
-    q: "Kolik stojí web?",
-    a: "Od 19 900 Kč: návrh, texty, formulář, spuštění. Přesnou cenu pošlu písemně do dvou dnů od konzultace. Většina webů se zaplatí jednou získanou zakázkou.",
+    q: "Kolik to stojí a co za to?",
+    a: "14 900 Kč konečná — návrh, texty, formulář, spuštění, zaškolení. Nejsem plátce DPH, k ceně se nic nepřidává. Přesný rozsah dostanete písemně do dvou dnů.",
   },
   {
-    q: "Jak dlouho to trvá?",
-    a: "5 až 7 pracovních dnů od odsouhlasení návrhu. Termín potvrdím písemně a držím ho. Když ho nedodržím, srazím 10 % z ceny.",
+    q: "Našel jsem web za devět tisíc. Proč vy?",
+    a: "Za devět tisíc dostanete web. Ode mě dostanete web a člověka. Sejdeme se, texty píšu podle toho, co mi řeknete, a po předání máte moje číslo. Jestli hledáte nejnižší cenu, vezměte tu za devět — bez ironie.",
   },
   {
-    q: "Musím rozumět technologiím?",
-    a: "Ne. Mluvím česky, bez žargonu. Vy odsouhlasíte návrh, techniku zařídím já.",
+    q: "Kdy to bude?",
+    a: "Do 14 dnů od odsouhlasení. Většinou to stihnu za sedm. Když termín nestihnu, srazím 10 %.",
   },
   {
-    q: "Proč vy a ne agentura?",
-    a: "U agentury mluvíte s account managerem, práci dělá někdo jiný. U mě mluvíte s tím, kdo web staví. Odpovídám za výsledek osobně.",
+    q: "Děláte to sám? Co když onemocníte?",
+    a: "Ano, sám. Proto beru maximálně tři zakázky měsíčně. Web dostanete i s přístupy, takže nejste na mně závislí — po předání s ním můžete jít kamkoliv.",
+  },
+  {
+    q: "Musím tomu rozumět?",
+    a: "Ne. Ptám se česky, vysvětluji česky. Vy odsouhlasíte návrh, techniku zařídím já.",
   },
   {
     q: "Co když nebudu spokojený?",
-    a: "Konzultace je zdarma a nezávazná. Návrh dostanete písemně, i když si ho necháte udělat jinde. U realizace řešíme připomínky průběžně.",
+    a: "Připomínky řešíme průběžně, ne až na konci. Platí se polovina předem, zbytek po předání — takže na konci máte páku vy.",
   },
   {
-    q: "Můžu služby kombinovat?",
-    a: "Ano. Komplet: web, první měsíc sítí a první měsíc podpory za 27 900 Kč. Jednotlivě by to stálo 29 900 Kč.",
-  },
-  {
-    q: "Jak probíhá konzultace?",
-    a: "Třicet minut, osobně nebo online. Řeknete, co řešíte, já navrhnu, kde začít. Do dvou dnů dostanete návrh s cenou.",
+    q: "Máte hodně klientů?",
+    a: "Ne. Jsem na začátku a beru tři zakázky měsíčně. To znamená, že vaše bude jedna ze tří, ne jedna z padesáti. První klienti dostávají moji plnou pozornost a férovou cenu — proto jsou první.",
   },
   {
     q: "Jak funguje platba?",
-    a: "Polovina jako záloha, zbytek po předání. Cenu a termín potvrdím písemně. Žádné skryté náklady.",
+    a: "Polovina jako záloha, zbytek po předání. Cenu a termín potvrdím písemně. Konečná cena, žádné skryté náklady.",
   },
 ];
 
-/* ---------- Hero ---------- */
+/* ─── Hero ─── */
 
-export const HERO_EYEBROW = "Jakub Digital — weby, sítě a provoz";
-export const HERO_H1 = "Vypadat dobře. Budit důvěru. Přinášet klienty.";
+export const HERO_EYEBROW = "JAKUB / WEBY · TEXTY · PROVOZ";
+export const HERO_H1 = "Web, na který se dá zavolat";
 export const HERO_SUBTITLE =
-  "Jsem Jakub Málek. Postavím web, který budí důvěru, a postarám se o sítě i provoz. Cena a termín předem, česky, konzultace zdarma.";
-export const HERO_CTA_PRIMARY = "Domluvit konzultaci zdarma";
-export const HERO_CTA_SECONDARY = "Podívat se na ceny";
-export const HERO_IMAGE_SRC = "/hero-bg.jpg";
+  "Jsem Jakub. Postavím web, napíšu texty a starám se dál. Jeden člověk, konečná cena, čtrnáct dnů.";
+export const HERO_CTA_PRIMARY = "Napište mi";
+export const HERO_PRICE = "14 900 Kč";
 
-/* ---------- O mně ---------- */
+/* ─── Capacity ─── */
+
+/** obsazeno: 0–3, max = 3 */
+export const CAPACITY = { total: 3, occupied: 2, month: "srpen 2026" };
+
+/* ─── O mně ─── */
 
 export const ABOUT_BIO =
-  "Vyrostl jsem v autoservisu AUTO IN. Tam jsem se naučil dvě věci: dělat práci pořádně a říkat pravdu. Deset let podnikám a stejná pravidla platí dodnes. Nejdřív se ptám, co potřebujete, pak navrhnu řešení s jasnou cenou a termínem. Stavím weby a systémy pro lidi, kteří nemají čas řešit techniku. Nestavím ze šablon, ale na míru — jeden člověk od začátku do konce, bez zbytečných mezičlánků. Rád vysvětluji, jak věci fungují, ať víte, co dostáváte. Za svou práci ručím jménem.";
+  "Vyrostl jsem v autoservisu AUTO IN. Tam jsem se naučil, že práce se dělá pořádně a že pravda se vždycky vyplatí. Deset let podnikám a stejná pravidla platí dodnes. Nejdřív se ptám, pak navrhnu — s jasnou cenou a termínem. Stavím weby a systémy pro lidi, kteří nemají čas řešit techniku. Rád vysvětluji, jak věci fungují, ať víte, co dostáváte. Za svou práci ručím jménem.";
 
 export type AboutStat = {
   label: string;
@@ -228,17 +194,21 @@ export type AboutStat = {
 
 export const ABOUT_STATS: AboutStat[] = [
   { value: "10 let", label: "podnikání" },
-  { value: "3", label: "aplikace v App Store" },
-  { value: "5 dní", label: "od zadání po spuštění" },
-  { value: "25–30 h", label: "týdně na vývoj" },
+  { value: "14 dnů", label: "garantovaný termín" },
+  { value: "3", label: "zakázky měsíčně max." },
+  { value: "1", label: "člověk od začátku do konce" },
 ];
 
-/* ---------- Kontakt a patička ---------- */
+/* ─── Kontakt ─── */
 
-export const CONTACT_HEADING = "Domluvte si konzultaci zdarma";
+export const CONTACT_HEADING = "Napište mi";
 export const CONTACT_TEXT =
   "Napište, co řešíte. Ozvu se do jednoho pracovního dne a domluvíme třicet minut, kdy vám to vyhovuje. Bez závazku a bez technické mluvy.";
-export const CONTACT_SUCCESS =
-  "Děkuji, zpráva dorazila. Ozvu se vám do jednoho pracovního dne — na e-mail nebo telefon, jak preferujete.";
+
+/** Telefon — zatím pouze e-mail, číslo doplnit až s novým číslem. Staré +420 777 068 493 je cizí (J&J Parts). */
+// export const CONTACT_PHONE = "";
+
+/* ─── Footer ─── */
+
 export const FOOTER_TEXT =
-  "Jakub Digital — digitální servis pro profesionály. Web, sociální sítě a podpora provozu od jednoho člověka.";
+  "Jakub Digital — weby, texty a provoz od člověka, kterému můžete zavolat.";

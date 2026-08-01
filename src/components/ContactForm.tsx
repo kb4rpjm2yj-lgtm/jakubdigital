@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { CONTACT_SUCCESS } from "@/data/content";
 
 type FormData = {
   jmeno: string;
@@ -13,7 +12,9 @@ type FormData = {
 };
 
 export default function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "fallback" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "fallback" | "error"
+  >("idle");
   const [error, setError] = useState("");
   const [mailto, setMailto] = useState("");
 
@@ -53,7 +54,10 @@ export default function ContactForm() {
         return;
       }
 
-      setError(result.error || "Zprávu se nepodařilo odeslat. Zkuste to prosím později.");
+      setError(
+        result.error ||
+          "Zprávu se nepodařilo odeslat. Zkuste to prosím později."
+      );
       setStatus("error");
     } catch {
       setError("Zprávu se nepodařilo odeslat. Zkuste to prosím později.");
@@ -63,34 +67,96 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-warm-ivory p-8 text-center rounded-xl" role="status" aria-live="polite">
-        <p className="text-antique-brass font-display text-xl mb-2">Děkuji za zprávu.</p>
-        <p className="text-steel-grey-strong text-sm">{CONTACT_SUCCESS}</p>
+      <div className="bg-graphite border border-grid-blue/20 p-8 text-center" role="status">
+        <p className="font-mono text-sm tracking-[0.15em] text-signal-orange mb-2">
+          Děkuji za zprávu.
+        </p>
+        <p className="text-warm-white/60 text-sm">
+          Ozvu se do jednoho pracovního dne — na e-mail nebo telefon, jak preferujete.
+        </p>
       </div>
     );
   }
 
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
+      {/* Honeypot */}
       <div className="hidden" aria-hidden="true">
         <label htmlFor="website">Web</label>
-        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </div>
+
       <div>
-        <label htmlFor="jmeno" className="block text-sm text-ink mb-1.5">Jméno a příjmení</label>
-        <input type="text" id="jmeno" name="jmeno" required autoComplete="name" className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300" placeholder="např. Jan Novák" />
+        <label
+          htmlFor="jmeno"
+          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+        >
+          JMÉNO
+        </label>
+        <input
+          type="text"
+          id="jmeno"
+          name="jmeno"
+          required
+          autoComplete="name"
+          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors"
+          placeholder="např. Jan Novák"
+        />
       </div>
+
       <div>
-        <label htmlFor="email" className="block text-sm text-ink mb-1.5">E-mail</label>
-        <input type="email" id="email" name="email" required autoComplete="email" className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300" placeholder="jan@novak.cz" />
+        <label
+          htmlFor="email"
+          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+        >
+          E-MAIL
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autoComplete="email"
+          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors"
+          placeholder="jan@novak.cz"
+        />
       </div>
+
       <div>
-        <label htmlFor="telefon" className="block text-sm text-ink mb-1.5">Telefon <span className="text-steel-grey-strong">(nepovinné)</span></label>
-        <input type="tel" id="telefon" name="telefon" autoComplete="tel" className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300" placeholder="+420 777 123 456" />
+        <label
+          htmlFor="telefon"
+          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+        >
+          TELEFON <span className="text-callout/40">(nepovinné)</span>
+        </label>
+        <input
+          type="tel"
+          id="telefon"
+          name="telefon"
+          autoComplete="tel"
+          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors"
+          placeholder="+420 777 123 456"
+        />
       </div>
+
       <div>
-        <label htmlFor="profese" className="block text-sm text-ink mb-1.5">Obor</label>
-        <select id="profese" name="profese" className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300">
+        <label
+          htmlFor="profese"
+          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+        >
+          OBOR
+        </label>
+        <select
+          id="profese"
+          name="profese"
+          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors appearance-none"
+        >
           <option value="">Vyberte...</option>
           <option value="Právní a poradenské služby">Právní a poradenské služby</option>
           <option value="Reality a finance">Reality a finance</option>
@@ -99,23 +165,55 @@ export default function ContactForm() {
           <option value="Jiný obor">Jiný obor</option>
         </select>
       </div>
+
       <div>
-        <label htmlFor="zprava" className="block text-sm text-ink mb-1.5">S čím potřebujete pomoci?</label>
-        <textarea id="zprava" name="zprava" required minLength={10} rows={5} className="w-full px-4 py-3 bg-white border border-ink/15 rounded-lg text-ink text-sm focus:outline-none focus:border-antique-brass focus:ring-2 focus:ring-antique-brass/20 transition-all duration-300 resize-y" placeholder="Například: Potřebuji nový web pro svou kancelář a rád bych věděl, jak by mohl fungovat." />
+        <label
+          htmlFor="zprava"
+          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+        >
+          S ČÍM POMOCI
+        </label>
+        <textarea
+          id="zprava"
+          name="zprava"
+          required
+          minLength={10}
+          rows={5}
+          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors resize-y"
+          placeholder="Například: Potřebuji nový web pro svou kancelář a rád bych věděl, jak by mohl fungovat."
+        />
       </div>
-      <label className="flex items-start gap-3 text-xs text-steel-grey-strong">
-        <input type="checkbox" required className="mt-0.5 accent-antique-brass" />
-        Údaje použiji jen pro odpověď na váš dotaz a domluvení konzultace.
+
+      <label className="flex items-start gap-3 text-[10px] text-callout/60 font-mono tracking-[0.08em]">
+        <input
+          type="checkbox"
+          required
+          className="mt-0.5 accent-signal-orange"
+        />
+        ÚDAJE POUŽIJI JEN PRO ODPOVĚĎ A DOMLUVENÍ KONZULTACE
       </label>
-      <button type="submit" disabled={status === "loading"} className="w-full py-4 bg-antique-brass text-white font-body font-medium text-sm tracking-wide uppercase rounded-lg hover:bg-antique-brass/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
-        {status === "loading" ? "Odesílám…" : "Odeslat nezávaznou poptávku"}
+
+      <button
+        type="submit"
+        disabled={status === "loading"}
+        className="w-full py-4 bg-signal-orange text-white font-mono text-xs tracking-[0.15em] hover:bg-signal-orange/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      >
+        {status === "loading" ? "ODESÍLÁM…" : "ODESLAT POPTÁVKU"}
       </button>
+
       {status === "fallback" && (
-        <p className="text-xs text-steel-grey-strong" role="status">
-          Neotevřela se vám e-mailová aplikace? <a href={mailto} className="text-antique-brass hover:text-antique-brass/80">Otevřít připravený e-mail</a>
+        <p className="font-mono text-[9px] text-callout/50" role="status">
+          Neotevřela se e-mailová aplikace?{" "}
+          <a href={mailto} className="text-signal-orange hover:text-signal-orange/70">
+            Otevřít připravený e-mail
+          </a>
         </p>
       )}
-      {status === "error" && <p className="text-red-600 text-xs" role="alert">{error}</p>}
+      {status === "error" && (
+        <p className="font-mono text-[9px] text-red-400" role="alert">
+          {error}
+        </p>
+      )}
     </form>
   );
 }

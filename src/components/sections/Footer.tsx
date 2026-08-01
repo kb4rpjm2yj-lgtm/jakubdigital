@@ -2,34 +2,33 @@ import Link from "next/link";
 import { FOOTER_TEXT } from "@/data/content";
 
 export default function Footer() {
+  const year = new Date().getFullYear();
+
   return (
-    <footer className="py-12 bg-midnight-teal">
+    <footer className="py-12 bg-graphite border-t border-grid-blue/20">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col items-center gap-4 mb-8">
-          <p className="text-steel-grey-light text-sm">
-            Máte otázku? Napište mi na{" "}
-            <a href="mailto:jakub@jakubdigital.cz" className="text-antique-brass hover:text-antique-brass/80 transition-colors duration-300">
-              jakub@jakubdigital.cz
-            </a>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-0">
+          {/* Logo */}
+          <p className="font-mono text-sm tracking-[0.15em] text-signal-orange">
+            JAKUB DIGITAL
           </p>
-        </div>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-antique-brass/10">
-          <p className="text-white text-lg font-display tracking-tight">
-            <span className="text-antique-brass">Jakub</span>{" "}
-            <span className="font-light">Digital</span>
-          </p>
-          <p className="text-steel-grey-light text-xs flex flex-col items-center gap-1.5">
-            <span>
-              &copy; {new Date().getFullYear()} Jakub Digital. Všechna práva vyhrazena.
-            </span>
+
+          {/* Legal */}
+          <div className="flex flex-wrap items-center gap-4 text-[10px] font-mono tracking-[0.1em] text-callout/50">
             <Link
               href="/gdpr"
-              className="hover:text-antique-brass transition-colors duration-300 underline underline-offset-2"
+              className="hover:text-callout transition-colors"
             >
-              Ochrana osobních údajů
+              OCHRANA OSOBNÍCH ÚDAJŮ
             </Link>
+            <span className="text-callout/20">│</span>
+            <span>&copy; {year} JAKUB MÁLEK</span>
+          </div>
+
+          {/* Tagline */}
+          <p className="text-warm-white/40 text-xs max-w-xs md:text-right leading-relaxed">
+            {FOOTER_TEXT}
           </p>
-          <p className="text-steel-grey-light text-xs max-w-xs text-center md:text-right">{FOOTER_TEXT}</p>
         </div>
       </div>
     </footer>
