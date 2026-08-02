@@ -10,10 +10,10 @@ export default function Contact() {
             <p className="text-accent font-medium tracking-wide text-sm mb-4">
               Kontakt
             </p>
-            <h2 className="font-display text-3xl md:text-4xl text-warm-white mb-4">
+            <h2 className="font-display text-3xl md:text-4xl text-paper mb-4">
               {CONTACT_HEADING}
             </h2>
-            <p className="text-warm-white/60 text-base leading-relaxed mb-8">
+            <p className="text-paper/60 text-base leading-relaxed mb-8">
               {CONTACT_TEXT}
             </p>
             <a
@@ -22,7 +22,7 @@ export default function Contact() {
             >
               jakub@jakubdigital.cz
             </a>
-            <p className="text-warm-white/45 text-sm mt-4">
+            <p className="text-paper/45 text-sm mt-4">
               Odpověď do jednoho pracovního dne.
             </p>
           </div>
