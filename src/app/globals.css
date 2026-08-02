@@ -1,19 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-graphite: #12161A;
-  --color-grid-blue: #1E3A5F;
-  --color-signal-orange: #FF6B35;
-  --color-signal-orange-dim: rgba(255, 107, 53, 0.12);
-  --color-warm-white: #EDEAE4;
-  --color-ink: #1F2428;
-  --color-callout: #5C6670;
+  /* Teplá, lidská paleta — místo studeného grafitu a signální oranžové */
+  --color-paper: #FAF6F0;        /* teplé krémové pozadí */
+  --color-paper-deep: #F3ECE2;   /* hlubší krém pro střídání sekcí */
+  --color-card: #FFFFFF;
+  --color-ink: #2E2822;          /* teplá tmavá na text */
+  --color-ink-soft: #6B6157;     /* jemný text */
+  --color-accent: #B4552D;       /* terakota — teplá, lidská */
+  --color-accent-soft: #E8D5C7;  /* jemný terakotový podtón */
+  --color-night: #2B2620;        /* teplá tmavá pro kontakt/patičku */
 
   --font-display: var(--font-fraunces), serif;
   --font-body: var(--font-inter), sans-serif;
-  --font-mono: var(--font-jetbrains), monospace;
 
-  --shadow-card: 0 2px 8px rgba(0,0,0,0.3);
+  --shadow-soft: 0 4px 24px rgba(46, 40, 34, 0.08);
+  --shadow-card: 0 2px 12px rgba(46, 40, 34, 0.06);
 }
 
 @layer base {
@@ -21,21 +23,22 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-warm-white text-ink font-body;
+    @apply bg-paper text-ink font-body;
     text-wrap: pretty;
   }
 
-  /* Fraunces na tmavém pozadí — těžší řez pro čitelnost */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
+    text-wrap: balance;
   }
 
   ::selection {
-    background: var(--color-signal-orange);
-    color: var(--color-warm-white);
+    background: var(--color-accent);
+    color: #fff;
   }
 
   a:focus-visible,
@@ -44,116 +47,40 @@
   select:focus-visible,
   textarea:focus-visible,
   summary:focus-visible {
-    outline: 2px solid var(--color-signal-orange);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
   }
 
-  /* Deaktivní kótovací text — minimální velikost 11px, vyżší kontrast */
-  .dim-label {
-    font-size: 0.6875rem; /* 11px minimum */
-    letter-spacing: 0.15em;
-  }
-
-  /* Na tmavém pozadí — zajisti čitelný kontrast */
   .text-muted-dark {
-    color: rgba(237, 234, 228, 0.5); /* warm-white at 50% na grafitu */
+    color: rgba(43, 38, 32, 0.55);
   }
 
   .text-muted-light {
-    color: rgba(31, 36, 40, 0.5); /* ink at 50% na warm-white */
+    color: rgba(250, 246, 240, 0.6);
   }
 }
 
-/* ─── Hero — blueprint surface ─── */
-
-.hero-surface {
-  background:
-    /* hlavní mřížka — silnější linky */
-    linear-gradient(rgba(30, 58, 95, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 58, 95, 0.18) 1px, transparent 1px),
-    /* jemná mřížka — 4× hustší */
-    linear-gradient(rgba(30, 58, 95, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 58, 95, 0.06) 1px, transparent 1px),
-    /* oranžový glow vpravo nahoře */
-    radial-gradient(ellipse 900px 600px at 85% 15%, rgba(255, 107, 53, 0.055), transparent),
-    var(--color-graphite);
-  background-size:
-    64px 64px,
-    64px 64px,
-    16px 16px,
-    16px 16px,
-    auto,
-    auto;
-}
-
-/* ─── Kótovací čáry ─── */
-
-.dim-line-v {
-  width: 1px;
-  background: linear-gradient(to bottom, var(--color-signal-orange) 0%, var(--color-signal-orange) 60%, transparent 100%);
-}
-
-.dim-line-h {
-  height: 1px;
-  background: linear-gradient(to right, var(--color-signal-orange) 0%, var(--color-signal-orange) 60%, transparent 100%);
-}
-
-/* Kótovací uzel — kolečko na konci linky */
-.dim-node {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 2px solid var(--color-signal-orange);
-  background: var(--color-graphite);
-}
-
-/* ─── Technické oddělovače ─── */
-
-.tech-divider {
-  height: 1px;
-  background: repeating-linear-gradient(
-    to right,
-    var(--color-signal-orange) 0px,
-    var(--color-signal-orange) 8px,
-    transparent 8px,
-    transparent 20px
-  );
-}
-
-/* ─── Cards ─── */
+/* ─── Karty — měkké, lidské ─── */
 
 .blueprint-card {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #FFFFFF;
+  background: var(--color-card);
+  border: 1px solid rgba(46, 40, 34, 0.07);
+  border-radius: 16px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
 }
 
-.blueprint-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background:
-    linear-gradient(rgba(30, 58, 95, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 58, 95, 0.03) 1px, transparent 1px);
-  background-size: 8px 8px;
-  pointer-events: none;
-}
-
 .blueprint-card:hover {
-  border-color: var(--color-signal-orange);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(180, 85, 45, 0.35);
 }
 
-/* ─── Dark section blueprint ─── */
+/* ─── Tmavá sekce (kontakt / patička) ─── */
 
 .blueprint-dark {
-  background:
-    linear-gradient(rgba(30, 58, 95, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30, 58, 95, 0.12) 1px, transparent 1px),
-    var(--color-graphite);
-  background-size: 32px 32px, 32px 32px, auto;
+  background: var(--color-night);
 }
 
 /* ─── FAQ accordion ─── */
@@ -195,17 +122,6 @@ details[open] > .faq-answer {
 .animate-delay-2 { animation-delay: 0.2s; }
 .animate-delay-3 { animation-delay: 0.3s; }
 
-/* ─── Pulse glow for capacity ─── */
-
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
-}
-
-.capacity-active {
-  animation: pulse-glow 2.5s ease-in-out infinite;
-}
-
 /* ─── Reduced motion ─── */
 
 @media (prefers-reduced-motion: reduce) {
@@ -213,7 +129,7 @@ details[open] > .faq-answer {
   .animate-delay-1,
   .animate-delay-2,
   .animate-delay-3,
-  .reveal,
-  .capacity-active { animation: none; }
+  .reveal { animation: none; }
   .faq-answer { transition: none; }
+  .blueprint-card { transition: none; }
 }

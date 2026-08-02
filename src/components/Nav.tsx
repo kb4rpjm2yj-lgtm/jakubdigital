@@ -24,34 +24,32 @@ export default function Nav() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-graphite/95 backdrop-blur-sm border-b border-grid-blue/20 shadow-lg"
+          ? "bg-paper/95 backdrop-blur-sm border-b border-ink/10 shadow-card"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <span className="dim-node group-hover:bg-signal-orange transition-colors" />
-          <span className="font-mono text-xs tracking-[0.15em] text-signal-orange group-hover:text-signal-orange/80 transition-colors font-medium">
-            JAKUB DIGITAL
+          <span className="font-display text-lg text-ink font-semibold group-hover:text-accent transition-colors">
+            Jakub Digital
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-5">
-          {LINKS.map((l, i) => (
+        <nav className="hidden md:flex items-center gap-6">
+          {LINKS.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="flex items-center gap-1.5 font-mono text-xs tracking-[0.12em] text-warm-white/70 hover:text-signal-orange transition-colors font-medium"
+              className="text-sm text-ink/70 hover:text-accent transition-colors font-medium"
             >
-              <span className="text-warm-white/40">0{i + 1}</span>
-              <span>{l.label}</span>
+              {l.label}
             </a>
           ))}
         </nav>
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-warm-white/75 hover:text-signal-orange transition-colors"
+          className="md:hidden text-ink/75 hover:text-accent transition-colors"
           aria-label="Menu"
         >
           <svg width="18" height="12" viewBox="0 0 18 12" fill="none">
@@ -63,16 +61,15 @@ export default function Nav() {
       </div>
 
       {open && (
-        <nav className="md:hidden bg-graphite border-t border-grid-blue/20 px-6 pb-6 pt-2 space-y-2">
-          {LINKS.map((l, i) => (
+        <nav className="md:hidden bg-paper border-t border-ink/10 px-6 pb-6 pt-2 space-y-2 shadow-card">
+          {LINKS.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="flex items-center gap-2 font-mono text-xs tracking-[0.12em] text-warm-white/75 hover:text-signal-orange transition-colors py-1.5 font-medium"
+              className="block text-sm text-ink/75 hover:text-accent transition-colors py-1.5 font-medium"
             >
-              <span className="text-warm-white/45">0{i + 1}</span>
-              <span>{l.label}</span>
+              {l.label}
             </a>
           ))}
         </nav>

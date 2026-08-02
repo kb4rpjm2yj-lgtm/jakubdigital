@@ -2,31 +2,30 @@ import { FAQ } from "@/data/content";
 
 export default function Faq() {
   return (
-    <section id="faq" className="reveal scroll-mt-16 py-24 md:py-32 bg-warm-white">
+    <section id="faq" className="reveal scroll-mt-16 py-24 md:py-32 bg-paper">
       <div className="max-w-3xl mx-auto px-6">
-        <div className="flex items-center gap-3 mb-3">
-          <span className="dim-node" />
-          <span className="dim-line-h w-12" />
-          <p className="font-mono text-xs tracking-[0.18em] text-callout/65 font-medium">
-            POZ. 12—{12 + FAQ.length - 1}
-          </p>
-        </div>
-        <h2 className="font-display text-3xl md:text-4xl text-ink mb-12 font-semibold">
-          Otázky
+        <p className="text-accent font-medium tracking-wide text-sm mb-3 text-center">
+          Časté otázky
+        </p>
+        <h2 className="font-display text-3xl md:text-4xl text-ink mb-12 font-semibold text-center">
+          Co vás zajímá
         </h2>
 
-        <div className="space-y-px">
+        <div className="space-y-3">
           {FAQ.map((item, i) => (
-            <details key={i} className="group border border-ink/10 bg-white">
-              <summary className="flex items-center justify-between cursor-pointer list-none px-6 py-4 hover:bg-ink/[0.02] transition-colors">
-                <span className="font-body text-sm text-ink/85 pr-4">
+            <details
+              key={i}
+              className="group bg-card border border-ink/10 rounded-2xl overflow-hidden shadow-card"
+            >
+              <summary className="flex items-center justify-between cursor-pointer list-none px-6 py-4 hover:bg-accent-soft/30 transition-colors">
+                <span className="font-body text-sm text-ink/85 pr-4 font-medium">
                   {item.q}
                 </span>
-                <span className="font-mono text-signal-orange text-base shrink-0 group-open:hidden font-medium">
+                <span
+                  className="text-accent text-xl shrink-0 transition-transform duration-300 group-open:rotate-45 font-medium"
+                  aria-hidden="true"
+                >
                   +
-                </span>
-                <span className="font-mono text-signal-orange text-base shrink-0 hidden group-open:inline font-medium">
-                  −
                 </span>
               </summary>
               <div className="faq-answer">

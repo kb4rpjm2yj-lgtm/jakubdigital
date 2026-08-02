@@ -67,12 +67,16 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-graphite border border-grid-blue/20 p-8 text-center" role="status">
-        <p className="font-mono text-sm tracking-[0.15em] text-signal-orange mb-2">
+      <div
+        className="bg-card border border-accent/25 rounded-2xl p-8 text-center shadow-card"
+        role="status"
+      >
+        <p className="text-accent font-display text-xl mb-2 font-semibold">
           Děkuji za zprávu.
         </p>
-        <p className="text-warm-white/60 text-sm">
-          Ozvu se do jednoho pracovního dne — na e-mail nebo telefon, jak preferujete.
+        <p className="text-ink/60 text-sm leading-relaxed">
+          Ozvu se do jednoho pracovního dne — na e-mail nebo telefon, jak
+          preferujete.
         </p>
       </div>
     );
@@ -95,9 +99,9 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="jmeno"
-          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+          className="block text-xs font-medium text-ink/70 mb-1.5"
         >
-          JMÉNO
+          Jméno
         </label>
         <input
           type="text"
@@ -105,7 +109,7 @@ export default function ContactForm() {
           name="jmeno"
           required
           autoComplete="name"
-          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors"
+          className="w-full px-4 py-3 bg-card border border-ink/15 rounded-xl text-ink text-sm placeholder:text-ink/35 focus:outline-none focus:border-accent transition-colors"
           placeholder="např. Jan Novák"
         />
       </div>
@@ -113,9 +117,9 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="email"
-          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+          className="block text-xs font-medium text-ink/70 mb-1.5"
         >
-          E-MAIL
+          E-mail
         </label>
         <input
           type="email"
@@ -123,7 +127,7 @@ export default function ContactForm() {
           name="email"
           required
           autoComplete="email"
-          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors"
+          className="w-full px-4 py-3 bg-card border border-ink/15 rounded-xl text-ink text-sm placeholder:text-ink/35 focus:outline-none focus:border-accent transition-colors"
           placeholder="jan@novak.cz"
         />
       </div>
@@ -131,16 +135,17 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="telefon"
-          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+          className="block text-xs font-medium text-ink/70 mb-1.5"
         >
-          TELEFON <span className="text-callout/40">(nepovinné)</span>
+          Telefon{" "}
+          <span className="text-ink/40 font-normal">(nepovinné)</span>
         </label>
         <input
           type="tel"
           id="telefon"
           name="telefon"
           autoComplete="tel"
-          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors"
+          className="w-full px-4 py-3 bg-card border border-ink/15 rounded-xl text-ink text-sm placeholder:text-ink/35 focus:outline-none focus:border-accent transition-colors"
           placeholder="+420 777 123 456"
         />
       </div>
@@ -148,17 +153,19 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="profese"
-          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+          className="block text-xs font-medium text-ink/70 mb-1.5"
         >
-          OBOR
+          Obor
         </label>
         <select
           id="profese"
           name="profese"
-          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors appearance-none"
+          className="w-full px-4 py-3 bg-card border border-ink/15 rounded-xl text-ink text-sm focus:outline-none focus:border-accent transition-colors appearance-none"
         >
           <option value="">Vyberte...</option>
-          <option value="Právní a poradenské služby">Právní a poradenské služby</option>
+          <option value="Právní a poradenské služby">
+            Právní a poradenské služby
+          </option>
           <option value="Reality a finance">Reality a finance</option>
           <option value="Veřejná komunikace">Veřejná komunikace</option>
           <option value="Odborná firma">Odborná firma</option>
@@ -169,9 +176,9 @@ export default function ContactForm() {
       <div>
         <label
           htmlFor="zprava"
-          className="block font-mono text-[10px] tracking-[0.15em] text-callout mb-1.5"
+          className="block text-xs font-medium text-ink/70 mb-1.5"
         >
-          S ČÍM POMOCI
+          S čím pomoci
         </label>
         <textarea
           id="zprava"
@@ -179,38 +186,37 @@ export default function ContactForm() {
           required
           minLength={10}
           rows={5}
-          className="w-full px-4 py-3 bg-graphite border border-grid-blue/30 text-warm-white text-sm focus:outline-none focus:border-signal-orange transition-colors resize-y"
+          className="w-full px-4 py-3 bg-card border border-ink/15 rounded-xl text-ink text-sm placeholder:text-ink/35 focus:outline-none focus:border-accent transition-colors resize-y"
           placeholder="Například: Potřebuji nový web pro svou kancelář a rád bych věděl, jak by mohl fungovat."
         />
       </div>
 
-      <label className="flex items-start gap-3 text-[10px] text-callout/60 font-mono tracking-[0.08em]">
-        <input
-          type="checkbox"
-          required
-          className="mt-0.5 accent-signal-orange"
-        />
-        ÚDAJE POUŽIJI JEN PRO ODPOVĚĎ A DOMLUVENÍ KONZULTACE
+      <label className="flex items-start gap-3 text-xs text-ink/55 leading-relaxed">
+        <input type="checkbox" required className="mt-0.5 accent-accent" />
+        Údaje použiji jen pro odpověď a domluvení konzultace
       </label>
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full py-4 bg-signal-orange text-white font-mono text-xs tracking-[0.15em] hover:bg-signal-orange/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="w-full py-4 bg-accent text-white text-sm font-semibold rounded-full hover:bg-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
       >
-        {status === "loading" ? "ODESÍLÁM…" : "ODESLAT POPTÁVKU"}
+        {status === "loading" ? "Odesílám…" : "Odeslat poptávku"}
       </button>
 
       {status === "fallback" && (
-        <p className="font-mono text-[9px] text-callout/50" role="status">
+        <p className="text-xs text-ink/50" role="status">
           Neotevřela se e-mailová aplikace?{" "}
-          <a href={mailto} className="text-signal-orange hover:text-signal-orange/70">
+          <a
+            href={mailto}
+            className="text-accent hover:text-accent/70"
+          >
             Otevřít připravený e-mail
           </a>
         </p>
       )}
       {status === "error" && (
-        <p className="font-mono text-[9px] text-red-400" role="alert">
+        <p className="text-xs text-red-500" role="alert">
           {error}
         </p>
       )}

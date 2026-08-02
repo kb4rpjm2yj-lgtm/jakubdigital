@@ -54,16 +54,16 @@ export default function GdprPage() {
   return (
     <>
       <Nav />
-      <main className="bg-warm-white">
-        <section className="hero-surface pt-32 pb-20 md:pt-40 md:pb-24">
+      <main className="bg-paper">
+        <section className="bg-paper-deep pt-32 pb-16 md:pt-40 md:pb-20">
           <div className="max-w-3xl mx-auto px-6">
-            <p className="font-mono text-[11px] tracking-[0.25em] text-signal-orange mb-4">
+            <p className="text-accent font-medium tracking-wide text-sm mb-3">
               GDPR
             </p>
-            <h1 className="font-display text-3xl md:text-5xl text-warm-white mb-6">
+            <h1 className="font-display text-3xl md:text-5xl text-ink mb-4">
               Ochrana osobních údajů
             </h1>
-            <p className="text-warm-white/60 text-sm">
+            <p className="text-ink/60 text-sm">
               Jak nakládáme s údaji na jakubdigital.cz. Platné od 1. 8. 2026.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function GdprPage() {
               {SECTIONS.map((s, i) => (
                 <div key={s.title}>
                   <h2 className="font-display text-xl text-ink mb-3 flex items-baseline gap-3">
-                    <span className="font-mono text-sm text-signal-orange">
+                    <span className="text-accent font-display text-sm font-semibold">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     {s.title}
@@ -89,16 +89,14 @@ export default function GdprPage() {
               ))}
             </div>
 
-            <div className="mt-16 border border-ink/10 p-8">
-              <p className="font-mono text-[10px] tracking-[0.15em] text-callout mb-4">
-                KONTAKT
-              </p>
+            <div className="mt-16 border border-ink/10 rounded-2xl bg-card p-8 shadow-card">
+              <p className="text-accent font-medium text-sm mb-3">Kontakt</p>
               <p className="text-ink/60 text-sm mb-4">
                 Máte dotaz ke zpracování údajů?
               </p>
               <a
                 href="mailto:jakub@jakubdigital.cz"
-                className="font-mono text-xs tracking-[0.12em] text-signal-orange hover:text-signal-orange/70 transition-colors"
+                className="text-accent hover:text-accent/70 transition-colors font-medium"
               >
                 jakub@jakubdigital.cz
               </a>

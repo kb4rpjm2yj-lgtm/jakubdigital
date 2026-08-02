@@ -5,28 +5,22 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="py-12 bg-graphite border-t border-grid-blue/20">
+    <footer className="py-12 bg-night border-t border-white/10">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pt-0">
-          {/* Logo */}
-          <p className="font-mono text-sm tracking-[0.15em] text-signal-orange">
-            JAKUB DIGITAL
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <p className="font-display text-lg text-warm-white font-semibold">
+            Jakub Digital
           </p>
 
-          {/* Legal */}
-          <div className="flex flex-wrap items-center gap-4 text-[10px] font-mono tracking-[0.1em] text-callout/50">
-            <Link
-              href="/gdpr"
-              className="hover:text-callout transition-colors"
-            >
-              OCHRANA OSOBNÍCH ÚDAJŮ
+          <div className="flex flex-wrap items-center gap-4 text-xs text-warm-white/45">
+            <Link href="/gdpr" className="hover:text-warm-white transition-colors">
+              Ochrana osobních údajů
             </Link>
-            <span className="text-callout/20">│</span>
-            <span>&copy; {year} JAKUB MÁLEK</span>
+            <span className="text-warm-white/20">|</span>
+            <span>&copy; {year} Jakub Málek</span>
           </div>
 
-          {/* Tagline */}
-          <p className="text-warm-white/40 text-xs max-w-xs md:text-right leading-relaxed">
+          <p className="text-warm-white/45 text-sm max-w-xs md:text-right leading-relaxed">
             {FOOTER_TEXT}
           </p>
         </div>

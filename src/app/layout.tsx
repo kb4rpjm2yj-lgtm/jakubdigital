@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
@@ -21,13 +21,6 @@ const inter = Inter({
   preload: true,
 });
 
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin", "latin-ext"],
-  weight: "variable",
-  variable: "--font-jetbrains",
-  display: "swap",
-  preload: true,
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://jakubdigital.cz"),
@@ -55,7 +48,7 @@ export default function RootLayout({
   return (
     <html
       lang="cs"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable} scroll-smooth`}
+      className={`${fraunces.variable} ${inter.variable} scroll-smooth`}
     >
       <body className="min-h-screen flex flex-col antialiased">
         <JsonLd />
