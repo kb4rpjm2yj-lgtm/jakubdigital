@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jakub Digital — weby, které prodávají</title>
+<meta name="description" content="Webové stránky na míru, správa sociálních sítí a viditelnost pro AI. Jeden člověk, jedna práce, žádná agenturní mlha. Liberec a okolí.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAF8F5;
+    --ink: #14212E;
+    --muted: #46586A;
+    --accent: #E85D26;
+    --line: #E7E2DB;
+    --ok: #1F6F5C;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Header ---------- */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(250,248,245,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1080px; margin: 0 auto; }
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: 0.3px; color: var(--ink); }
+  .logo span { color: var(--accent); }
+  nav a { color: var(--muted); margin-left: 22px; font-size: 15px; font-weight: 600; }
+  nav a:hover { color: var(--accent); text-decoration: none; }
+  .nav-cta { background: var(--accent); color: #fff !important; padding: 9px 18px; border-radius: 8px; margin-left: 22px; }
+  .nav-cta:hover { background: #d24e1c; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 96px 0 72px; border-bottom: 1px solid var(--line); }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+  .hero-kicker {
+    font-size: 15px; font-weight: 600; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.5rem, 6vw, 4.2rem);
+    line-height: 1.08;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .rotator { display: inline-block; color: var(--accent); font-style: italic; }
+  .hero p.lead { font-size: 18px; color: var(--muted); max-width: 520px; margin-bottom: 30px; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; background: var(--ink); color: #fff;
+    padding: 14px 26px; border-radius: 8px; font-weight: 600; font-size: 16px;
+    border: none; cursor: pointer; transition: transform .15s ease, background .15s ease;
+  }
+  .btn:hover { background: #0d1822; transform: translateY(-1px); text-decoration: none; }
+  .btn.accent { background: var(--accent); }
+  .btn.accent:hover { background: #d24e1c; }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+  .btn.ghost:hover { border-color: var(--ink); background: transparent; }
+
+  /* Hero card — timeline */
+  .hero-card {
+    border: 1px solid var(--line); border-radius: 14px;
+    background: #fff; padding: 26px;
+    box-shadow: 0 1px 4px rgba(20,33,46,0.05);
+  }
+  .hero-card .card-label { font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; }
+  .hero-card .card-title { font-family: 'Fraunces', serif; font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+  .hero-card .card-sub { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+  .timeline { list-style: none; }
+  .timeline li { display: flex; align-items: center; gap: 12px; padding: 9px 0; font-size: 15px; border-bottom: 1px dashed var(--line); }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline .dot {
+    width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+    border: 2px solid var(--line); display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: transparent;
+  }
+  .timeline li.done .dot { background: var(--ok); border-color: var(--ok); color: #fff; }
+  .timeline li.done { color: var(--ink); }
+  .timeline li.todo { color: var(--muted); }
+  .timeline .bar {
+    height: 6px; border-radius: 3px; background: var(--line); margin-top: 14px; overflow: hidden;
+  }
+  .timeline .bar i { display: block; height: 100%; width: 100%; background: var(--ok); animation: growbar 5s ease forwards; }
+  @keyframes growbar { from { width: 0; } to { width: 100%; } }
+  .card-foot { margin-top: 14px; font-size: 14px; font-weight: 600; color: var(--ok); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 72px 0; }
+  .section-head { max-width: 640px; margin-bottom: 44px; }
+  .section-head .kicker { font-size: 14px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .section-head h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.15; font-weight: 600; }
+
+  /* ---------- Services (bento) ---------- */
+  .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+  .card {
+    border: 1px solid var(--line); border-radius: 14px; background: #fff;
+    padding: 28px; transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(20,33,46,0.07); }
+  .card .icon { font-size: 22px; margin-bottom: 14px; }
+  .card h3 { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+  .card p { font-size: 15px; color: var(--muted); }
+  .card .price { display: inline-block; margin-top: 14px; font-weight: 600; color: var(--ok); font-size: 15px; font-variant-numeric: tabular-nums; }
+  .span-4 { grid-column: span 4; }
+  .span-6 { grid-column: span 6; }
+  .span-8 { grid-column: span 8; }
+  .span-12 { grid-column: span 12; }
+  .card.featured { background: var(--ink); border-color: var(--ink); }
+  .card.featured h3, .card.featured p { color: #fff; }
+  .card.featured p { color: #B9C6D2; }
+  .card.featured .price { color: #7FD1A8; }
+
+  /* ---------- References ---------- */
+  .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .ref { border: 1px solid var(--line); border-radius: 14px; padding: 24px; background: #fff; }
+  .ref .tag { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+  .ref h4 { font-family: 'Fraunces', serif; font-size: 18px; margin: 8px 0 6px; }
+  .ref .num { font-size: 30px; font-weight: 700; color: var(--ok); font-variant-numeric: tabular-nums; margin: 10px 0 2px; letter-spacing: -0.5px; }
+  .ref .num small { font-size: 15px; font-weight: 600; color: var(--muted); letter-spacing: 0; margin-left: 4px; }
+  .ref p { font-size: 14px; color: var(--muted); }
+  .ref a { font-size: 13px; font-weight: 600; }
+
+  /* ---------- About ---------- */
+  .about { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
+  .about .portrait {
+    border-radius: 14px; background: var(--line); aspect-ratio: 4/5;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 15px; border: 1px solid var(--line);
+    background: linear-gradient(135deg, #EFE9E1 0%, #E2D9CC 100%);
+  }
+  .about .portrait span { max-width: 200px; text-align: center; }
+  .about-text h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.4rem); margin-bottom: 18px; }
+  .about-text p { color: var(--muted); margin-bottom: 16px; max-width: 520px; }
+  .about-text p strong { color: var(--ink); }
+
+  /* ---------- Pricing ---------- */
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  tr { border-bottom: 1px solid var(--line); }
+  tr:last-child { border-bottom: none; }
+  th { text-align: left; padding: 14px 20px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); background: #F4F0EA; }
+  td { padding: 16px 20px; font-size: 15px; }
+  td.price-tag { font-weight: 700; color: var(--ok); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .note { margin-top: 18px; font-size: 14px; color: var(--muted); max-width: 640px; }
+
+  /* ---------- CTA ---------- */
+  .cta-block {
+    background: var(--ink); border-radius: 18px; padding: 56px 48px;
+    display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap;
+  }
+  .cta-block h2 { font-family: 'Fraunces', serif; color: #fff; font-size: clamp(1.6rem, 3vw, 2.3rem); max-width: 460px; line-height: 1.15; }
+  .cta-block p { color: #B9C6D2; margin-top: 10px; max-width: 440px; font-size: 15px; }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--line); padding: 28px 0; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 14px; color: var(--muted); }
+
+  /* ---------- Sticky mobile CTA ---------- */
+  .sticky-cta {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
+    background: #fff; border-top: 1px solid var(--line); padding: 12px 16px;
+  }
+  .sticky-cta a { display: block; text-align: center; }
+
+  @media (max-width: 860px) {
+    .hero-grid, .about { grid-template-columns: 1fr; gap: 32px; }
+    .hero { padding: 56px 0 48px; }
+    nav { display: none; }
+    .span-4, .span-6, .span-8 { grid-column: span 12; }
+    .cta-block { padding: 40px 28px; }
+    .sticky-cta { display: block; }
+    section { padding: 52px 0; }
+    .hero h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Jakub<span>Digital</span></div>
+    <nav>
+      <a href="#sluzby">Služby</a>
+      <a href="#reference">Reference</a>
+      <a href="#o-mne">O mně</a>
+      <a href="#cenik">Ceník</a>
+      <a href="#kontakt" class="nav-cta">Nezávazně se poradit</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-kicker">Jmenuju se Jakub a dělám weby</div>
+      <h1>Váš web by měl <span class="rotator">prodávat</span>,<br>ne jen hezky vypadat.</h1>
+      <p class="lead">Udělám vám web na míru, který se nestydíte poslat klientovi. Nejdřív si řekneme, co vlastně potřebujete, a teprve pak to postavím. Bez agenturních cen a řečí, kterým nikdo nerozumí.</p>
+      <div class="hero-ctas">
+        <a href="#kontakt" class="btn accent">Nezávazná konzultace</a>
+        <a href="#reference" class="btn ghost">Podívat se na práci</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="card-label">Poslední projekt</div>
+      <div class="card-title">Web za 5 dní</div>
+      <div class="card-sub">Eva Kaprálová — krajská zastupitelka</div>
+      <ul class="timeline">
+        <li class="done"><span class="dot">✓</span> Obsah a struktura</li>
+        <li class="done"><span class="dot">✓</span> Návrh a design</li>
+        <li class="done"><span class="dot">✓</span> Kód a publikace</li>
+        <li class="done"><span class="dot">✓</span> Zaškolení</li>
+      </ul>
+      <div class="bar"><i></i></div>
+      <div class="card-foot">Publikováno. Klient spokojen.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY -->
+<section id="sluzby">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Služby</div>
+      <h2>Všechno, co potřebujete, aby vás lidi našli a vybrali si vás.</h2>
+    </div>
+    <div class="bento">
+      <div class="card span-8">
+        <div class="icon">🖥️</div>
+        <h3>Web na míru</h3>
+        <p>Postavím web od nuly, přesně podle toho, co potřebujete. Nejdřív si popovídáme, pak teprve kódím. Žádné šablony, žádné „tohle by se vám mohlo líbit".</p>
+        <span class="price">12 000–20 000 Kč · hotovo za 7 dní až 3 týdny</span>
+      </div>
+      <div class="card span-4">
+        <div class="icon">📱</div>
+        <h3>Správa sítí</h3>
+        <p>Píšu a plánuju příspěvky za vás, vy se věnujete práci. Profil žije, vy nemusíte.</p>
+        <span class="price">4 000–6 000 Kč/měsíc</span>
+      </div>
+      <div class="card span-4">
+        <div class="icon">🛡️</div>
+        <h3>Údržba webu</h3>
+        <p>Aktualizace, zálohy, drobné opravy. Aby vám web nespadl zrovna ve chvíli, kdy ho potřebujete.</p>
+        <span class="price">1 500 Kč/měsíc</span>
+      </div>
+      <div class="card span-4 featured">
+        <div class="icon">🤖</div>
+        <h3>Najdou vás i AI</h3>
+        <p>Lidi se dnes ptají ChatGPT, koho si vybrat. Upravím web tak, aby vás doporučoval. Nikdo z okolí to nenabízí.</p>
+        <span class="price">3 000–5 000 Kč</span>
+      </div>
+      <div class="card span-4">
+        <div class="icon">⚙️</div>
+        <h3>Automatizace</h3>
+        <p>Opakující se práce, kterou děláte ručně. Necháme to běžet za vás.</p>
+        <span class="price">individuálně</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCE -->
+<section id="reference" style="border-top: 1px solid var(--line); background: #F4F0EA;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Reference</div>
+      <h2>Konkrétní projekty, konkrétní výsledky. Zeptejte se klientů.</h2>
+    </div>
+    <div class="refs">
+      <div class="ref">
+        <div class="tag">Web + sítě</div>
+        <h4>Eva Kaprálová</h4>
+        <div class="num">5 <small>dní od zadání ke spuštění</small></div>
+        <p>Krajská zastupitelka, ředitelka školy, aktivní kampaň.</p>
+        <a href="https://evakapralova.cz" target="_blank">evakapralova.cz →</a>
+      </div>
+      <div class="ref">
+        <div class="tag">Občanský projekt</div>
+        <h4>liberec.online</h4>
+        <div class="num">1 <small>funkční mapa pro hlášení problémů</small></div>
+        <p>Lidé se zapojují, město vidí, co trápí.</p>
+        <a href="https://liberec.online" target="_blank">liberec.online →</a>
+      </div>
+      <div class="ref">
+        <div class="tag">Volební web</div>
+        <h4>proJablonec</h4>
+        <div class="num">1 <small>týden od zadání po publikaci</small></div>
+        <p>Kampaňový web pro komunální volby 2026.</p>
+        <a href="#" onclick="return false;">projablonec.cz (připravuje se)</a>
+      </div>
+      <div class="ref">
+        <div class="tag">Modernizace</div>
+        <h4>horsechurch</h4>
+        <div class="num">✓ <small>citlivá modernizace</small></div>
+        <p>Web pro kostelnici. Stál míň než nové varhany.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- O MNĚ -->
+<section id="o-mne">
+  <div class="wrap about">
+    <div class="portrait"><span>Tady bude fotka Jakuba,<br>až ji dodá 🙂</span></div>
+    <div class="about-text">
+      <h2>Jeden člověk, jedna práce.</h2>
+      <p>Celý život se pohybuju mezi lidmi a technikou. Dělám weby, sítě a automatizace pro lidi, kteří nemají čas ani chuť řešit, jak to celé funguje — chtějí, aby to prostě fungovalo.</p>
+      <p>Nejsem agentura. Nevoláte do call centra, nepřepojujete mě mezi odděleními. Jsem jeden člověk, kterému na vašem webu záleží, protože je na něm moje jméno.</p>
+      <p>Občas to stojí víc času, než jsem plánoval. Občas si říkám, že jsem si mohl vybrat jednodušší práci. Ale když web běží a klient je spokojený, tak to za to stojí. <strong>To jsem zase já.</strong></p>
+      <p>Liberec a okolí. Osobně, nebo online — jak vám to vyhovuje.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CENÍK -->
+<section id="cenik" style="border-top: 1px solid var(--line); background: #F4F0EA;">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Ceník</div>
+      <h2>Žádné schovávání. Víte, za co platíte, ještě než se zeptáte.</h2>
+    </div>
+    <table>
+      <tr><th>Služba</th><th>Co dostanete</th><th>Cena</th></tr>
+      <tr><td>Jednostránkový web</td><td>Návrh, texty, tvorba, nasazení</td><td class="price-tag">od 12 000 Kč</td></tr>
+      <tr><td>Web na míru (3–5 stránek)</td><td>Návrh, texty, tvorba, nasazení, zaškolení</td><td class="price-tag">od 15 000 Kč</td></tr>
+      <tr><td>Web pro profesionály (5–7 stránek)</td><td>Vše výše + struktura, SEO základy</td><td class="price-tag">od 20 000 Kč</td></tr>
+      <tr><td>Správa sociálních sítí</td><td>8–12 příspěvků měsíčně + grafika + reporting</td><td class="price-tag">od 4 000 Kč/měs.</td></tr>
+      <tr><td>Údržba webu</td><td>Aktualizace, zálohy, drobné úpravy, dohled</td><td class="price-tag">od 1 500 Kč/měs.</td></tr>
+      <tr><td>Viditelnost pro AI (GEO)</td><td>Audit + úprava webu, aby vás doporučovaly AI chatboty</td><td class="price-tag">od 3 000 Kč</td></tr>
+      <tr><td>Automatizace</td><td>Analýza, návrh, implementace, dokumentace</td><td class="price-tag">individuálně</td></tr>
+    </table>
+    <p class="note">Ceny jsou orientační bez DPH. Konkrétní nabídku připravím zdarma po krátké konzultaci — řekněte, co potřebujete, a já řeknu, kolik to stojí a za jak dlouho to bude.</p>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="cta-block">
+      <div>
+        <h2>Nezávazně si sedneme a projdeme, co potřebujete.</h2>
+        <p>Klidně přes telefon, klidně osobně. Když si nesedneme, nic se neděje — aspoň budete vědět, na co se ptát dál.</p>
+      </div>
+      <div>
+        <a href="mailto:info@jakubdigital.cz" class="btn accent" style="font-size:17px;">info@jakubdigital.cz</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>Jakub Digital © 2026 · Liberec</div>
+    <div>Jeden člověk, jedna práce, žádná agenturní mlha.</div>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="#kontakt" class="btn accent">Nezávazná konzultace</a>
+</div>
+
+<script>
+  // Rotující slovo v hero
+  const words = ['prodávat', 'být za 5 dní', 'najít AI', 'dělat práci za vás'];
+  const el = document.querySelector('.rotator');
+  let i = 0;
+  setInterval(() => { i = (i + 1) % words.length; el.textContent = words[i]; }, 2800);
+</script>
+
+</body>
+</html>
