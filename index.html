@@ -330,6 +330,15 @@
   }
   .sticky-cta a { display: block; text-align: center; }
 
+  /* FAQ */
+  .faq-list { max-width: 760px; }
+  .faq-item { border: 1px solid var(--line); border-radius: 12px; background: #fff; margin-bottom: 12px; overflow: hidden; }
+  .faq-item summary { padding: 18px 22px; font-weight: 600; font-size: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item summary::after { content: '+'; font-size: 22px; color: var(--accent); font-weight: 400; }
+  .faq-item[open] summary::after { content: '–'; }
+  .faq-item summary:hover { background: #F8F5F0; }
+  .faq-item p { padding: 0 22px 18px; font-size: 15px; color: var(--muted); }
+
   @media (max-width: 860px) {
     .hero-grid, .about { grid-template-columns: 1fr; gap: 32px; }
     .hero { padding: 56px 0 48px; }
@@ -516,15 +525,61 @@
         <a href="clanky/kolik-stoji-web.html">Přečíst článek →</a>
       </div>
       <div class="ref">
-        <div class="tag">Brzy</div>
-        <h4>Co je GEO a proč na něm záleží?</h4>
-        <p>Jak AI vybírá firmy a proč vás ChatGPT možná nedoporučí.</p>
+        <div class="tag">Pro advokáty</div>
+        <h4>Web pro advokáta</h4>
+        <p>Povinné údaje dle ČAK, co nesmí a jak přináší klienty.</p>
+        <a href="clanky/web-pro-advokata.html">Přečíst článek →</a>
       </div>
       <div class="ref">
-        <div class="tag">Brzy</div>
-        <h4>Web pro advokáta</h4>
-        <p>Proč je web vizitka, která vám přináší klienty.</p>
+        <div class="tag">Viditelnost pro AI</div>
+        <h4>Co je GEO a proč na něm záleží?</h4>
+        <p>Jak AI vybírá firmy a proč vás ChatGPT možná nedoporučí.</p>
+        <a href="clanky/co-je-geo.html">Přečíst článek →</a>
       </div>
+      <div class="ref">
+        <div class="tag">Pro realitní makléře</div>
+        <h4>Ztracené poptávky = ztracené provize</h4>
+        <p>Proč web makléře vydělává a jak proměnit návštěvníky v poptávky.</p>
+        <a href="clanky/web-pro-realitniho-maklere.html">Přečíst článek →</a>
+      </div>
+      <div class="ref">
+        <div class="tag">Pro místní firmy</div>
+        <h4>Web v Liberci</h4>
+        <p>Proč Facebook nestačí a jak vás najdou místní (i přes AI).</p>
+        <a href="clanky/web-v-liberci.html">Přečíst článek →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="border-top: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">FAQ</div>
+      <h2>Časté otázky. Odpovídám rovnou, ať se nemusíte ptát.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Kolik stojí web na míru?</summary>
+        <p>Jednostránkový web od 14 900 Kč, web na míru (3–5 stránek) od 18 500 Kč a web pro profesionály (5–7 stránek) od 24 500 Kč. Ceny jsou konečné — nejsem plátce DPH, takže se k nim nic nepřičítá.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Za jak dlouho bude web hotový?</summary>
+        <p>Jednostránkový web za 7–10 dní, menší web do 2 týdnů, rozsáhlejší do 3 týdnů. Už jsem dodal web za 5 dní.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Co je viditelnost pro AI (GEO)?</summary>
+        <p>Lidé se dnes ptají ChatGPT a jiných AI chatbotů, koho si vybrat. GEO (Generative Engine Optimization) upraví web tak, aby ho AI správně pochopila a doporučovala — strukturovaná data, čitelný obsah, metadata.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Jak probíhá spolupráce?</summary>
+        <p>Nejdřív si nezávazně popovídáme o tom, co potřebujete, a připravím konkrétní nabídku zdarma. Po odsouhlasení web postavím, nasadím a zaškolím vás.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Děláte weby jen v Liberci?</summary>
+        <p>Působím v Liberci a okolí, ale pracuji i online pro klienty z celé České republiky.</p>
+      </details>
     </div>
   </div>
 </section>
