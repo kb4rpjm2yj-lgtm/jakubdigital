@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jak zjistit, jestli vás AI doporučuje: otestujte svůj web v ChatGPT za 10 minut — Jakub Digital</title>
+<meta name="description" content="Zjistěte, co o vás říkají ChatGPT, Gemini a Perplexity. 5 promptů, kterými ověříte svou AI viditelnost za 10 minut — návod krok za krokem.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jakubdigital.cz/clanky/jestli-vas-ai-doporucuje">
+<property="og:type" content="article">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="Jakub Digital">
+<meta property="og:title" content="Jak zjistit, jestli vás AI doporučuje">
+<meta property="og:description" content="5 promptů do ChatGPT za 10 minut. Zjistěte, co o vás AI říká.">
+<meta property="og:url" content="https://jakubdigital.cz/clanky/jestli-vas-ai-doporucuje">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Jak zjistit, jestli vás AI doporučuje: otestujte svůj web v ChatGPT za 10 minut",
+  "description": "5 promptů, kterými ověříte svou AI viditelnost za 10 minut.",
+  "author": {"@type": "Person", "name": "Jakub Málek", "url": "https://jakubdigital.cz/"},
+  "publisher": {"@type": "Organization", "name": "Jakub Digital", "url": "https://jakubdigital.cz/"},
+  "datePublished": "2026-08-08",
+  "dateModified": "2026-08-08",
+  "mainEntityOfPage": "https://jakubdigital.cz/clanky/jestli-vas-ai-doporucuje",
+  "inLanguage": "cs"
+}
+</script>
+<style>
+  :root { --paper:#FAF8F5; --ink:#14212E; --muted:#46586A; --accent:#E85D26; --line:#E7E2DB; --ok:#1F6F5C; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; font-size:17px; line-height:1.7; color:var(--ink); background:var(--paper); -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 24px; }
+  a { color:var(--accent); }
+  header { border-bottom:1px solid var(--line); background:rgba(250,248,245,0.95); position:sticky; top:0; z-index:10; }
+  .header-inner { display:flex; justify-content:space-between; align-items:center; padding:16px 24px; max-width:1080px; margin:0 auto; }
+  .logo { font-weight:700; font-size:20px; color:var(--ink); text-decoration:none; }
+  .logo span { color:var(--accent); }
+  .logo:hover { text-decoration:none; }
+  nav a { color:var(--muted); margin-left:20px; font-size:15px; font-weight:600; text-decoration:none; }
+  nav a:hover { color:var(--accent); }
+  article { padding:64px 0 80px; }
+  .kicker { font-size:14px; font-weight:600; color:var(--accent); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px; }
+  h1 { font-family:'Fraunces',serif; font-size:clamp(2rem,5vw,3rem); line-height:1.12; font-weight:600; margin-bottom:16px; }
+  .meta { font-size:14px; color:var(--muted); margin-bottom:32px; }
+  h2 { font-family:'Fraunces',serif; font-size:1.6rem; margin:40px 0 14px; }
+  h3 { font-size:1.15rem; margin:28px 0 10px; }
+  p { margin-bottom:18px; color:#2c3a47; }
+  ul, ol { margin:0 0 20px 24px; color:#2c3a47; }
+  li { margin-bottom:8px; }
+  code { background:#EFE9E1; padding:2px 6px; border-radius:4px; font-size:0.9em; }
+  .tip { background:#EFF6F2; border-left:4px solid var(--ok); border-radius:0 10px 10px 0; padding:18px 22px; margin:24px 0; }
+  .cta-box { background:var(--ink); color:#fff; border-radius:14px; padding:32px; margin-top:48px; }
+  .cta-box h2 { color:#fff; margin-top:0; font-size:1.4rem; }
+  .cta-box p { color:#B9C6D2; }
+  .btn { display:inline-block; background:var(--accent); color:#fff; padding:13px 24px; border-radius:8px; font-weight:600; text-decoration:none; margin-top:8px; }
+  .btn:hover { background:#d24e1c; text-decoration:none; }
+  .back { display:inline-block; margin-bottom:32px; font-size:15px; font-weight:600; }
+  footer { border-top:1px solid var(--line); padding:28px 0; font-size:14px; color:var(--muted); }
+  .footer-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  @media (max-width:640px) { nav { display:none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="https://jakubdigital.cz/" class="logo">Jakub<span>Digital</span></a>
+    <nav>
+      <a href="https://jakubdigital.cz/#sluzby">Služby</a>
+      <a href="https://jakubdigital.cz/#reference">Reference</a>
+      <a href="https://jakubdigital.cz/#cenik">Ceník</a>
+      <a href="https://jakubdigital.cz/#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <a href="https://jakubdigital.cz/" class="back">← Zpět na hlavní stránku</a>
+    <div class="kicker">GEO prakticky</div>
+    <h1>Jak zjistit, jestli vás AI doporučuje: otestujte svůj web v ChatGPT za 10 minut</h1>
+    <div class="meta">8. srpna 2026 · Jakub Málek · 6 min čtení</div>
+
+    <p>Lidé se dnes ptají AI — ChatGPT, Gemini, Perplexity. A AI odpovídá z webů, které zná. Otázka zní: <strong>jste v těch odpovědích vy, nebo konkurence?</strong> Zjistíte to za 10 minut. A když nebudete, řeknu vám, co s tím.</p>
+
+    <h2>5 promptů, které ověří vaši AI viditelnost</h2>
+    <p>Otevřete <strong>ChatGPT</strong> (nebo Gemini, Perplexity — zkuste všechny tři) a zadejte následující. Nahraďte svým oborem a městem:</p>
+
+    <h3>Prompt 1: Obecné doporučení</h3>
+    <code>Kdo dělá dobré weby v Liberci? Doporuč mi 3 firmy nebo freelancery, které znáš.</code>
+    <p>Jste v odpovědi? Na jaké pozici? Kdo tam je místo vás?</p>
+
+    <h3>Prompt 2: Obecné + AI</h3>
+    <code>Potřebuju web pro advokátní kancelář. Kdo v Česku dělá weby, kterým bych měl věnovat pozornost?</code>
+    <p>Nahraďte „advokátní kancelář" vaším oborem. AI tady hledá, kdo je na váš obor zaměřený.</p>
+
+    <h3>Prompt 3: Lokální + specifické</h3>
+    <code>Sháním webdesignéra pro můj autoservis v Jablonci nad Nisou. Poradíš mi?</code>
+    <p>Když vás AI nezná lokálně, nejste vidět. Tohle je prompt, který píšou vaši zákazníci.</p>
+
+    <h3>Prompt 4: Ověření konkrétní firmy</h3>
+    <code>Co víš o Jakub Digital z Liberce? Co dělají a jaké mají reference?</code>
+    <p>Nahraďte svým jménem. Pokud AI odpoví „o téhle firmě nic nevím", máte práci.</p>
+
+    <h3>Prompt 5: Cena + termíny</h3>
+    <code>Kolik stojí web na míru a za jak dlouho je hotový?</code>
+    <p>Cituje AI váš ceník? Nebo obecné informace? Tohle je nejčastější otázka vašich zákazníků.</p>
+
+    <h2>Jak vyhodnotit výsledky</h2>
+    <ul>
+      <li><strong>AI vás zná a doporučuje</strong> — skvěle, máte solidní GEO základ. Pište další články a odpovídejte na nové otázky.</li>
+      <li><strong>AI vás zná málo nebo okrajově</strong> — chybí strukturovaná data, obsah, odpovědi na otázky. Opravitelné.</li>
+      <li><strong>AI o vás neví vůbec</strong> — to je nejčastější. Znamená to, že váš web je pro AI neviditelný. Potřebujete technickou úpravu + obsah.</li>
+    </ul>
+
+    <h2>Co dál, když nejste vidět</h2>
+    <p>Stejné kroky, co jsem udělal na svém webu: strukturovaná data, metadata, robots.txt, sitemap, FAQ, články. Je to technická práce, ne magie. A dá se udělat do týdne.</p>
+
+    <div class="cta-box">
+      <h2>Vyšel váš test špatně?</h2>
+      <p>Pošlete mi adresu webu a já vám za 24 hodin pošlu GEO audit — co z vašeho webu AI vidí a co s tím. Zdarma, bez závazků.</p>
+      <a href="mailto:info@jakubdigital.cz" class="btn">info@jakubdigital.cz</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>Jakub Digital © 2026 · Liberec</div>
+    <div><a href="https://jakubdigital.cz/">Hlavní stránka</a> · <a href="https://jakubdigital.cz/clanky/geo-audit-v-5-krocich">GEO audit v 5 krocích</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
