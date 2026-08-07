@@ -140,12 +140,12 @@
   /* ---------- About ---------- */
   .about { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
   .about .portrait {
-    border-radius: 14px; background: var(--line); aspect-ratio: 4/5;
-    display: flex; align-items: center; justify-content: center;
-    color: var(--muted); font-size: 15px; border: 1px solid var(--line);
-    background: linear-gradient(135deg, #EFE9E1 0%, #E2D9CC 100%);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: #EFE9E1;
   }
-  .about .portrait span { max-width: 200px; text-align: center; }
+  .about .portrait img { display: block; width: 100%; height: auto; object-fit: cover; }
   .about-text h2 { font-family: 'Fraunces', serif; font-size: clamp(1.75rem, 3vw, 2.4rem); margin-bottom: 18px; }
   .about-text p { color: var(--muted); margin-bottom: 16px; max-width: 520px; }
   .about-text p strong { color: var(--ink); }
@@ -245,25 +245,25 @@
         <div class="icon">🖥️</div>
         <h3>Web na míru</h3>
         <p>Postavím web od nuly, přesně podle toho, co potřebujete. Nejdřív si popovídáme, pak teprve kódím. Žádné šablony, žádné „tohle by se vám mohlo líbit".</p>
-        <span class="price">12 000–20 000 Kč · hotovo za 7 dní až 3 týdny</span>
+        <span class="price">14 900–24 500 Kč · hotovo za 7 dní až 3 týdny</span>
       </div>
       <div class="card span-4">
         <div class="icon">📱</div>
         <h3>Správa sítí</h3>
         <p>Píšu a plánuju příspěvky za vás, vy se věnujete práci. Profil žije, vy nemusíte.</p>
-        <span class="price">4 000–6 000 Kč/měsíc</span>
+        <span class="price">4 900–7 500 Kč/měsíc</span>
       </div>
       <div class="card span-4">
         <div class="icon">🛡️</div>
         <h3>Údržba webu</h3>
         <p>Aktualizace, zálohy, drobné opravy. Aby vám web nespadl zrovna ve chvíli, kdy ho potřebujete.</p>
-        <span class="price">1 500 Kč/měsíc</span>
+        <span class="price">1 900 Kč/měsíc</span>
       </div>
       <div class="card span-4 featured">
         <div class="icon">🤖</div>
         <h3>Najdou vás i AI</h3>
         <p>Lidi se dnes ptají ChatGPT, koho si vybrat. Upravím web tak, aby vás doporučoval. Nikdo z okolí to nenabízí.</p>
-        <span class="price">3 000–5 000 Kč</span>
+        <span class="price">3 900–6 500 Kč</span>
       </div>
       <div class="card span-4">
         <div class="icon">⚙️</div>
@@ -317,11 +317,11 @@
 <!-- O MNĚ -->
 <section id="o-mne">
   <div class="wrap about">
-    <div class="portrait"><span>Tady bude fotka Jakuba,<br>až ji dodá 🙂</span></div>
+    <div class="portrait"><img src="foto-jakub.jpg" alt="Jakub Málek"></div>
     <div class="about-text">
       <h2>Jeden člověk, jedna práce.</h2>
       <p>Celý život se pohybuju mezi lidmi a technikou. Dělám weby, sítě a automatizace pro lidi, kteří nemají čas ani chuť řešit, jak to celé funguje — chtějí, aby to prostě fungovalo.</p>
-      <p>Nejsem agentura. Nevoláte do call centra, nepřepojujete mě mezi odděleními. Jsem jeden člověk, kterému na vašem webu záleží, protože je na něm moje jméno.</p>
+      <p>Nejsem agentura. Nevoláte do call centra, nikdo vás nepřepojuje mezi odděleními. Jsem jeden člověk, kterému na vašem webu záleží, protože je na něm moje jméno.</p>
       <p>Občas to stojí víc času, než jsem plánoval. Občas si říkám, že jsem si mohl vybrat jednodušší práci. Ale když web běží a klient je spokojený, tak to za to stojí. <strong>To jsem zase já.</strong></p>
       <p>Liberec a okolí. Osobně, nebo online — jak vám to vyhovuje.</p>
     </div>
@@ -337,15 +337,15 @@
     </div>
     <table>
       <tr><th>Služba</th><th>Co dostanete</th><th>Cena</th></tr>
-      <tr><td>Jednostránkový web</td><td>Návrh, texty, tvorba, nasazení</td><td class="price-tag">od 12 000 Kč</td></tr>
-      <tr><td>Web na míru (3–5 stránek)</td><td>Návrh, texty, tvorba, nasazení, zaškolení</td><td class="price-tag">od 15 000 Kč</td></tr>
-      <tr><td>Web pro profesionály (5–7 stránek)</td><td>Vše výše + struktura, SEO základy</td><td class="price-tag">od 20 000 Kč</td></tr>
-      <tr><td>Správa sociálních sítí</td><td>8–12 příspěvků měsíčně + grafika + reporting</td><td class="price-tag">od 4 000 Kč/měs.</td></tr>
-      <tr><td>Údržba webu</td><td>Aktualizace, zálohy, drobné úpravy, dohled</td><td class="price-tag">od 1 500 Kč/měs.</td></tr>
-      <tr><td>Viditelnost pro AI (GEO)</td><td>Audit + úprava webu, aby vás doporučovaly AI chatboty</td><td class="price-tag">od 3 000 Kč</td></tr>
+      <tr><td>Jednostránkový web</td><td>Návrh, texty, tvorba, nasazení</td><td class="price-tag">od 14 900 Kč</td></tr>
+      <tr><td>Web na míru (3–5 stránek)</td><td>Návrh, texty, tvorba, nasazení, zaškolení</td><td class="price-tag">od 18 500 Kč</td></tr>
+      <tr><td>Web pro profesionály (5–7 stránek)</td><td>Vše výše + struktura, SEO základy</td><td class="price-tag">od 24 500 Kč</td></tr>
+      <tr><td>Správa sociálních sítí</td><td>8–12 příspěvků měsíčně + grafika + reporting</td><td class="price-tag">od 4 900 Kč/měs.</td></tr>
+      <tr><td>Údržba webu</td><td>Aktualizace, zálohy, drobné úpravy, dohled</td><td class="price-tag">od 1 900 Kč/měs.</td></tr>
+      <tr><td>Viditelnost pro AI (GEO)</td><td>Audit + úprava webu, aby vás doporučovaly AI chatboty</td><td class="price-tag">od 3 900 Kč</td></tr>
       <tr><td>Automatizace</td><td>Analýza, návrh, implementace, dokumentace</td><td class="price-tag">individuálně</td></tr>
     </table>
-    <p class="note">Ceny jsou orientační bez DPH. Konkrétní nabídku připravím zdarma po krátké konzultaci — řekněte, co potřebujete, a já řeknu, kolik to stojí a za jak dlouho to bude.</p>
+    <p class="note">Ceny jsou konečné — nejsem plátce DPH, takže se k nim nic nepřičítá. Konkrétní nabídku připravím zdarma po krátké konzultaci — řekněte, co potřebujete, a já řeknu, kolik to stojí a za jak dlouho to bude.</p>
   </div>
 </section>
 
