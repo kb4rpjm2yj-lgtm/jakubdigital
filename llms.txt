@@ -39,6 +39,7 @@
 
 - [Eva Kaprálová](https://evakapralova.cz/): web pro političku (zastupitelka Královéhradeckého kraje, PRO) — [případová studie](https://jakubdigital.cz/reference-evakapralova)
 - [liberec.online](https://liberec.online/): občanská mapa problémů v Liberci-Pavlovicích
+- [Kalendář alternativy](https://kalendar-alternativy.cz/): kalendář akcí propojený s profily osobností — [případová studie](https://jakubdigital.cz/reference-kalendar-alternativy)
 
 ## Kontakt
 
