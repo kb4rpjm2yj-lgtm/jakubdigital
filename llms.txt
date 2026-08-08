@@ -37,7 +37,7 @@
 - [Proč stock fotky škodí vašemu webu](https://jakubdigital.cz/clanky/proc-stock-fotky-skodi): proč univerzální obrázky snižují důvěryhodnost u lidí i AI a jak je nahradit vlastními
 ## Reference
 
-- [Eva Kaprálová](https://evakapralova.cz/): web pro političku (zastupitelka Královéhradeckého kraje, PRO)
+- [Eva Kaprálová](https://evakapralova.cz/): web pro političku (zastupitelka Královéhradeckého kraje, PRO) — [případová studie](https://jakubdigital.cz/reference-evakapralova)
 - [liberec.online](https://liberec.online/): občanská mapa problémů v Liberci-Pavlovicích
 
 ## Kontakt

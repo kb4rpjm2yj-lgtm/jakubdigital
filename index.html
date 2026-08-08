@@ -282,6 +282,10 @@
   /* ---------- References ---------- */
   .refs { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
   .ref { border: 1px solid var(--line); border-radius: 14px; padding: 24px; background: #fff; }
+  .ref .shot { display:block; border-radius: 10px; overflow:hidden; border:1px solid var(--line); margin:-8px 0 14px; line-height:0; }
+  .ref .shot img { width:100%; height:auto; display:block; }
+  .ref .shot:hover { opacity:0.92; }
+  .ref .cs-link { display:inline-block; margin-top:10px; font-size:13px; font-weight:600; }
   .ref .tag { font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
   .ref h4 { font-family: 'Fraunces', serif; font-size: 18px; margin: 8px 0 6px; }
   .ref .num { font-size: 30px; font-weight: 700; color: var(--ok); font-variant-numeric: tabular-nums; margin: 10px 0 2px; letter-spacing: -0.5px; }
@@ -451,11 +455,13 @@
     </div>
     <div class="refs">
       <div class="ref">
-        <div class="tag">Web + sítě</div>
+        <div class="tag">Web + sítě + podpora</div>
+        <a class="shot" href="reference-evakapralova"><img src="ref/eva-desktop.jpg" alt="Web Evy Kaprálové — evakapralova.cz" loading="lazy"></a>
         <h4>Eva Kaprálová</h4>
         <div class="num">5 <small>dní od zadání ke spuštění</small></div>
-        <p>Krajská zastupitelka, ředitelka školy, aktivní kampaň.</p>
-        <a href="https://evakapralova.cz" target="_blank">evakapralova.cz →</a>
+        <p>Krajská zastupitelka, ředitelka školy, aktivní kampaň. Web s administrací, blog, správa sítí a digitální podpora.</p>
+        <a href="https://evakapralova.cz" target="_blank">evakapralova.cz →</a><br>
+        <a class="cs-link" href="reference-evakapralova">Případová studie →</a>
       </div>
       <div class="ref">
         <div class="tag">Občanský projekt</div>
