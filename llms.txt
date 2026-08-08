@@ -44,7 +44,3 @@
 - Web: https://jakubdigital.cz
 - Email: info@jakubdigital.cz
 - Lokalita: Liberec, Česko
-
-## Optional
-
-- [AlphaCreator](https://alphacreator.cz/): autorský projekt Jakuba Málka (KubaFAKT, KubaTV, KubaINFO)
