@@ -5,7 +5,7 @@
 ## O nás
 
 - Zakladatel: Jakub Málek, webdesignér a specialista na GEO z Liberce
-- Služby: tvorba webových stránek na míru, webdesign, SEO, GEO (viditelnost pro AI vyhledávače jako ChatGPT, Perplexity, Gemini, Claude), správa sociálních sítí, údržba webů
+- Služby: tvorba webových stránek na míru, webdesign, SEO, GEO (viditelnost pro AI vyhledávače jako ChatGPT, Perplexity, Gemini, Claude), správa sociálních sítí, údržba webů, firemní focení (provozovna, portrét, produkt)
 - Cenové rozpětí: 14 900 – 24 500 Kč za web na míru
 - Oblast: Liberec, Jablonec nad Nisou, Liberecký kraj, celá ČR (práce na dálku)
 - Přístup: transparentní ceník, žádné schovávání, klient ví za co platí
@@ -34,6 +34,7 @@
 - [Web pro školu](https://jakubdigital.cz/clanky/web-pro-skolu): weby pro školy
 - [Jak napsat texty na web](https://jakubdigital.cz/clanky/jak-napsat-texty-na-web): copywriting pro weby
 
+- [Proč stock fotky škodí vašemu webu](https://jakubdigital.cz/clanky/proc-stock-fotky-skodi): proč univerzální obrázky snižují důvěryhodnost u lidí i AI a jak je nahradit vlastními
 ## Reference
 
 - [Eva Kaprálová](https://evakapralova.cz/): web pro političku (zastupitelka Královéhradeckého kraje, PRO)
