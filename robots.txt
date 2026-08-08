@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jakubdigital.pages.dev/sitemap.xml
+Sitemap: https://jakubdigital.cz/sitemap.xml
