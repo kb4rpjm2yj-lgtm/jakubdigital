@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Co je GEO (viditelnost pro AI) a proč na něm záleží — Jakub Digital</title>
+<meta name="description" content="GEO = Generative Engine Optimization. Jak AI chatboty (ChatGPT, Gemini) vybírají firmy, co musí web umět, aby vás AI doporučila, a jak se to liší od SEO.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jakubdigital.cz/clanky/co-je-geo">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="Jakub Digital">
+<meta property="og:title" content="Co je GEO (viditelnost pro AI) a proč na něm záleží">
+<meta property="og:description" content="Jak AI vybírá firmy, co musí web umět, aby vás ChatGPT doporučil, a jak se GEO liší od SEO.">
+<meta property="og:url" content="https://jakubdigital.cz/clanky/co-je-geo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "image": "https://jakubdigital.cz/og-image.png",
+  "headline": "Co je GEO (viditelnost pro AI) a proč na něm záleží",
+  "description": "Jak AI chatboty vybírají firmy, co musí web umět, aby vás AI doporučila, a jak se GEO liší od SEO.",
+  "author": {"@type": "Person", "name": "Jakub Málek", "url": "https://jakubdigital.cz/"},
+  "publisher": {"@type": "Organization", "name": "Jakub Digital", "url": "https://jakubdigital.cz/"},
+  "datePublished": "2026-08-07",
+  "dateModified": "2026-08-07",
+  "mainEntityOfPage": "https://jakubdigital.cz/clanky/co-je-geo",
+  "inLanguage": "cs"
+}
+</script>
+<style>
+  :root { --paper:#FAF8F5; --ink:#14212E; --muted:#46586A; --accent:#E85D26; --line:#E7E2DB; --ok:#1F6F5C; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Inter',sans-serif; font-size:17px; line-height:1.7; color:var(--ink); background:var(--paper); -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 24px; }
+  a { color:var(--accent); }
+  header { border-bottom:1px solid var(--line); background:rgba(250,248,245,0.95); position:sticky; top:0; z-index:10; }
+  .header-inner { display:flex; justify-content:space-between; align-items:center; padding:16px 24px; max-width:1080px; margin:0 auto; }
+  .logo { font-weight:700; font-size:20px; color:var(--ink); text-decoration:none; }
+  .logo span { color:var(--accent); }
+  .logo:hover { text-decoration:none; }
+  nav a { color:var(--muted); margin-left:20px; font-size:15px; font-weight:600; text-decoration:none; }
+  nav a:hover { color:var(--accent); }
+  article { padding:64px 0 80px; }
+  .kicker { font-size:14px; font-weight:600; color:var(--accent); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px; }
+  h1 { font-family:'Fraunces',serif; font-size:clamp(2rem,5vw,3rem); line-height:1.12; font-weight:600; margin-bottom:16px; }
+  .meta { font-size:14px; color:var(--muted); margin-bottom:32px; }
+  h2 { font-family:'Fraunces',serif; font-size:1.6rem; margin:40px 0 14px; }
+  h3 { font-size:1.15rem; margin:28px 0 10px; }
+  p { margin-bottom:18px; color:#2c3a47; }
+  ul, ol { margin:0 0 20px 24px; color:#2c3a47; }
+  li { margin-bottom:8px; }
+  .tip { background:#EFF6F2; border-left:4px solid var(--ok); border-radius:0 10px 10px 0; padding:18px 22px; margin:24px 0; }
+  .cta-box { background:var(--ink); color:#fff; border-radius:14px; padding:32px; margin-top:48px; }
+  .cta-box h2 { color:#fff; margin-top:0; font-size:1.4rem; }
+  .cta-box p { color:#B9C6D2; }
+  .btn { display:inline-block; background:var(--accent); color:#fff; padding:13px 24px; border-radius:8px; font-weight:600; text-decoration:none; margin-top:8px; }
+  .btn:hover { background:#d24e1c; text-decoration:none; }
+  .back { display:inline-block; margin-bottom:32px; font-size:15px; font-weight:600; }
+  footer { border-top:1px solid var(--line); padding:28px 0; font-size:14px; color:var(--muted); }
+  .footer-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  @media (max-width:640px) { nav { display:none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="https://jakubdigital.cz/" class="logo">Jakub<span>Digital</span></a>
+    <nav>
+      <a href="https://jakubdigital.cz/#sluzby">Služby</a>
+      <a href="https://jakubdigital.cz/#reference">Reference</a>
+      <a href="https://jakubdigital.cz/#cenik">Ceník</a>
+      <a href="https://jakubdigital.cz/#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+    <a href="https://jakubdigital.cz/" class="back">← Zpět na hlavní stránku</a>
+    <div class="kicker">Viditelnost pro AI</div>
+    <h1>Co je GEO (viditelnost pro AI) a proč na něm záleží</h1>
+    <div class="meta">7. srpna 2026 · Jakub Málek · 6 min čtení</div>
+
+    <p>Sedm z deseti mladých lidí se dnes ptá AI chatbota na nákupní tipy (průzkum NMS, 2026). Když se někdo zeptá „kdo dělá dobré weby v Liberci" nebo „kterého advokáta si vybrat", odpověď už nehledá v Googlu — zeptá se ChatGPT. A tady přichází otázka, kterou si zatím klade málokdo: <strong>doporučí AI zrovna vás?</strong></p>
+
+    <h2>Co je GEO</h2>
+    <p>GEO (Generative Engine Optimization) je optimalizace webu pro AI systémy — aby vás ChatGPT, Gemini, Claude nebo Perplexity správně pochopily, citovaly a hlavně <strong>doporučovaly</strong>. Zatímco SEO dělá web viditelným ve vyhledávačích, GEO dělá web čitelným a důvěryhodným pro AI.</p>
+    <p>Je to nové SEO. A většina firem o něm zatím neví — což je pro vás příležitost, ne hrozba.</p>
+
+    <h2>Jak AI vybírá, koho doporučí</h2>
+    <p>Když se ChatGPT zeptáte „kde koupit kvalitní kolo v Liberci", nehledá v databázi reklam. Čte weby, které zná, a odpovídá podle toho, co z nich pochopil. Konkrétně mu pomáhá:</p>
+    <ul>
+      <li><strong>Čistý, strukturovaný obsah.</strong> Kdo jste, co děláte, komu to děláte, kde působíte. Jasně, lidsky, bez balastu.</li>
+      <li><strong>Strukturovaná data (schema.org).</strong> AI čte metadata, která jí říkají: tohle je firma, tohle jsou služby, tyhle jsou ceny, tohle je oblast působení.</li>
+      <li><strong>Texty, které odpovídají na otázky.</strong> „Kolik stojí web?", „Jak probíhá spolupráce?", „Jak vybrat advokáta?" — články a FAQ, které rovnou odpovídají, AI ráda cituje.</li>
+      <li><strong>Konzistentní informace napříč webem.</strong> Stejné jméno, adresa, telefon všude. Žádné rozpory.</li>
+    </ul>
+
+    <h2>Co AI nesnáší</h2>
+    <ul>
+      <li><strong>Weby, kde je obsah schovaný za JavaScriptem.</strong> AI (a roboti obecně) čte HTML. Když je obsah vykreslený až po načtení skriptů, může ho minout.</li>
+      <li><strong>Prázdné stránky a šablony bez obsahu.</strong> „Vítejte na našem webu" nikomu nepomůže — ani AI, ani zákazníkovi.</li>
+      <li><strong>Rozpory.</strong> Jinde jste „Jan Novák s.r.o.", jinde „Novák a synové". AI ztratí jistotu, kdo vlastně jste.</li>
+    </ul>
+
+    <h2>SEO vs GEO: v čem je rozdíl</h2>
+    <ul>
+      <li><strong>SEO</strong> = být vidět na Googlu, když někdo hledá „web Liberec". Cíl: první stránka výsledků.</li>
+      <li><strong>GEO</strong> = být doporučený AI, když se někdo zeptá „kdo udělá web v Liberci". Cíl: být v odpovědi chatbota.</li>
+    </ul>
+    <p>Nejlepší je dělat obojí — technicky se to hodně překrývá. Kvalitní obsah, struktura, rychlost a metadata prospívají Googlu i AI zároveň.</p>
+
+    <h2>Co konkrétně upravíme na vašem webu</h2>
+    <ol>
+      <li><strong>Audit čitelnosti pro AI</strong> — co AI z vašeho webu vidí a co ne.</li>
+      <li><strong>Strukturovaná data</strong> — firma, služby, ceny, oblast, kontakt (schema.org).</li>
+      <li><strong>Úprava obsahu</strong> — aby odpovídal na otázky, které vaši zákazníci AI kladou.</li>
+      <li><strong>Technické doladění</strong> — metadata, canonical, robots.txt, sitemap.</li>
+      <li><strong>Základ pro citování</strong> — FAQ, články, konzistentní informace.</li>
+    </ol>
+
+    <div class="tip"><strong>Příklad z praxe:</strong> Když jsem svůj vlastní web připravoval na AI viditelnost, našel jsem, že robots.txt vůbec neexistoval a AI z webu neviděla strukturu. Po úpravách (metadata, schema, sitemap) je web čitelný pro ChatGPT, Google i další systémy. Přesně to samé udělám pro vás.</div>
+
+    <h2>Kolik to stojí</h2>
+    <p>Audit a úprava webu pro AI viditelnost u mě začíná na 3 900 Kč, kompletnější nastavení podle rozsahu webu. Konkrétní nabídku připravím zdarma po krátké konzultaci.</p>
+
+    <p>Chcete si ověřit, co z vašeho webu AI vidí? Zkuste <a href="geo-audit-v-5-krocich">GEO audit v 5 krocích</a>.</p>
+
+    <p>A pokud chcete vědět, jestli vás AI doporučuje, vyzkoušejte <a href="jestli-vas-ai-doporucuje">test viditelnosti v ChatGPT</a>.</p>
+
+    <div class="cta-box">
+      <h2>Chcete vědět, co z vašeho webu AI vidí?</h2>
+      <p>Napište mi a udělám rychlý audit čitelnosti pro AI. Zjistíte, jestli vás ChatGPT vůbec může doporučit — a co s tím udělat.</p>
+      <a href="mailto:info@jakubdigital.cz" class="btn">info@jakubdigital.cz</a>
+    </div>
+  </div>
+</article>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>Jakub Digital © 2026 · Liberec</div>
+    <div><a href="https://jakubdigital.cz/">Hlavní stránka</a> · <a href="https://jakubdigital.cz/clanky/kolik-stoji-web">Kolik stojí web</a> · <a href="https://jakubdigital.cz/clanky/web-pro-advokata">Web pro advokáta</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
