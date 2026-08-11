@@ -172,13 +172,20 @@
   /* ---------- Sticky mobile CTA ---------- */
   .sticky-cta {
     display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
-    background: #fff; border-top: 1px solid var(--line); padding: 12px 16px;
+    background: var(--ink); padding: 10px 12px;
+    box-shadow: 0 -4px 16px rgba(20,33,46,0.18);
   }
-  .sticky-cta { display: none; }
-  .sticky-cta .btn { display: block; text-align: center; }
+  .sticky-cta .btn {
+    display: flex; align-items: center; justify-content: center;
+    padding: 11px 10px; font-size: 14px; border-radius: 8px;
+  }
   @media (max-width: 860px) {
-    .sticky-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .sticky-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   }
+  .sticky-cta .btn-call { background: var(--accent); color: #fff; }
+  .sticky-cta .btn-call:hover { background: var(--accent-dark); }
+  .sticky-cta .btn-mail { background: #fff; color: var(--ink); }
+  .sticky-cta .btn-mail:hover { background: #f0ece6; }
 
   /* FAQ */
   .faq-list { max-width: 760px; }
