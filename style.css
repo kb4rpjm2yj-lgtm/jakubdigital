@@ -30,7 +30,8 @@
     border-bottom: 1px solid var(--line);
   }
   .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; max-width: 1080px; margin: 0 auto; }
-  .logo { font-weight: 700; font-size: 20px; letter-spacing: 0.3px; color: var(--ink); }
+  .logo { font-weight: 700; font-size: 20px; letter-spacing: 0.3px; color: var(--ink); display: flex; align-items: center; gap: 10px; }
+  .logo-img { width: 30px; height: 30px; border-radius: 6px; }
   .logo span { color: var(--accent); }
   nav a { color: var(--muted); margin-left: 22px; font-size: 15px; font-weight: 600; }
   nav a:hover { color: var(--accent); text-decoration: none; }
