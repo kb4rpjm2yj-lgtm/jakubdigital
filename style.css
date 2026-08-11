@@ -202,7 +202,7 @@
     nav { display: none; }
     .span-4, .span-6, .span-8 { grid-column: span 12; }
     .cta-block { padding: 40px 28px; }
-    .sticky-cta { display: block; }
+    .sticky-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     section { padding: 52px 0; }
     .hero h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
   }
