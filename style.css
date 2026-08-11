@@ -201,3 +201,5 @@
 .alt-section { border-top: 1px solid var(--line); background: #F4F0EA; }
 .lined-section { border-top: 1px solid var(--line); }
 .btn-contact { font-size: 17px; }
+  .contact-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .contact-actions .btn { white-space: nowrap; }
