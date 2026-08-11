@@ -184,8 +184,8 @@
   }
   .sticky-cta .btn-call { background: var(--accent); color: #fff; }
   .sticky-cta .btn-call:hover { background: var(--accent-dark); }
-  .sticky-cta .btn-mail { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.6); }
-  .sticky-cta .btn-mail:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
+  .sticky-cta .btn-mail { background: var(--ink); color: #fff; }
+  .sticky-cta .btn-mail:hover { background: #0d1822; }
 
   /* FAQ */
   .faq-list { max-width: 760px; }
