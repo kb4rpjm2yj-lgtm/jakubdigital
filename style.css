@@ -172,8 +172,8 @@
   /* ---------- Sticky mobile CTA ---------- */
   .sticky-cta {
     display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 60;
-    background: var(--ink); padding: 10px 12px;
-    box-shadow: 0 -4px 16px rgba(20,33,46,0.18);
+    background: #fff; border-top: 1px solid var(--line); padding: 10px 12px;
+    box-shadow: 0 -4px 16px rgba(20,33,46,0.08);
   }
   .sticky-cta .btn {
     display: flex; align-items: center; justify-content: center;
@@ -184,8 +184,8 @@
   }
   .sticky-cta .btn-call { background: var(--accent); color: #fff; }
   .sticky-cta .btn-call:hover { background: var(--accent-dark); }
-  .sticky-cta .btn-mail { background: #fff; color: var(--ink); }
-  .sticky-cta .btn-mail:hover { background: #f0ece6; }
+  .sticky-cta .btn-mail { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.6); }
+  .sticky-cta .btn-mail:hover { background: rgba(255,255,255,0.1); border-color: #fff; }
 
   /* FAQ */
   .faq-list { max-width: 760px; }
