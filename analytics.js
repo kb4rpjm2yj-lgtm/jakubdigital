@@ -3,6 +3,7 @@
  * Načítá se synchronně v <head> PŘED async gtag.js (viz snippet v každé stránce).
  * Bez souhlasu se neukládají žádné cookies (analytics_storage = denied).
  * Volba se pamatuje v localStorage pod klíčem "jd_cookie_consent".
+ * Souhlas lze odvolat tlačítkem [data-jd-cookie-settings] (stránka /gdpr).
  */
 (function () {
   'use strict';
@@ -26,7 +27,16 @@
   gtag('js', new Date());
   gtag('config', MEASUREMENT_ID);
 
-  // 2) Uživatel už rozhodl → aplikuj volbu a lištu neukazuj
+  // 2) Odvolání / změna souhlasu — tlačítko [data-jd-cookie-settings] (viz /gdpr)
+  document.addEventListener('click', function (e) {
+    var el = e.target && e.target.closest ? e.target.closest('[data-jd-cookie-settings]') : null;
+    if (!el) return;
+    e.preventDefault();
+    try { localStorage.removeItem(STORAGE_KEY); } catch (err) {}
+    window.location.reload();
+  });
+
+  // 3) Uživatel už rozhodl → aplikuj volbu a lištu neukazuj
   var stored = null;
   try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
   if (stored === 'granted') {
@@ -35,7 +45,7 @@
   }
   if (stored === 'denied') return;
 
-  // 3) První návštěva → zobraz lištu
+  // 4) První návštěva → zobraz lištu
   function decide(value) {
     try { localStorage.setItem(STORAGE_KEY, value); } catch (e) {}
     if (value === 'granted') {
@@ -58,6 +68,8 @@
       '#cookie-bar .cb-deny:hover{border-color:rgba(250,248,245,.75);}',
       '#cookie-bar .cb-accept{background:#E85D26;color:#fff;}',
       '#cookie-bar .cb-accept:hover{background:#C73C05;}',
+      '#cookie-bar .cb-text a{color:#E85D26;text-decoration:underline;}',
+      '#cookie-bar .cb-text a:hover{color:#FAF8F5;}',
       '#cookie-bar .cb-btn:focus-visible{outline:2px solid #E85D26;outline-offset:2px;}',
       '@media(max-width:640px){#cookie-bar .cb-actions{width:100%;}#cookie-bar .cb-btn{flex:1;}}'
     ].join('');
@@ -73,7 +85,8 @@
     bar.innerHTML =
       '<div class="cb-inner">' +
         '<p class="cb-text">Používám Google Analytics, abych věděl, co na webu funguje. ' +
-        'Cookies se ukládají jen s vaším souhlasem a nic tím neztratíte — web funguje i bez něj.</p>' +
+        'Cookies se ukládají jen s vaším souhlasem a nic tím neztratíte — web funguje i bez něj. ' +
+        'Podrobnosti najdete v <a href="/gdpr">zásadách ochrany osobních údajů</a>.</p>' +
         '<div class="cb-actions">' +
           '<button type="button" class="cb-btn cb-deny">Odmítnout</button>' +
           '<button type="button" class="cb-btn cb-accept">Přijmout</button>' +
