@@ -8,6 +8,13 @@ Osobní web Jakuba Málka (jakubdigital.cz) — digitální servis pro profesion
 ## Struktura
 
 - `index.html` — celý one-page web (služby, reference, ceník, kontakt)
+- `analytics.js` — GA4 (G-L9LH3NKXZY) + Consent Mode v2 + cookie lišta; snippet v `<head>` každé stránky
+
+## Analytika
+
+Google Analytics 4 přes Consent Mode v2 — cookies se ukládají až po kliknutí na „Přijmout“ v liště.
+Bez souhlasu posílá GA jen cookieless signál. CSP v `_headers` musí povolovat `googletagmanager.com`
+a `google-analytics.com`, jinak se GA zablokuje. Volba se pamatuje v `localStorage` (`jd_cookie_consent`).
 
 ## Lokální spuštění
 
