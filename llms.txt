@@ -34,7 +34,6 @@
 - [Web pro kavárnu](https://jakubdigital.cz/clanky/web-pro-kavarnu): weby pro kavárny a restaurace
 - [Web pro školu](https://jakubdigital.cz/clanky/web-pro-skolu): weby pro školy
 - [Jak napsat texty na web](https://jakubdigital.cz/clanky/jak-napsat-texty-na-web): copywriting pro weby
-
 - [Proč stock fotky škodí vašemu webu](https://jakubdigital.cz/clanky/proc-stock-fotky-skodi): proč univerzální obrázky snižují důvěryhodnost u lidí i AI a jak je nahradit vlastními
 
 ## Reference
@@ -42,6 +41,7 @@
 - [Eva Kaprálová](https://evakapralova.cz/): web pro političku (zastupitelka Královéhradeckého kraje, PRO) — [případová studie](https://jakubdigital.cz/reference-evakapralova)
 - [liberec.online](https://liberec.online/): občanská mapa hlášení zápachu z výrobního areálu v Liberci-Pavlovicích — [případová studie](https://jakubdigital.cz/reference-liberec-online)
 - [Kalendář alternativy](https://kalendar-alternativy.cz/): kalendář akcí propojený s profily osobností — [případová studie](https://jakubdigital.cz/reference-kalendar-alternativy)
+- [proJablonec](https://projablonec.cz/): kompletní digitální kampaň pro komunální volby 2026 — web, minihra, strategie a viditelnost v AI — [případová studie](https://jakubdigital.cz/reference-projablonec)
 
 ## Kontakt
 
