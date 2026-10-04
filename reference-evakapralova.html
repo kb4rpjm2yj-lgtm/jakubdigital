@@ -66,6 +66,16 @@
   footer { border-top:1px solid var(--line); padding:28px 0; font-size:14px; color:var(--muted); }
   .footer-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
   @media (max-width:640px) { nav { display:none; } }
+  /* mobilní navigace (hamburger) */
+  .nav-toggle { display:none; align-items:center; justify-content:center; width:44px; height:40px; padding:0; background:#fff; border:1px solid var(--line); border-radius:9px; cursor:pointer; color:var(--ink); font-size:19px; line-height:1; }
+  .nav-toggle.open { background:var(--ink); color:#fff; border-color:var(--ink); }
+   (max-width:640px) {
+    .nav-toggle { display:flex; }
+    nav { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; background:var(--paper); border-bottom:1px solid var(--line); padding:8px 24px 18px; box-shadow:0 14px 28px rgba(20,33,46,0.10); }
+    nav.open { display:flex; }
+    nav a { margin:0; padding:13px 0; font-size:17px; border-bottom:1px solid var(--line); }
+    nav a:last-child { border-bottom:none; }
+  }
 </style>
 </head>
 <body>
