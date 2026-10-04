@@ -41,7 +41,7 @@
 // Jemné odhalování obsahu při scrollu
 (function () {
   function init() {
-    var nodes = document.querySelectorAll('section, .card, .ref');
+    var nodes = document.querySelectorAll('section:not(.hero), .card, .ref');
     if (!nodes.length) return;
     if (!('IntersectionObserver' in window)) return;
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
