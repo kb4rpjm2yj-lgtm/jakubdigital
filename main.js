@@ -65,3 +65,42 @@
     document.addEventListener('DOMContentLoaded', init);
   } else { init(); }
 })();
+
+// Interaktivní kalkulačka ceny
+(function () {
+  function init() {
+    var calc = document.getElementById('calc');
+    if (!calc) return;
+    var webGroup = calc.querySelector('[data-group="web"]');
+    var addons = calc.querySelectorAll('[data-group="addons"] .calc-opt');
+    var out = document.getElementById('calc-total');
+
+    function fmt(n) {
+      return n.toLocaleString('cs-CZ').replace(/\u00a0/g, ' ') + ' Kč';
+    }
+    function recalc() {
+      var base = parseInt(webGroup.querySelector('.calc-opt.active').getAttribute('data-price'), 10);
+      var sum = base;
+      addons.forEach(function (b) {
+        if (b.classList.contains('active')) sum += parseInt(b.getAttribute('data-add'), 10);
+      });
+      out.textContent = fmt(sum);
+    }
+    webGroup.querySelectorAll('.calc-opt').forEach(function (b) {
+      b.addEventListener('click', function () {
+        webGroup.querySelectorAll('.calc-opt').forEach(function (x) { x.classList.remove('active'); });
+        b.classList.add('active');
+        recalc();
+      });
+    });
+    addons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        b.classList.toggle('active');
+        recalc();
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
