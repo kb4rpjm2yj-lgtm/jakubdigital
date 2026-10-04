@@ -14,6 +14,7 @@
 
 - [Domovská stránka](https://jakubdigital.cz/): přehled služeb, referencí a přístupu
 - [Tvorba webů v Liberci](https://jakubdigital.cz/tvorba-webu-liberec): tvorba webových stránek na míru pro Liberec a okolí
+- [Viditelnost v AI (GEO)](https://jakubdigital.cz/geo): úprava webu tak, aby jej ChatGPT, Gemini a další AI doporučovaly — audit zdarma, od 6 900 Kč
 - [O mně](https://jakubdigital.cz/o-mne): kdo je Jakub Málek a jak pracuje
 - [Ochrana osobních údajů](https://jakubdigital.cz/gdpr): jaké osobní údaje zpracovávám, komu je předávám, jaká máte práva a jak fungují cookies
 
