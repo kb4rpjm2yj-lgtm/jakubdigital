@@ -104,3 +104,40 @@
     document.addEventListener('DOMContentLoaded', init);
   } else { init(); }
 })();
+
+// Animovaná počítadla
+(function () {
+  function init() {
+    var nums = document.querySelectorAll('[data-count]');
+    if (!nums.length) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    nums.forEach(function (el) {
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var suffix = el.getAttribute('data-suffix') || '';
+      if (reduce || !('IntersectionObserver' in window)) {
+        el.textContent = target + suffix;
+        return;
+      }
+      el.textContent = '0' + suffix;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          io.disconnect();
+          var start = null, dur = 1100;
+          function step(ts) {
+            if (start === null) start = ts;
+            var p = Math.min((ts - start) / dur, 1);
+            var val = Math.round(target * (1 - Math.pow(1 - p, 3)));
+            el.textContent = val + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.5 });
+      io.observe(el);
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();

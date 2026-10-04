@@ -204,6 +204,17 @@
   .ref .links { margin-top:auto; padding-top:12px; }
   .ref .links a { color: var(--accent-dark); }
   .ref a { font-size: 13px; font-weight: 600; color: var(--accent-dark); }
+  .ref { transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; }
+  .ref:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 12px 30px rgba(20,33,46,0.09); }
+  .ref .shot img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+  .ref:hover .shot img { transform: scale(1.06); }
+
+  /* ---------- Statistiky ---------- */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+  .stat .num { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 600; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .stat .num b { color: var(--accent); font-weight: 600; }
+  .stat .lbl { font-size: 14px; color: var(--muted); margin-top: 10px; }
+  @media (max-width: 860px) { .stats { grid-template-columns: repeat(2, 1fr); gap: 30px 16px; } }
 
   /* ---------- About ---------- */
   .about { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 48px; align-items: start; }
