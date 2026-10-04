@@ -33,7 +33,7 @@
   "url": "https://jakubdigital.cz/",
   "image": "https://jakubdigital.cz/foto-jakub.webp",
   "areaServed": ["Liberec", "Jablonec nad Nisou", "Liberecký kraj", "Česko"],
-  "priceRange": "14900 CZK - 24500 CZK",
+  "priceRange": "18900 CZK - 36900 CZK",
   "founder": {
     "@type": "Person",
     "name": "Jakub Málek",
@@ -48,35 +48,35 @@
     {
       "@type": "Offer",
       "name": "Jednostránkový web",
-      "price": "14900",
+      "price": "18900",
       "priceCurrency": "CZK",
       "description": "Jednostránkový web na míru, hotovo za 7–10 dní."
     },
     {
       "@type": "Offer",
       "name": "Web na míru (3–5 stránek)",
-      "price": "18500",
+      "price": "26900",
       "priceCurrency": "CZK",
       "description": "Web na míru včetně návrhu, textů a nasazení."
     },
     {
       "@type": "Offer",
       "name": "Web pro profesionály (5–7 stránek)",
-      "price": "24500",
+      "price": "36900",
       "priceCurrency": "CZK",
       "description": "Rozsáhlejší web se strukturou a SEO základy."
     },
     {
       "@type": "Offer",
       "name": "Správa sociálních sítí",
-      "price": "4900",
+      "price": "6900",
       "priceCurrency": "CZK",
       "description": "8–12 příspěvků měsíčně včetně grafiky a reportingu."
     },
     {
       "@type": "Offer",
       "name": "Viditelnost v AI (GEO)",
-      "price": "3900",
+      "price": "6900",
       "priceCurrency": "CZK",
       "description": "Úprava webu tak, aby ho doporučovaly AI chatboty jako ChatGPT."
     }
@@ -129,7 +129,7 @@
       "name": "Kolik stojí web na míru?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Jednostránkový web od 14 900 Kč, web na míru (3–5 stránek) od 18 500 Kč a web pro profesionály (5–7 stránek) od 24 500 Kč. Ceny jsou konečné — nejsem plátce DPH."
+        "text": "Jednostránkový web od 18 900 Kč, web na míru (3–5 stránek) od 26 900 Kč a web pro profesionály (5–7 stránek) od 36 900 Kč. Ceny jsou konečné — nejsem plátce DPH."
       }
     },
     {
@@ -178,7 +178,8 @@
 <header>
   <div class="header-inner">
     <div class="logo"><img src="/favicon-32x32.png" alt="" width="28" height="28" class="logo-img">Jakub<span>Digital</span></div>
-    <nav>
+    <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav">☰</button>
+    <nav id="nav">
       <a href="#sluzby">Služby</a>
       <a href="#reference">Reference</a>
       <a href="#cenik">Ceník</a>
@@ -216,6 +217,26 @@
   </div>
 </section>
 
+<!-- PRO KOHO -->
+<section id="pro-koho" class="lined-section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Pro koho</div>
+      <h2>Dělám weby a digitální servis pro profese, které mají jasno v tom, co umí.</h2>
+    </div>
+    <div class="chips">
+      <a class="chip" href="clanky/web-pro-advokata"><span class="chip-ico">⚖️</span> Advokáti a kanceláře</a>
+      <a class="chip" href="clanky/web-pro-realitniho-maklere"><span class="chip-ico">🏠</span> Realitní makléři</a>
+      <a class="chip" href="clanky/web-pro-politika"><span class="chip-ico">🎙️</span> Politici a osobnosti</a>
+      <a class="chip" href="clanky/web-pro-remeslnika"><span class="chip-ico">🔧</span> Řemeslníci a živnostníci</a>
+      <a class="chip" href="clanky/web-pro-kavarnu"><span class="chip-ico">☕</span> Kavárny a restaurace</a>
+      <a class="chip" href="clanky/web-pro-skolu"><span class="chip-ico">🎓</span> Školy a školky</a>
+      <a class="chip" href="clanky/web-pro-autoservis"><span class="chip-ico">🚗</span> Autoservisy a dílny</a>
+      <a class="chip" href="#kontakt"><span class="chip-ico">💼</span> Malé a střední firmy</a>
+    </div>
+  </div>
+</section>
+
 <!-- SLUŽBY -->
 <section id="sluzby">
   <div class="wrap">
@@ -228,25 +249,25 @@
         <div class="icon">🖥️</div>
         <h3>Web na míru</h3>
         <p>Postavím web od nuly, přesně podle toho, co potřebujete. Nejdřív si popovídáme, pak teprve kódím. Žádné šablony, žádné „tohle by se vám mohlo líbit".</p>
-        <span class="price">14 900–24 500 Kč · jednostránkový web do 5–7 dní, větší do 2–3 týdnů</span>
+        <span class="price">18 900–36 900 Kč · jednostránkový web do 5–7 dní, větší do 2–3 týdnů</span>
       </div>
       <div class="card span-4">
         <div class="icon">📱</div>
         <h3>Správa sítí</h3>
         <p>Píšu a plánuju příspěvky za vás, vy se věnujete práci. Profil žije, vy nemusíte.</p>
-        <span class="price">4 900–7 500 Kč/měsíc</span>
+        <span class="price">6 900–9 900 Kč/měsíc</span>
       </div>
       <div class="card span-4">
         <div class="icon">🛡️</div>
         <h3>Údržba webu</h3>
         <p>Aktualizace, zálohy, drobné opravy. Aby vám web nespadl zrovna ve chvíli, kdy ho potřebujete.</p>
-        <span class="price">1 900 Kč/měsíc</span>
+        <span class="price">2 400 Kč/měsíc</span>
       </div>
       <div class="card span-4 featured">
         <div class="icon">🤖</div>
         <h3>Viditelnost v AI a ChatGPT</h3>
         <p>Lidi se dnes ptají ChatGPT, koho si vybrat. Upravím web tak, aby AI lépe rozuměla, kdo jste a co děláte — a měla vás z čeho doporučit.</p>
-        <span class="price">3 900–6 500 Kč</span>
+        <span class="price">6 900 Kč</span>
       </div>
       <div class="card span-4">
         <div class="icon">⚙️</div>
@@ -258,7 +279,7 @@
         <div class="icon">📷</div>
         <h3>Foto obsah na míru</h3>
         <p>Nafotím vaši provozovnu, vás a vaši práci. Žádné stock fotky — web, který vypadá jako vy, buduje důvěru.</p>
-        <span class="price">3 900–5 900 Kč</span>
+        <span class="price">4 900–7 900 Kč</span>
       </div>
     </div>
   </div>
@@ -344,15 +365,15 @@
     </div>
     <table>
       <tr><th>Služba</th><th>Co dostanete</th><th>Cena</th></tr>
-      <tr><td>Jednostránkový web</td><td>Návrh, texty, tvorba, nasazení</td><td class="price-tag">od 14 900 Kč</td></tr>
-      <tr><td>Web na míru (3–5 stránek)</td><td>Návrh, texty, tvorba, nasazení, zaškolení</td><td class="price-tag">od 18 500 Kč</td></tr>
-      <tr><td>Web pro profesionály (5–7 stránek)</td><td>Vše výše + struktura, SEO základy</td><td class="price-tag">od 24 500 Kč</td></tr>
-      <tr><td>Správa sociálních sítí</td><td>8–12 příspěvků měsíčně + grafika + reporting</td><td class="price-tag">od 4 900 Kč/měs.</td></tr>
-      <tr><td>Údržba webu</td><td>Aktualizace, zálohy, drobné úpravy, dohled</td><td class="price-tag">od 1 900 Kč/měs.</td></tr>
-      <tr><td>Viditelnost v AI (GEO)</td><td>Audit + úprava webu, aby mu AI chatboty lépe rozuměly a měly vás z čeho doporučit</td><td class="price-tag">od 3 900 Kč</td></tr>
+      <tr><td>Jednostránkový web</td><td>Návrh, texty, tvorba, nasazení</td><td class="price-tag">od 18 900 Kč</td></tr>
+      <tr><td>Web na míru (3–5 stránek)</td><td>Návrh, texty, tvorba, nasazení, zaškolení</td><td class="price-tag">od 26 900 Kč</td></tr>
+      <tr><td>Web pro profesionály (5–7 stránek)</td><td>Vše výše + struktura, SEO základy</td><td class="price-tag">od 36 900 Kč</td></tr>
+      <tr><td>Správa sociálních sítí</td><td>8–12 příspěvků měsíčně + grafika + reporting</td><td class="price-tag">od 6 900 Kč/měs.</td></tr>
+      <tr><td>Údržba webu</td><td>Aktualizace, zálohy, drobné úpravy, dohled</td><td class="price-tag">od 2 400 Kč/měs.</td></tr>
+      <tr><td>Viditelnost v AI (GEO)</td><td>Audit + úprava webu, aby mu AI chatboty lépe rozuměly a měly vás z čeho doporučit</td><td class="price-tag">od 6 900 Kč</td></tr>
       <tr><td>Automatizace</td><td>Analýza, návrh, implementace, dokumentace</td><td class="price-tag">individuálně</td></tr>
-      <tr><td>Firemní focení</td><td>Provozovna + portrét + produkt, 20–60 upravených fotek, licence na web a sítě</td><td class="price-tag">3 900–5 900 Kč</td></tr>
-      <tr><td>Web + focení (balíček)</td><td>Web na míru + focení provozovny a portrétu — vše od jednoho člověka</td><td class="price-tag">od 17 800 Kč (sleva 1 000 Kč)</td></tr>
+      <tr><td>Firemní focení</td><td>Provozovna + portrét + produkt, 20–60 upravených fotek, licence na web a sítě</td><td class="price-tag">4 900–7 900 Kč</td></tr>
+      <tr><td>Web + focení (balíček)</td><td>Web na míru + focení provozovny a portrétu — vše od jednoho člověka</td><td class="price-tag">od 27 900 Kč (sleva 2 000 Kč)</td></tr>
     </table>
     <p class="note">Ceny jsou konečné — nejsem plátce DPH, takže se k nim nic nepřičítá. Konkrétní nabídku připravím zdarma po krátké konzultaci — řekněte, co potřebujete, a já řeknu, kolik to stojí a za jak dlouho to bude.</p>
   </div>
@@ -476,7 +497,7 @@
     <div class="faq-list">
       <details class="faq-item">
         <summary>Kolik stojí web na míru?</summary>
-        <p>Jednostránkový web od 14 900 Kč, web na míru (3–5 stránek) od 18 500 Kč a web pro profesionály (5–7 stránek) od 24 500 Kč. Ceny jsou konečné — nejsem plátce DPH, takže se k nim nic nepřičítá.</p>
+        <p>Jednostránkový web od 18 900 Kč, web na míru (3–5 stránek) od 26 900 Kč a web pro profesionály (5–7 stránek) od 36 900 Kč. Ceny jsou konečné — nejsem plátce DPH, takže se k nim nic nepřičítá.</p>
       </details>
       <details class="faq-item">
         <summary>Za jak dlouho bude web hotový?</summary>
@@ -496,7 +517,7 @@
       </details>
       <details class="faq-item">
         <summary>Nabízíte i focení?</summary>
-        <p>Ano — nafotím provozovnu, portrét nebo produkt přímo pro váš web a sociální sítě. Firemní focení stojí 3 900–5 900 Kč, v balíčku s webem dostanete slevu 1 000 Kč. Fotky jsou v ceně upravené a s licencí na web i sítě.</p>
+        <p>Ano — nafotím provozovnu, portrét nebo produkt přímo pro váš web a sociální sítě. Firemní focení stojí 4 900–7 900 Kč, v balíčku s webem dostanete slevu 2 000 Kč. Fotky jsou v ceně upravené a s licencí na web i sítě.</p>
       </details>
     </div>
   </div>

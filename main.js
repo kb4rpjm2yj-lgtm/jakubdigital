@@ -1,5 +1,67 @@
 // Rotující slovo v hero
-  const words = ['prodávat', 'být za 5 dní', 'najít AI', 'dělat práci za vás'];
-  const el = document.querySelector('.rotator');
-  let i = 0;
-  setInterval(() => { i = (i + 1) % words.length; el.textContent = words[i]; }, 2800);
+(function () {
+  var words = ['prodávat', 'být za 5 dní', 'najít AI', 'dělat práci za vás'];
+  var el = document.querySelector('.rotator');
+  if (!el) return;
+  var i = 0;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  setInterval(function () { i = (i + 1) % words.length; el.textContent = words[i]; }, 2800);
+})();
+
+// Mobilní navigace (hamburger)
+(function () {
+  function init() {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('#nav');
+    if (!toggle || !nav) return;
+
+    function setState(open) {
+      nav.classList.toggle('open', open);
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.textContent = open ? '✕' : '☰';
+    }
+
+    toggle.addEventListener('click', function () {
+      setState(!nav.classList.contains('open'));
+    });
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setState(false); });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setState(false);
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
+
+// Jemné odhalování obsahu při scrollu
+(function () {
+  function init() {
+    var nodes = document.querySelectorAll('section, .card, .ref');
+    if (!nodes.length) return;
+    if (!('IntersectionObserver' in window)) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    nodes.forEach(function (r) {
+      r.classList.add('reveal');
+      io.observe(r);
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
