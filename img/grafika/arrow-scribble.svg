@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" fill="none" role="img" aria-label="Rukou kreslená oranžová šipka">
+  <g stroke="#FF5A1F" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14 132 C 46 128, 74 106, 96 78 C 116 52, 140 34, 176 26"/>
+    <path d="M18 138 C 52 132, 82 108, 104 80 C 124 54, 148 36, 182 30" opacity=".45" stroke-width="5"/>
+    <path d="M148 22 L 182 26 L 166 52"/>
+  </g>
+</svg>

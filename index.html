@@ -1,605 +1,461 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jakub Digital — weby a viditelnost v AI | Liberec</title>
+<meta name="description" content="Weby na míru pro živnostníky a malé firmy z Liberce a celé ČR. Od 14 900 Kč, péče o web od 1 900 Kč/měs, viditelnost v AI. Jeden člověk, přímá domluva.">
+<link rel="canonical" href="https://jakubdigital.cz/">
+<meta name="author" content="Jakub Málek">
+<meta name="theme-color" content="#101310">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Jakub Digital">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Jakub Digital — web, který najdou lidé i AI.">
+<meta property="og:description" content="Originální weby, viditelnost v AI a fotky pro živnostníky a malé firmy. Liberec a celá ČR.">
+<meta property="og:url" content="https://jakubdigital.cz/">
+<meta property="og:image" content="https://jakubdigital.cz/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jakub Digital — digitální dílna z Liberce">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/favicon.svg">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" href="/assets/fonts/anton-400-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-400-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"ProfessionalService","@id":"https://jakubdigital.cz/#firma","name":"Jakub Digital","description":"Tvorba originálních webů, péče o weby a GEO (viditelnost v AI) pro živnostníky a malé firmy. Liberec a celá ČR.","url":"https://jakubdigital.cz/","image":"https://jakubdigital.cz/img/og-image.png","logo":"https://jakubdigital.cz/favicon.svg","telephone":"+420910121933","email":"jakub@jakubdigital.cz","priceRange":"1900–19900 Kč","currenciesAccepted":"CZK","paymentAccepted":"Převod na účet","address":{"@type":"PostalAddress","addressLocality":"Liberec","addressRegion":"Liberecký kraj","addressCountry":"CZ"},"geo":{"@type":"GeoCoordinates","latitude":50.7663,"longitude":15.0561},"areaServed":[{"@type":"AdministrativeArea","name":"Liberecký kraj"},{"@type":"Country","name":"Česko"}],"founder":{"@type":"Person","name":"Jakub Málek"},"knowsAbout":["tvorba webů","GEO","viditelnost v AI","SEO","webdesign","fotografie","automatizace"],"makesOffer":[
+{"@type":"Offer","name":"GEO audit — co o vás říká AI","price":"4900","priceCurrency":"CZK"},
+{"@type":"Offer","name":"Jednostránkový web na míru","price":"14900","priceCurrency":"CZK"},
+{"@type":"Offer","name":"Web na míru 3–5 stránek","price":"19900","priceCurrency":"CZK"},
+{"@type":"Offer","name":"Péče o web (Start / Plus / Pro)","price":"1900","priceCurrency":"CZK","description":"měsíční péče, varianty 1 900 / 3 900 / 6 900 Kč"},
+{"@type":"Offer","name":"GEO monitoring — měsíční report","price":"2900","priceCurrency":"CZK"},
+{"@type":"Offer","name":"Focení (20–60 fotek, licence)","price":"3900","priceCurrency":"CZK"}]},
+{"@type":"WebSite","@id":"https://jakubdigital.cz/#web","url":"https://jakubdigital.cz/","name":"Jakub Digital","inLanguage":"cs","publisher":{"@id":"https://jakubdigital.cz/#firma"}},
+{"@type":"FAQPage","@id":"https://jakubdigital.cz/#faq","mainEntity":[
+{"@type":"Question","name":"Kolik stojí web?","acceptedAnswer":{"@type":"Answer","text":"Jednostránkový web na míru 14 900 Kč, web o 3–5 stránkách 19 900 Kč. Větší zadání individuálně. Ceny jsou konečné — nejsem plátce DPH, takže se nic nepřičítá. V ceně je originální design, texty, GEO základ, nasazení a zaškolení."}},
+{"@type":"Question","name":"Jak dlouho stavba trvá?","acceptedAnswer":{"@type":"Answer","text":"Jednostránkový web 5–7 dní, větší web 2–3 týdny. Termín rezervuji po záloze, abych na něm opravdu pracoval."}},
+{"@type":"Question","name":"Co je GEO a proč to potřebuji?","acceptedAnswer":{"@type":"Answer","text":"GEO (viditelnost v AI) znamená, že vás najdou nejen v Googlu, ale i když se lidé ptají ChatGPT nebo jiné AI. GEO audit za 4 900 Kč ukáže, co o vás AI dnes říká, kde chybíte, a nabídne 3 konkrétní kroky. Dodání do 2 dnů."}},
+{"@type":"Question","name":"Mám už web. Má smysl se ozvat?","acceptedAnswer":{"@type":"Answer","text":"Právě proto se ozvěte. Podívám se na něj a řeknu 3 věci, které vás dnes stojí zákazníky. Když bude web v pořádku, řeknu vám to narovinu a nic neprodávám."}},
+{"@type":"Question","name":"Jak se platí?","acceptedAnswer":{"@type":"Answer","text":"50 % záloha před začátkem, doplatek při předání. Dvě kola revizí jsou v ceně. Ceny neslevuji — místo slevy raději uberu rozsah nebo přidám bonus."}},
+{"@type":"Question","name":"Můžu se ozvat, i když nejsem z Liberce?","acceptedAnswer":{"@type":"Answer","text":"Jsem z Liberce a Liberecký kraj znám, ale práci dělám odkudkoli — celá ČR. Většina spolupráce probíhá telefonem a e-mailem, schůzka naživo je bonus, ne podmínka."}}]}
+]}
+</script>
 <!-- Google Analytics 4 (Consent Mode v2) — logika v /analytics.js -->
 <script src="/analytics.js"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L9LH3NKXZY"></script>
-<meta charset="UTF-8">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tvorba webových stránek v Liberci | Jakub Digital</title>
-<meta name="description" content="Tvorba webových stránek na míru v Liberci a okolí. Webdesign, SEO, GEO, správa sítí a údržba. Osobní přístup bez agenturní mlhy.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://jakubdigital.cz/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="cs_CZ">
-<meta property="og:site_name" content="Jakub Digital">
-<meta property="og:title" content="Tvorba webových stránek v Liberci | Jakub Digital">
-<meta property="og:description" content="Tvorba webových stránek na míru v Liberci a okolí. Webdesign, SEO, GEO, správa sítí a údržba.">
-<meta property="og:url" content="https://jakubdigital.cz/">
-<meta property="og:image" content="https://jakubdigital.cz/og-image.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tvorba webových stránek v Liberci | Jakub Digital">
-<meta name="twitter:description" content="Tvorba webových stránek na míru v Liberci a okolí. Webdesign, SEO, GEO, správa sítí.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Jakub Digital",
-  "telephone": "+420910121933",
-  "description": "Webové stránky na míru, správa sociálních sítí a viditelnost pro AI (GEO) pro advokáty, realitní makléře, politiky a malé podnikatele. Liberec a okolí.",
-  "url": "https://jakubdigital.cz/",
-  "image": "https://jakubdigital.cz/foto-jakub.webp",
-  "areaServed": ["Liberec", "Jablonec nad Nisou", "Liberecký kraj", "Česko"],
-  "priceRange": "18900 CZK - 36900 CZK",
-  "founder": {
-    "@type": "Person",
-    "name": "Jakub Málek",
-    "jobTitle": "Webový vývojář a digitální marketér"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Liberec",
-    "addressCountry": "CZ"
-  },
-  "makesOffer": [
-    {
-      "@type": "Offer",
-      "name": "Jednostránkový web",
-      "price": "18900",
-      "priceCurrency": "CZK",
-      "description": "Jednostránkový web na míru, hotovo za 7–10 dní."
-    },
-    {
-      "@type": "Offer",
-      "name": "Web na míru (3–5 stránek)",
-      "price": "26900",
-      "priceCurrency": "CZK",
-      "description": "Web na míru včetně návrhu, textů a nasazení."
-    },
-    {
-      "@type": "Offer",
-      "name": "Web pro profesionály (5–7 stránek)",
-      "price": "36900",
-      "priceCurrency": "CZK",
-      "description": "Rozsáhlejší web se strukturou a SEO základy."
-    },
-    {
-      "@type": "Offer",
-      "name": "Správa sociálních sítí",
-      "price": "6900",
-      "priceCurrency": "CZK",
-      "description": "8–12 příspěvků měsíčně včetně grafiky a reportingu."
-    },
-    {
-      "@type": "Offer",
-      "name": "Viditelnost v AI (GEO)",
-      "price": "6900",
-      "priceCurrency": "CZK",
-      "description": "Úprava webu tak, aby ho doporučovaly AI chatboty jako ChatGPT."
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Jakub Málek",
-  "telephone": "+420910121933",
-  "url": "https://jakubdigital.cz/",
-  "image": "https://jakubdigital.cz/foto-jakub.webp",
-  "jobTitle": "Webový vývojář a digitální marketér",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Jakub Digital",
-    "url": "https://jakubdigital.cz/"
-  },
-  "knowsAbout": ["Tvorba webových stránek", "Webdesign", "Sociální sítě", "SEO", "GEO", "Copywriting", "Automatizace", "WordPress", "Next.js"]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Jakub Digital",
-  "url": "https://jakubdigital.cz/",
-  "description": "Digitální servis pro profesionály — weby na míru, sociální sítě a viditelnost pro AI.",
-  "email": "info@jakubdigital.cz",
-  "telephone": "+420910121933",
-  "areaServed": ["Liberec", "Liberecký kraj", "Česko"],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer service",
-    "telephone": "+420910121933",
-    "email": "info@jakubdigital.cz",
-    "availableLanguage": "Czech"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Kolik stojí web na míru?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Jednostránkový web od 18 900 Kč, web na míru (3–5 stránek) od 26 900 Kč a web pro profesionály (5–7 stránek) od 36 900 Kč. Ceny jsou konečné — nejsem plátce DPH."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Za jak dlouho bude web hotový?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Jednostránkový web do 5–7 dní, menší web do 2 týdnů, rozsáhlejší do 3 týdnů. Nejkratší dodání: 5 dní."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Co je viditelnost pro AI (GEO)?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lidé se dnes ptají ChatGPT a jiných AI chatbotů, koho si vybrat. GEO (Generative Engine Optimization) upraví web tak, aby ho AI správně pochopila a doporučovala — strukturovaná data, čitelný obsah, metadata."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Jak probíhá spolupráce?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Nejdřív si nezávazně popovídáme o tom, co potřebujete, a připravím konkrétní nabídku zdarma. Po odsouhlasení web postavím, nasadím a zaškolím vás."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Děláte weby jen v Liberci?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Působím v Liberci a okolí, ale pracuji i online pro klienty z celé České republiky."
-      }
-    }
-  ]
-}
-</script>
-<link rel="preload" href="/fonts/fraunces-600-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link href="/fonts/fonts.css" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<main>
+<a class="skip" href="#main">Přeskočit na obsah</a>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"></div>
+<div class="toast" role="status" aria-live="polite"></div>
 
-
-<header>
-  <div class="header-inner">
-    <div class="logo"><img src="/images/jd-logo.png" alt="Jakub Digital" width="30" height="30" class="logo-img">Jakub<span>Digital</span></div>
-    <button class="nav-toggle" aria-label="Otevřít menu" aria-expanded="false" aria-controls="nav">☰</button>
-    <nav id="nav">
-      <a href="#sluzby">Služby</a>
-      <a href="#reference">Reference</a>
-      <a href="#cenik">Ceník</a>
-      <a href="o-mne">O mně</a>
-      <a href="#kontakt" class="nav-cta">Nezávazně se poradit</a>
-    </nav>
-  </div>
+<header class="topbar">
+  <a class="brand" href="#domu" aria-label="JakubDigital.cz — úvod">
+    <span class="brand__word">Jakub<b>Digital</b>.cz</span>
+    <small>Weby · AI · Foto</small>
+  </a>
+  <nav class="nav" id="nav" aria-label="Hlavní navigace">
+    <a href="#sluzby">Co umím</a>
+    <a href="#postup">Jak pracuju</a>
+    <a href="#reference">Projekty</a>
+    <a href="#cenik">Ceník</a>
+    <a class="nav__cta" href="#kontakt">Napsat mi ↗</a>
+  </nav>
+  <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Otevřít navigaci">☰</button>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="hero-kicker">Jmenuju se Jakub a dělám weby</div>
-      <h1>Váš web by měl <span class="rotator">prodávat</span>,<br>ne jen hezky vypadat.</h1>
-      <p class="lead">Tvorba webových stránek na míru v Liberci a okolí. Web, obsah, SEO a viditelnost v AI — bez agenturní mlhy.</p>
-      <div class="hero-ctas">
-        <a href="#kontakt" class="btn accent">Nezávazná konzultace</a>
-        <a href="#reference" class="btn ghost">Podívat se na práci</a>
-      </div>
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="domu" aria-labelledby="h-hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__grid" aria-hidden="true"></div>
+
+  <div class="hero__copy">
+    <p class="eyebrow">Weby a viditelnost v AI · Liberec / celá ČR</p>
+    <h1 id="h-hero" class="hero__title">
+      <span class="hl">Web, který</span>
+      <span class="hl hl--hot"><span class="brush">najdou</span></span>
+      <span class="hl hl--3">lidé i AI.</span>
+    </h1>
+    <p class="hero__lead">Stavím weby pro živnostníky a malé firmy — <strong>rychlé, srozumitelné a připravené</strong> na to, že se lidé dnes ptají Googlu i ChatGPT.</p>
+    <div class="hero__cta">
+      <a class="btn btn--hot" href="#kontakt">Chci se poradit <span aria-hidden="true">↗</span></a>
+      <a class="btn btn--ghost" href="#reference">Ukázky práce <span aria-hidden="true">↓</span></a>
     </div>
-    <div class="hero-card">
-      <div class="card-label">Poslední projekt</div>
-      <div class="card-title">Web za 5 dní</div>
-      <div class="card-sub">Eva Kaprálová — krajská zastupitelka</div>
-      <ul class="timeline">
-        <li class="done"><span class="dot">✓</span> Obsah a struktura</li>
-        <li class="done"><span class="dot">✓</span> Návrh a design</li>
-        <li class="done"><span class="dot">✓</span> Kód a publikace</li>
-        <li class="done"><span class="dot">✓</span> Zaškolení</li>
-      </ul>
-      <div class="bar"><i></i></div>
-      <div class="card-foot">Publikováno. Klient spokojen.</div>
+    <p class="hero__loc"><b aria-hidden="true">⌁</b> Jeden člověk místo agentury. Web stavím sám, od začátku do konce.</p>
+  </div>
+
+  <div class="stage" id="heroStage" aria-label="Interaktivní nástěnka digitální dílny">
+    <div class="stage__blue" data-depth="-0.4" aria-hidden="true"></div>
+    <div class="stage__orbit" data-depth="0.9" aria-hidden="true"><span>ZADÁNÍ<br>↓<br>NÁVRH<br>↓<br>WEB</span></div>
+
+    <figure class="board tilt" data-depth="1.2">
+      <i class="board__tape" aria-hidden="true"></i>
+      <img src="img/grafika/hero-dilna.webp" alt="Ručně kreslená ilustrace pracovního stolu digitální dílny — monitor, fotoaparát, lampa, káva a nástroje" width="1200" height="900" fetchpriority="high" decoding="async">
+      <figcaption>pracovní stůl / Liberec</figcaption>
+    </figure>
+
+    <img class="stage__stamp" src="img/grafika/stamp-dilna.webp" alt="" aria-hidden="true" loading="lazy" decoding="async">
+    <img class="stage__arrow" src="img/grafika/arrow-scribble.svg" alt="" aria-hidden="true" loading="lazy" decoding="async">
+
+    <p class="stage__scribble" data-depth="1.8">Méně pozlátka.<br>Více smyslu.</p>
+
+    <div class="pin pin--a" data-draggable tabindex="0" role="group" aria-label="Přetahovatelný lístek — požadavky projektu">
+      <span class="pin__mark" aria-hidden="true">✳</span>
+      <strong>POŽADAVEK #01</strong>
+      <p>Ať to dobře vypadá.<br>Ať to funguje.<br><b>Ať je to k něčemu.</b></p>
     </div>
+    <div class="pin pin--b" data-draggable tabindex="0" role="group" aria-label="Přetahovatelný lístek — pracovní zásada">
+      <span class="pin__mark" aria-hidden="true">↗</span>
+      <strong>PRACOVNÍ ZÁSADA</strong>
+      <p>Hezké je fajn.<br><b>Užitečné je lepší.</b></p>
+    </div>
+
+    <div class="chip" data-depth="1.4"><b>STATUS:</b> MÍSTO PRO DALŠÍ PROJEKT</div>
+    <span class="stage__ast" data-depth="-1" aria-hidden="true">✳</span>
+    <p class="stage__hint">Zkus posunout lístky ↗</p>
   </div>
 </section>
 
-<!-- STATISTIKY -->
-<section class="lined-section" id="cisla">
+<!-- ================= BĚŽÍCÍ PÁS ================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Weby na míru</span><i>✳</i><span>Viditelnost v AI (GEO)</span><i>✳</i><span>Fotky a video</span><i>✳</i><span>Texty a správa obsahu</span><i>✳</i>
+    <span>Weby na míru</span><i>✳</i><span>Viditelnost v AI (GEO)</span><i>✳</i><span>Fotky a video</span><i>✳</i><span>Texty a správa obsahu</span><i>✳</i>
+  </div>
+</div>
+
+<!-- ================= SLUŽBY ================= -->
+<section class="sec sec--paper" id="sluzby" aria-labelledby="h-sluzby">
+  <div class="sec__rip" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="stats">
-      <div class="stat"><div class="num" data-count="16" data-suffix="+">0</div><div class="lbl">článků a odpovědí</div></div>
-      <div class="stat"><div class="num" data-count="5">0</div><div class="lbl">dní — nejrychlejší web</div></div>
-      <div class="stat"><div class="num" data-count="4">0</div><div class="lbl">velké projekty</div></div>
-      <div class="stat"><div class="num" data-count="100" data-suffix=" %">0</div><div class="lbl">konečné ceny</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRO KOHO -->
-<section id="pro-koho" class="lined-section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Pro koho</div>
-      <h2>Dělám weby a digitální servis pro profese, které mají jasno v tom, co umí.</h2>
-    </div>
-    <div class="chips">
-      <a class="chip" href="clanky/web-pro-advokata"><span class="chip-ico">⚖️</span> Advokáti a kanceláře</a>
-      <a class="chip" href="clanky/web-pro-realitniho-maklere"><span class="chip-ico">🏠</span> Realitní makléři</a>
-      <a class="chip" href="clanky/web-pro-politika"><span class="chip-ico">🎙️</span> Politici a osobnosti</a>
-      <a class="chip" href="clanky/web-pro-remeslnika"><span class="chip-ico">🔧</span> Řemeslníci a živnostníci</a>
-      <a class="chip" href="clanky/web-pro-kavarnu"><span class="chip-ico">☕</span> Kavárny a restaurace</a>
-      <a class="chip" href="clanky/web-pro-skolu"><span class="chip-ico">🎓</span> Školy a školky</a>
-      <a class="chip" href="clanky/web-pro-autoservis"><span class="chip-ico">🚗</span> Autoservisy a dílny</a>
-      <a class="chip" href="#kontakt"><span class="chip-ico">💼</span> Malé a střední firmy</a>
-    </div>
-  </div>
-</section>
-
-<!-- SLUŽBY -->
-<section id="sluzby">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Služby</div>
-      <h2>Všechno, co potřebujete, aby vás lidi našli a vybrali si vás.</h2>
-    </div>
-    <div class="bento">
-      <div class="card span-8">
-        <div class="icon">🖥️</div>
-        <h3>Web na míru</h3>
-        <p>Postavím web od nuly, přesně podle toho, co potřebujete. Nejdřív si popovídáme, pak teprve kódím. Žádné šablony, žádné „tohle by se vám mohlo líbit".</p>
-        <span class="price">18 900–36 900 Kč · jednostránkový web do 5–7 dní, větší do 2–3 týdnů</span>
-      </div>
-      <div class="card span-4">
-        <div class="icon">📱</div>
-        <h3>Správa sítí</h3>
-        <p>Píšu a plánuju příspěvky za vás, vy se věnujete práci. Profil žije, vy nemusíte.</p>
-        <span class="price">6 900–9 900 Kč/měsíc</span>
-      </div>
-      <div class="card span-4">
-        <div class="icon">🛡️</div>
-        <h3>Údržba webu</h3>
-        <p>Aktualizace, zálohy, drobné opravy. Aby vám web nespadl zrovna ve chvíli, kdy ho potřebujete.</p>
-        <span class="price">2 400 Kč/měsíc</span>
-      </div>
-      <div class="card span-4 featured">
-        <div class="icon">🤖</div>
-        <h3>Viditelnost v AI a ChatGPT</h3>
-        <p>Lidi se dnes ptají ChatGPT, koho si vybrat. Upravím web tak, aby AI lépe rozuměla, kdo jste a co děláte — a měla vás z čeho doporučit.</p>
-        <span class="price">6 900 Kč</span>
-        <div><a href="geo" class="cs-link">Zjistit více o GEO →</a></div>
-      </div>
-      <div class="card span-4">
-        <div class="icon">⚙️</div>
-        <h3>Automatizace</h3>
-        <p>Opakující se práce, kterou děláte ručně. Necháme to běžet za vás.</p>
-        <span class="price">individuálně</span>
-      </div>
-      <div class="card span-4">
-        <div class="icon">📷</div>
-        <h3>Foto obsah na míru</h3>
-        <p>Nafotím vaši provozovnu, vás a vaši práci. Žádné stock fotky — web, který vypadá jako vy, buduje důvěru.</p>
-        <span class="price">4 900–7 900 Kč</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- KALKULAČKA -->
-<section id="kalkulacka" class="lined-section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Orientační cena</div>
-      <h2>Spočítejte si, kolik by stál váš web.</h2>
-    </div>
-    <div class="calc" id="calc">
-      <div class="calc-row">
-        <label>Jaký web potřebujete?</label>
-        <div class="calc-opts" data-group="web">
-          <button type="button" class="calc-opt active" data-price="18900">Jednostránkový</button>
-          <button type="button" class="calc-opt" data-price="26900">Web na míru (3–5 str.)</button>
-          <button type="button" class="calc-opt" data-price="36900">Web pro profesionály (5–7 str.)</button>
-        </div>
-      </div>
-      <div class="calc-row">
-        <label>Chcete něco navíc? (můžete vybrat víc)</label>
-        <div class="calc-opts" data-group="addons">
-          <button type="button" class="calc-opt" data-add="4900">Focení +4 900</button>
-          <button type="button" class="calc-opt" data-add="6900">Viditelnost v AI (GEO) +6 900</button>
-          <button type="button" class="calc-opt" data-add="2400">Údržba (1. měsíc) +2 400</button>
-        </div>
-      </div>
-      <div class="calc-total">
-        <span>Orientační cena:</span>
-        <strong id="calc-total">18 900 Kč</strong>
-      </div>
-      <p class="note">Orientační. Konkrétní nabídku připravím zdarma po krátké konzultaci. Ceny jsou konečné — nejsem plátce DPH.</p>
-    </div>
-  </div>
-</section>
-
-<!-- REFERENCE -->
-<section id="reference" class="alt-section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Reference</div>
-      <h2>Konkrétní projekty, konkrétní výsledky. Zeptejte se klientů.</h2>
-    </div>
-    <div class="refs">
-      <div class="ref">
-        <div class="tag">Web + sítě + podpora</div>
-        <a class="shot" href="reference-evakapralova"><img src="ref/eva-desktop.webp" alt="Web Evy Kaprálové — evakapralova.cz" loading="lazy"></a>
-        <h3>Eva Kaprálová</h3>
-        <div class="num">5 <small>dní od zadání po spuštění</small></div>
-        <p>Krajská zastupitelka, ředitelka školy, aktivní kampaň. Web s administrací, blog, správa sítí a digitální podpora.</p>
-        <div class="links">
-          <a href="https://evakapralova.cz" target="_blank">evakapralova.cz →</a><br>
-          <a class="cs-link" href="reference-evakapralova">Případová studie →</a>
-        </div>
-      </div>
-      <div class="ref">
-        <div class="tag">Občanský projekt</div>
-        <a class="shot" href="reference-liberec-online"><img src="ref/lib-desktop.webp" alt="liberec.online — mapa zápachu z Liberce-Pavlovic" loading="lazy"></a>
-        <h3>liberec.online</h3>
-        <div class="num">1 <small>mapa hlášení problémů</small></div>
-        <p>Mapování zápachu z výrobního areálu — lidé se zapojují, data jdou za úřady. Propojení občanů, radnice a SVJ.</p>
-        <div class="links">
-          <a href="https://liberec.online" target="_blank">liberec.online →</a><br>
-          <a class="cs-link" href="reference-liberec-online">Případová studie →</a>
-        </div>
-      </div>
-      <div class="ref">
-        <div class="tag">Web aplikace</div>
-        <a class="shot" href="reference-kalendar-alternativy"><img src="ref/kal-desktop.webp" alt="Kalendář alternativy — kalendar-alternativy.cz" loading="lazy"></a>
-        <h3>Kalendář alternativy</h3>
-        <div class="num">3 <small>akce propojené s osobnostmi</small></div>
-        <p>Akce, debaty a besedy s profily osobností, časovou osou, galerií a sdílením na sítě.</p>
-        <div class="links">
-          <a href="https://kalendar-alternativy.cz" target="_blank">kalendar-alternativy.cz →</a><br>
-          <a class="cs-link" href="reference-kalendar-alternativy">Případová studie →</a>
-        </div>
-      </div>
-      <div class="ref">
-        <div class="tag">Web + kampaň + AI</div>
-        <a class="shot" href="reference-projablonec"><img src="ref/projablonec-identita.webp" alt="Projablonec — kompletní digitální kampaň pro komunální volby 2026" loading="lazy"></a>
-        <h3>Správná Cesta Pro Jablonec</h3>
-        <div class="num">30 <small>kandidátů, 5 pilířů, minihra, SEO/GEO</small></div>
-        <p>Nejen web — kompletní digitální kampaň: 30 kandidátů, minihra se sdílecí kartičkou, plán kampaně a viditelnost pro AI.</p>
-        <div class="links">
-          <a href="https://projablonec.cz" target="_blank">projablonec.cz →</a><br>
-          <a class="cs-link" href="reference-projablonec">Případová studie →</a>
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- O MNĚ -->
-<section id="o-mne">
-  <div class="wrap about">
-    <div class="portrait"><img src="foto-jakub.webp" alt="Jakub Málek"></div>
-    <div class="about-text">
-      <h2>Jeden člověk, jedna práce.</h2>
-      <p>Celý život se pohybuju mezi lidmi a technikou. Dělám weby, sítě a automatizace pro lidi, kteří nemají čas řešit, jak to funguje — chtějí, aby to prostě fungovalo.</p>
-      <p>Nejsem agentura. Nevoláte do call centra, nikdo vás nepřepojuje. Jsem jeden člověk, kterému na vašem webu záleží, protože je na něm moje jméno. Liberec a okolí — osobně, nebo online, jak vám to vyhovuje.</p>
-      <p>Občas to stojí víc času, než jsem plánoval. Ale když web běží a klient je spokojený, stojí to za to. <strong>To jsem zase já.</strong></p>
-    </div>
-  </div>
-</section>
-
-<!-- CENÍK -->
-<section id="cenik" class="alt-section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Ceník</div>
-      <h2>Žádné schovávání. Víte, za co platíte, ještě než se zeptáte.</h2>
-    </div>
-    <table>
-      <tr><th>Služba</th><th>Co dostanete</th><th>Cena</th></tr>
-      <tr><td>Jednostránkový web</td><td>Návrh, texty, tvorba, nasazení</td><td class="price-tag">od 18 900 Kč</td></tr>
-      <tr><td>Web na míru (3–5 stránek)</td><td>Návrh, texty, tvorba, nasazení, zaškolení</td><td class="price-tag">od 26 900 Kč</td></tr>
-      <tr><td>Web pro profesionály (5–7 stránek)</td><td>Vše výše + struktura, SEO základy</td><td class="price-tag">od 36 900 Kč</td></tr>
-      <tr><td>Správa sociálních sítí</td><td>8–12 příspěvků měsíčně + grafika + reporting</td><td class="price-tag">od 6 900 Kč/měs.</td></tr>
-      <tr><td>Údržba webu</td><td>Aktualizace, zálohy, drobné úpravy, dohled</td><td class="price-tag">od 2 400 Kč/měs.</td></tr>
-      <tr><td>Viditelnost v AI (GEO)</td><td>Audit + úprava webu, aby mu AI chatboty lépe rozuměly a měly vás z čeho doporučit</td><td class="price-tag">od 6 900 Kč</td></tr>
-      <tr><td>Automatizace</td><td>Analýza, návrh, implementace, dokumentace</td><td class="price-tag">individuálně</td></tr>
-      <tr><td>Firemní focení</td><td>Provozovna + portrét + produkt, 20–60 upravených fotek, licence na web a sítě</td><td class="price-tag">4 900–7 900 Kč</td></tr>
-      <tr><td>Web + focení (balíček)</td><td>Web na míru + focení provozovny a portrétu — vše od jednoho člověka</td><td class="price-tag">od 27 900 Kč (sleva 2 000 Kč)</td></tr>
-    </table>
-    <p class="note">Ceny jsou konečné — nejsem plátce DPH, takže se k nim nic nepřičítá. Konkrétní nabídku připravím zdarma po krátké konzultaci — řekněte, co potřebujete, a já řeknu, kolik to stojí a za jak dlouho to bude.</p>
-  </div>
-</section>
-
-<!-- ČLÁNKY -->
-<section id="clanky" class="lined-section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Články</div>
-      <h2>Čtu, píšu a vysvětluju. Ať víte, do čeho jdete.</h2>
-    </div>
-    <div class="refs">
-      <div class="ref">
-        <div class="tag">Průvodce cenami</div>
-        <h3>Kolik stojí web v roce 2026?</h3>
-        <p>Reálné ceny, co je ovlivňuje a proč „levný web" stojí nejvíc.</p>
-        <a href="clanky/kolik-stoji-web">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Pro advokáty</div>
-        <h3>Web pro advokáta</h3>
-        <p>Povinné údaje dle ČAK, co nesmí a jak přináší klienty.</p>
-        <a href="clanky/web-pro-advokata">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Viditelnost pro AI</div>
-        <h3>Co je GEO a proč na něm záleží?</h3>
-        <p>Jak AI vybírá firmy a proč vás ChatGPT možná nedoporučí.</p>
-        <a href="clanky/co-je-geo">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Pro realitní makléře</div>
-        <h3>Ztracené poptávky = ztracené provize</h3>
-        <p>Proč web makléře vydělává a jak proměnit návštěvníky v poptávky.</p>
-        <a href="clanky/web-pro-realitniho-maklere">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Pro místní firmy</div>
-        <h3>Web v Liberci</h3>
-        <p>Proč Facebook nestačí a jak vás najdou místní (i přes AI).</p>
-        <a href="clanky/web-v-liberci">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Pro politiky a osobnosti</div>
-        <h3>Web pro politika</h3>
-        <p>Osobní značka, která přežije volby. Web za 5 dní (case study).</p>
-        <a href="clanky/web-pro-politika">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Pro autoservisy</div>
-        <h3>Web pro autoservis</h3>
-        <p>Jak získat zákazníky, kteří tě hledají. Know-how z prostředí.</p>
-        <a href="clanky/web-pro-autoservis">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Sociální sítě</div>
-        <h3>Správa sítí pro firmy</h3>
-        <p>Proč to nejde dělat „když zbude čas" a kolik to stojí.</p>
-        <a href="clanky/sprava-socialnich-siti">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">GEO prakticky</div>
-        <h3>GEO audit v 5 krocích</h3>
-        <p>Zjistěte za 15 minut, co z vašeho webu vidí AI.</p>
-        <a href="clanky/geo-audit-v-5-krocich">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">GEO prakticky</div>
-        <h3>Doporučuje vás AI?</h3>
-        <p>5 promptů do ChatGPT za 10 minut — otestujte se.</p>
-        <a href="clanky/jestli-vas-ai-doporucuje">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Praktický průvodce</div>
-        <h3>Jak vybrat webdesignéra</h3>
-        <p>8 otázek, než někomu svěříte web. Kontrolní seznam.</p>
-        <a href="clanky/jak-vybrat-webdesignera">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Pro řemeslníky</div>
-        <h3>Web pro řemeslníka</h3>
-        <p>Jak získat zakázky, i když nejste na sítích.</p>
-        <a href="clanky/web-pro-remeslnika">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Gastronomie</div>
-        <h3>Web pro kavárnu a restauraci</h3>
-        <p>Menu online, rezervace, fotky. Instagram nestačí.</p>
-        <a href="clanky/web-pro-kavarnu">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Školství</div>
-        <h3>Web pro školu a školku</h3>
-        <p>Jak budovat důvěru rodičů. Povinné informace.</p>
-        <a href="clanky/web-pro-skolu">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Copywriting</div>
-        <h3>Jak napsat texty na web</h3>
-        <p>5 pravidel pro necopywritery. Příklady před a po.</p>
-        <a href="clanky/jak-napsat-texty-na-web">Přečíst článek →</a>
-      </div>
-      <div class="ref">
-        <div class="tag">Důvěryhodnost</div>
-        <h3>Proč stock fotky škodí vašemu webu</h3>
-        <p>AI i zákazníci poznají univerzální obrázky. Jak vypadat věrohodně.</p>
-        <a href="clanky/proc-stock-fotky-skodi">Přečíst článek →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="lined-section">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">FAQ</div>
-      <h2>Časté otázky. Odpovídám rovnou, ať se nemusíte ptát.</h2>
-    </div>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>Kolik stojí web na míru?</summary>
-        <p>Jednostránkový web od 18 900 Kč, web na míru (3–5 stránek) od 26 900 Kč a web pro profesionály (5–7 stránek) od 36 900 Kč. Ceny jsou konečné — nejsem plátce DPH, takže se k nim nic nepřičítá.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Za jak dlouho bude web hotový?</summary>
-        <p>Jednostránkový web do 5–7 dní, menší web do 2 týdnů, rozsáhlejší do 3 týdnů. Nejkratší dodání: 5 dní.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Co je viditelnost pro AI (GEO)?</summary>
-        <p>Lidé se dnes ptají ChatGPT a jiných AI chatbotů, koho si vybrat. GEO (Generative Engine Optimization) upraví web tak, aby ho AI správně pochopila a doporučovala — strukturovaná data, čitelný obsah, metadata.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Jak probíhá spolupráce?</summary>
-        <p>Nejdřív si nezávazně popovídáme o tom, co potřebujete, a připravím konkrétní nabídku zdarma. Po odsouhlasení web postavím, nasadím a zaškolím vás.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Děláte weby jen v Liberci?</summary>
-        <p>Působím v Liberci a okolí, ale pracuji i online pro klienty z celé České republiky.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Nabízíte i focení?</summary>
-        <p>Ano — nafotím provozovnu, portrét nebo produkt přímo pro váš web a sociální sítě. Firemní focení stojí 4 900–7 900 Kč, v balíčku s webem dostanete slevu 2 000 Kč. Fotky jsou v ceně upravené a s licencí na web i sítě.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- KONTAKT -->
-<section id="kontakt">
-  <div class="wrap">
-    <div class="cta-block">
+    <header class="shead rv">
       <div>
-        <h2>Nezávazně si sedneme a projdeme, co potřebujete.</h2>
-        <p>Klidně přes telefon, klidně osobně. Když si nesedneme, nic se neděje — aspoň budete vědět, na co se ptát dál.</p>
+        <p class="kicker">01 / Co pro vás udělám</p>
+        <h2 id="h-sluzby">Nejde o to mít web.<br><em>Jde o to, aby vás našli.</em></h2>
       </div>
-      <div class="contact-actions">
-        <a href="tel:+420910121933" class="btn accent btn-contact">+420 910 121 933</a>
-        <a href="mailto:info@jakubdigital.cz" class="btn accent btn-contact">info@jakubdigital.cz</a>
+      <p class="shead__aside">Každé zadání je jiné. Nejdřív si řekneme, co má web dokázat, a teprve pak se vybírá, jak na to.</p>
+    </header>
+
+    <div class="sheets">
+      <article class="sheet rv">
+        <span class="sheet__no" aria-hidden="true">01</span>
+        <svg class="sheet__ico" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="6" width="40" height="29" stroke="currentColor" stroke-width="2"/><path d="M4 13h40M12 10h1M17 10h1M22 10h1M19 35v7M29 35v7M13 42h22" stroke="currentColor" stroke-width="2"/><path d="m12 27 7-7 6 5 7-9 6 6" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Weby, které<br>pracují.</h3>
+        <p>Rychlé na mobilu, srozumitelné na první pohled a postavené kolem toho, co má člověk udělat. Ne kolem toho, co se líbí na poradě.</p>
+        <ul class="sheet__list">
+          <li><span>Návrh a struktura</span><b aria-hidden="true">↗</b></li>
+          <li><span>Kód a nasazení</span><b aria-hidden="true">↗</b></li>
+          <li><span>Příprava pro Google i AI</span><b aria-hidden="true">↗</b></li>
+        </ul>
+        <p class="sheet__foot"><span>Od zadání po spuštění</span><b aria-hidden="true">↗</b></p>
+      </article>
+
+      <article class="sheet sheet--dark rv">
+        <span class="sheet__no" aria-hidden="true">02</span>
+        <svg class="sheet__ico" viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 4v8m0 24v8M4 24h8m24 0h8M10 10l6 6m16 16 6 6m0-28-6 6M16 32l-6 6" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="24" r="13" stroke="currentColor" stroke-width="2"/><path d="M18 24h12M24 18v12" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Ať vás AI<br>nepřehlédne.</h3>
+        <p>Lidé se dnes neptají jen Googlu, ale i ChatGPT. Připravím web a texty tak, aby o vás AI měla co říct — a správně.</p>
+        <ul class="sheet__list">
+          <li><span>Technické základy</span><b aria-hidden="true">↗</b></li>
+          <li><span>Texty a struktura stránek</span><b aria-hidden="true">↗</b></li>
+          <li><span>Kontrola, co o vás AI říká</span><b aria-hidden="true">↗</b></li>
+        </ul>
+        <p class="sheet__foot"><span>Ne sliby. Konkrétní práce.</span><b aria-hidden="true">↗</b></p>
+      </article>
+
+      <article class="sheet rv">
+        <span class="sheet__no" aria-hidden="true">03</span>
+        <svg class="sheet__ico" viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="4" y="14" width="40" height="27" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="27.5" r="8" stroke="currentColor" stroke-width="2"/><path d="M13 14 16 7h14l4 7M37 19h2" stroke="currentColor" stroke-width="2"/></svg>
+        <h3>Vlastní fotky<br>místo stocků.</h3>
+        <p>Vyfotím vás, váš tým, produkty nebo provozovnu — včetně krátkého videa. Vlastní fotky fungují líp než stažené.</p>
+        <ul class="sheet__list">
+          <li><span>Firemní a produktová foto</span><b aria-hidden="true">↗</b></li>
+          <li><span>Fotky pro sociální sítě</span><b aria-hidden="true">↗</b></li>
+          <li><span>Krátké video</span><b aria-hidden="true">↗</b></li>
+        </ul>
+        <p class="sheet__foot"><span>Vaše firma, vaše fotky.</span><b aria-hidden="true">↗</b></p>
+      </article>
+    </div>
+
+    <p class="sec__note rv"><span>Každé zadání je jiné.</span><span>Proto nezačínám ceníkem, ale otázkou.</span><span>↙ Posuň se dál</span></p>
+  </div>
+</section>
+
+<!-- ================= PROCES ================= -->
+<section class="sec sec--ink" id="postup" aria-labelledby="h-postup">
+  <div class="wrap">
+    <header class="shead rv">
+      <div>
+        <p class="kicker">02 / Jak pracuju</p>
+        <h2 id="h-postup">Víte, co dostanete.<br><em>A kdy.</em></h2>
+      </div>
+      <p class="shead__aside">Nebudu předstírat, že každý problém vyřeší nový web, AI nebo větší logo. <b>Nejdřív si řekneme, co má být jinak.</b> Pak navrhnu postup, který k tomu vede — a průběžně ukazuju, co vzniká.</p>
+    </header>
+
+    <ol class="flow">
+      <li class="flow__step rv">
+        <span class="flow__no">01 / POSLECH</span>
+        <h3>Popovídáme si</h3>
+        <p>Co vás brzdí? Co potřebují vaši zákazníci? Co má být po projektu lepší?</p>
+      </li>
+      <li class="flow__step rv">
+        <span class="flow__no">02 / NÁVRH</span>
+        <h3>Navrhnu řešení</h3>
+        <p>Dostanete strukturu, texty a cenu. Vy řeknete, co sedí a co ne.</p>
+      </li>
+      <li class="flow__step rv">
+        <span class="flow__no">03 / DÍLNA</span>
+        <h3>Postavím to</h3>
+        <p>Žádné nekonečné prezentace. Průběžně vidíte hotovou věc, kterou si můžete proklikat.</p>
+      </li>
+      <li class="flow__step rv">
+        <span class="flow__no">04 / PROVOZ</span>
+        <h3>Spustíme a doladíme</h3>
+        <p>Web nasadím, ukážu vám, jak si ho spravovat, a zůstanu k ruce i potom.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= PRÁCE ================= -->
+<section class="sec sec--work" id="reference" aria-labelledby="h-reference">
+  <div class="wrap">
+    <header class="shead shead--work rv">
+      <div>
+        <p class="kicker">03 / Hotové projekty</p>
+        <h2 id="h-reference">Reálné weby,<br><em>ne case studies.</em></h2>
+      </div>
+      <p class="shead__aside">Různá zadání, stejný postup: pochopit, co je potřeba, a udělat to.</p>
+      <div class="railnav">
+        <button class="round" id="workPrev" aria-label="Předchozí projekty">←</button>
+        <button class="round" id="workNext" aria-label="Další projekty">→</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="rail" id="rail" tabindex="0" aria-label="Ukázky projektů, vodorovný posuv">
+    <article class="proj rv">
+      <a class="proj__frame" href="#kontakt" aria-label="Eva Kaprálová — web a digitální podpora">
+        <img src="img/prace/evakapralova.webp" alt="Náhled webu evakapralova.cz — osobní web s portrétem" width="1080" height="720" loading="lazy" decoding="async">
+        <span class="proj__dom">evakapralova.cz</span>
+      </a>
+      <div class="proj__meta"><span>01 / WEB · OBSAH</span><h3>Osobní značka</h3><p>Osobní web a obsah pro veřejně činnou osobnost.</p></div>
+    </article>
+
+    <article class="proj rv">
+      <a class="proj__frame" href="#kontakt" aria-label="liberec.online — platforma pro hlášení problémů">
+        <img src="img/prace/liberec-online.webp" alt="Náhled webu liberec.online — mapa hlášení problémů" width="1080" height="720" loading="lazy" decoding="async">
+        <span class="proj__dom">liberec.online</span>
+      </a>
+      <div class="proj__meta"><span>02 / WEB · Mapa</span><h3>liberec.online</h3><p>Místo, kam lidé hlásí problémy ve svém okolí — aby to někdo viděl a řešil.</p></div>
+    </article>
+
+    <article class="proj rv">
+      <a class="proj__frame" href="#kontakt" aria-label="proJablonec — web na míru">
+        <img src="img/prace/projablonec.webp" alt="Náhled webu projablonec.cz — titulní strana" width="1080" height="720" loading="lazy" decoding="async">
+        <span class="proj__dom">projablonec.cz</span>
+      </a>
+      <div class="proj__meta"><span>03 / WEB</span><h3>proJablonec</h3><p>Web na míru — čitelný na mobilu a bez zbytečností.</p></div>
+    </article>
+
+    <article class="proj rv">
+      <a class="proj__frame" href="#kontakt" aria-label="Kalendář alternativy — přehled akcí">
+        <img src="img/prace/kalendar-alternativy.webp" alt="Náhled webu kalendar-alternativy.cz — přehled akcí s kalendářem" width="1080" height="720" loading="lazy" decoding="async">
+        <span class="proj__dom">kalendar-alternativy.cz</span>
+      </a>
+      <div class="proj__meta"><span>04 / WEB · DATABÁZE</span><h3>Kalendář alternativy</h3><p>Přehledová stránka, kde se dá rychle najít, co se děje. Struktura místo chaosu.</p></div>
+    </article>
+
+    <article class="proj rv">
+      <a class="proj__frame" href="#kontakt" aria-label="Vysoké Veselí — web a tištěné materiály">
+        <img src="img/prace/veselizije.webp" alt="Náhled webu veselizije.cz — titulní strana obce" width="1080" height="720" loading="lazy" decoding="async">
+        <span class="proj__dom">veselizije.cz</span>
+      </a>
+      <div class="proj__meta"><span>05 / WEB · TISK</span><h3>Vysoké Veselí</h3><p>Web a tištěné materiály pro obec — od struktury po sazbu.</p></div>
+    </article>
+
+    <article class="proj proj--free rv">
+      <div class="proj__frame proj__frame--free"><span>vaše místo<br>je tady</span><img class="proj__arrow" src="img/grafika/arrow-scribble.svg" alt="" aria-hidden="true" loading="lazy"></div>
+      <div class="proj__meta"><span>06 / VOLNÉ MÍSTO</span><h3>Váš projekt</h3><p>Tohle místo je zatím prázdné. Může tu být vaše firma — stačí se ozvat.</p></div>
+    </article>
+  </div>
+
+  <div class="wrap">
+    <p class="sec__note rv"><span>Ukázky jsou reálné weby — ne case study s vycucanými čísly.</span><span>Táhni / posuň / klikni ↗</span></p>
+  </div>
+</section>
+
+<!-- ================= CENÍK ================= -->
+<section class="sec sec--paper" id="cenik" aria-labelledby="h-cenik">
+  <div class="wrap">
+    <header class="shead rv">
+      <div>
+        <p class="kicker">04 / Ceník</p>
+        <h2 id="h-cenik">Ceny <em>konečné</em>.</h2>
+      </div>
+      <p class="shead__aside">Nejsem plátce DPH, takže se nic nepřičítá. Cenu znáte dopředu a je konečná.</p>
+    </header>
+
+    <div class="price">
+      <div class="price__col rv">
+        <p class="price__cap"><span>Nové weby</span><b>jednorázově</b></p>
+        <div class="price__row price__row--hot"><h3>GEO audit — co o vás říká AI<small>Podívám se, co o vás dnes AI říká, a dám vám tři konkrétní kroky. Hotové do dvou dnů.</small></h3><span class="price__v">4 900 Kč</span></div>
+        <div class="price__row"><h3>Jednostránkový web<small>Originální design, texty, GEO základ, nasazení, zaškolení.</small></h3><span class="price__v">14 900 Kč</span></div>
+        <div class="price__row"><h3>Web na míru 3–5 stránek<small>Vše výše + struktura, SEO základy, 2 revize.</small></h3><span class="price__v">19 900 Kč</span></div>
+        <div class="price__row"><h3>Větší zadání<small>Nad 20 tis. Kč individuálně — klidně po etapách.</small></h3><span class="price__v">na míru</span></div>
+        <div class="price__row"><h3>Focení a vizuály<small>20–60 upravených fotek s licencí podle rozsahu.</small></h3><span class="price__v">3 900–5 900</span></div>
+      </div>
+
+      <div class="price__col rv">
+        <p class="price__cap"><span>Průběžná péče</span><b>měsíčně</b></p>
+        <div class="price__row"><h3>Péče o web — Start<small>Updaty, zálohy, drobné úpravy, monitoring dostupnosti.</small></h3><span class="price__v">1 900 Kč</span></div>
+        <div class="price__row"><h3>Péče o web — Plus<small>Vše + úpravy 3–4 h/měs, rychlost a bezpečnost, report.</small></h3><span class="price__v">3 900 Kč</span></div>
+        <div class="price__row"><h3>Péče o web — Pro<small>Vše + prioritní reakce, větší úpravy, konzultace.</small></h3><span class="price__v">6 900 Kč</span></div>
+        <div class="price__row price__row--hot"><h3>GEO monitoring<small>Měsíční report: co o vás říká AI a kam se to posunulo.</small></h3><span class="price__v">2 900 Kč</span></div>
+        <div class="price__row"><h3>Správa sociálních sítí<small>8–12 příspěvků měsíčně + grafika + reporting.</small></h3><span class="price__v">od 4 900</span></div>
+      </div>
+    </div>
+
+    <ul class="price__note rv">
+      <li>50 % předem, doplatek při předání</li>
+      <li>2 revize v ceně</li>
+      <li>AI ve firmě: audit 4 900–7 900 · setup 15–30 tis. · podpora 3 900–5 900 Kč/měs</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= MANIFEST ================= -->
+<section class="manifest" aria-labelledby="h-manifest">
+  <div class="wrap">
+    <p class="kicker rv">05 / Jeden člověk. Přímá domluva.</p>
+    <h2 id="h-manifest" class="rv">Vaše firma není kopie.<br><span>Web by taky neměl být.</span></h2>
+    <div class="manifest__foot rv">
+      <p>Nemusím být největší studio na světě. Stačí, když pochopím váš projekt, budu přemýšlet vlastní hlavou a odvedu práci, za kterou se dá postavit.</p>
+      <a class="btn btn--ink" href="#kontakt">Napište mi <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="sec sec--ink" id="faq" aria-labelledby="h-faq">
+  <div class="wrap">
+    <header class="shead rv">
+      <div>
+        <p class="kicker">06 / Časté otázky</p>
+        <h2 id="h-faq">Na co se <em>ptáte</em>.</h2>
+      </div>
+    </header>
+
+    <div class="faq rv">
+      <div class="faq__item">
+        <h3><button class="faq__q" aria-expanded="false" aria-controls="faq-1">Kolik stojí web?<span class="sr-only"> – rozbalit odpověď</span></button></h3>
+        <div class="faq__a" id="faq-1" hidden><p>Jednostránkový web na míru 14 900 Kč, web o 3–5 stránkách 19 900 Kč, větší zadání individuálně. Ceny jsou konečné — nejsem plátce DPH, takže se nic nepřičítá. V ceně je design, texty, GEO základ, nasazení i zaškolení.</p></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" aria-expanded="false" aria-controls="faq-2">Jak dlouho stavba trvá?<span class="sr-only"> – rozbalit odpověď</span></button></h3>
+        <div class="faq__a" id="faq-2" hidden><p>Jednostránkový web 5–7 dní, větší web 2–3 týdny. Termín rezervuji po záloze, abych na něm opravdu pracoval a nedělal na pěti věcech naráz.</p></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" aria-expanded="false" aria-controls="faq-3">Co je GEO a proč to potřebuji?<span class="sr-only"> – rozbalit odpověď</span></button></h3>
+        <div class="faq__a" id="faq-3" hidden><p>Lidé se dnes ptají i ChatGPT, ne jen hledají v seznamu odkazů. GEO (viditelnost v AI) znamená, že vás najdou i touto cestou. Audit za 4 900 Kč ukáže, co o vás AI dnes říká, kde chybíte, a dá 3 konkrétní kroky. Hotové do dvou dnů.</p></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" aria-expanded="false" aria-controls="faq-4">Mám už web. Má smysl se ozvat?<span class="sr-only"> – rozbalit odpověď</span></button></h3>
+        <div class="faq__a" id="faq-4" hidden><p>Právě proto. Podívám se na něj a řeknu 3 věci, které vás dnes stojí zákazníky. Když bude web v pořádku, řeknu vám to narovinu a nic neprodávám.</p></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" aria-expanded="false" aria-controls="faq-5">Jak se platí?<span class="sr-only"> – rozbalit odpověď</span></button></h3>
+        <div class="faq__a" id="faq-5" hidden><p>50 % záloha před začátkem, doplatek při předání. Dvě kola revizí jsou v ceně. Ceny neslevuji — místo slevy raději uberu rozsah nebo přidám bonus, aby práce i pro mě pořád měla smysl.</p></div>
+      </div>
+      <div class="faq__item">
+        <h3><button class="faq__q" aria-expanded="false" aria-controls="faq-6">Můžu se ozvat, i když nejsem z Liberce?<span class="sr-only"> – rozbalit odpověď</span></button></h3>
+        <div class="faq__a" id="faq-6" hidden><p>Jsem z Liberce a kraj znám, ale pracuju odkudkoli — celá ČR. Většina spolupráce jde telefonem a e-mailem; osobní schůzka je bonus, ne podmínka.</p></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ================= KONTAKT ================= -->
+<section class="contact" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap contact__in">
+    <div class="contact__copy rv">
+      <p class="kicker">07 / Napište mi</p>
+      <h2 id="h-kontakt">Máte<br>nápad?<br><em>Povídejte.</em></h2>
+      <div class="contact__details">
+        <a href="mailto:jakub@jakubdigital.cz">✉ &nbsp;jakub@jakubdigital.cz</a>
+        <a href="tel:+420910121933">☎ &nbsp;+420 910 121 933</a>
+        <span>⌖ &nbsp;Liberec a okolí · online po celé ČR</span>
+      </div>
+      <p class="contact__note">Nezávazně. Bez obchodní prezentace. Klidně jen první otázka.</p>
+      <svg class="contact__map" viewBox="0 0 320 90" role="img" aria-label="Kresba siluety Ještědu a Liberce"><path d="M6 78h308"/><path d="M34 78 L 74 36 L 92 58 L 118 16 L 150 78"/><path d="M118 16 L 128 40 M118 16 L 106 38"/><path d="M150 78 L 176 44 L 196 66 L 214 48 L 236 78"/><path d="M244 78 L 262 58 L 278 78"/><circle cx="292" cy="26" r="6"/></svg>
+      <p class="coord">50,7663 N · 15,0561 E — Z Liberce do celého Česka</p>
+    </div>
+
+    <form class="form rv" id="contactForm" novalidate>
+      <span class="form__tape" aria-hidden="true"></span>
+      <p class="form__title">Napište mi.</p>
+      <p class="form__sub">Stačí pár vět. Zbytek si vyjasníme v rozhovoru.</p>
+      <label class="field"><span>Jak vám říkat?</span><input name="name" autocomplete="name" placeholder="Jméno" required></label>
+      <label class="field"><span>Kam se ozvat?</span><input name="email" type="email" autocomplete="email" placeholder="E-mail" required></label>
+      <label class="field"><span>Co vám běží hlavou?</span><textarea name="message" placeholder="Mám nápad na…" required></textarea></label>
+      <div class="form__foot">
+        <button class="btn btn--hot" type="submit">Poslat zprávu <span aria-hidden="true">↗</span></button>
+        <small>Otevře se váš e-mailový program — nic se neposílá na server tohoto webu.</small>
+      </div>
+      <p class="form__msg" id="formMsg" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
 
 </main>
-<footer>
-  <div class="wrap footer-inner">
-    <div>Jakub Digital © 2026 · Liberec</div>
-    <div>Jeden člověk, jedna práce, Žádná agenturní mlha.</div>
-    <div><a href="/geo">Viditelnost v AI (GEO)</a> · <a href="https://jakubdigital.cz/gdpr">Ochrana osobních údajů</a></div>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__in">
+      <div>
+        <h3>Jakub Digital</h3>
+        <p>Web a viditelnost v AI pro lokální profesionály.<br>Od člověka, ne od agentury.</p>
+      </div>
+      <div>
+        <h3>Kudy dál</h3>
+        <ul>
+          <li><a href="#sluzby">Co umím</a></li>
+          <li><a href="#reference">Projekty</a></li>
+          <li><a href="#cenik">Ceník</a></li>
+          <li><a href="#faq">Časté otázky</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontakt</h3>
+        <ul>
+          <li>Jakub Málek, Liberec</li>
+          <li><a href="tel:+420910121933">+420 910 121 933</a></li>
+          <li><a href="mailto:jakub@jakubdigital.cz">jakub@jakubdigital.cz</a></li>
+          <li>Neplátce DPH — ceny konečné</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bar">
+      <span>© 2026 Jakub Digital · Liberec</span>
+      <span><a href="/geo">Viditelnost v AI</a> · <a href="/o-mne">O mně</a> · <a href="/gdpr">Ochrana údajů</a> · <a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">sitemap.xml</a></span>
+      <a class="foot__top" href="#domu">Zpět nahoru ↑</a>
+    </div>
   </div>
 </footer>
 
-<div class="sticky-cta">
-  <a href="tel:+420910121933" class="btn accent btn-call">910 121 933</a>
-  <a href="mailto:info@jakubdigital.cz" class="btn btn-mail">Napsat mail</a>
-</div>
-
-<script src="/main.js" defer></script>
-
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>

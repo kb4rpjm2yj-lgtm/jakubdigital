@@ -1,20 +1,27 @@
 User-agent: *
 Allow: /
 
-# AI crawlery — chceme být citováni v AI odpovědích (prodáváme GEO)
+# AI crawlery — viditelnost v AI je součást naší práce, ne hrozba
 User-agent: GPTBot
 Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
+
 User-agent: PerplexityBot
 Allow: /
-User-agent: ClaudeBot
-Allow: /
-User-agent: Claude-Web
-Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Plné znění pro jazykové modely: /llms.txt
 Sitemap: https://jakubdigital.cz/sitemap.xml

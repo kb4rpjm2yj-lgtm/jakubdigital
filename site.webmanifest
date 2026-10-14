@@ -1,0 +1,13 @@
+{
+  "name": "Jakub Digital",
+  "short_name": "Jakub Digital",
+  "description": "Weby a viditelnost v AI pro lokální profesionály. Liberec a celá ČR.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F4EDE1",
+  "theme_color": "#F4EDE1",
+  "lang": "cs",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
