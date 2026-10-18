@@ -71,7 +71,7 @@
       '#cookie-bar .cb-text a{color:#E85D26;text-decoration:underline;}',
       '#cookie-bar .cb-text a:hover{color:#FAF8F5;}',
       '#cookie-bar .cb-btn:focus-visible{outline:2px solid #E85D26;outline-offset:2px;}',
-      '@media(max-width:640px){#cookie-bar .cb-actions{width:100%;}#cookie-bar .cb-btn{flex:1;}}'
+      '@media(max-width:640px){#cookie-bar{padding:10px 14px;font-size:12.5px;line-height:1.45;box-shadow:0 -4px 16px rgba(0,0,0,.16);}#cookie-bar .cb-inner{gap:8px;}#cookie-bar .cb-text{max-width:none;}#cookie-bar .cb-actions{width:100%;gap:8px;}#cookie-bar .cb-btn{flex:1;padding:9px 12px;}}'
     ].join('');
 
     var style = document.createElement('style');
@@ -82,11 +82,15 @@
     bar.id = 'cookie-bar';
     bar.setAttribute('role', 'dialog');
     bar.setAttribute('aria-label', 'Souhlas s analytickými cookies');
+    var short = window.matchMedia && window.matchMedia('(max-width:640px)').matches;
+    var text = short
+      ? 'Používám analytické cookies. Web funguje i bez nich. <a href="/gdpr">Detaily</a>'
+      : 'Používám Google Analytics, abych věděl, co na webu funguje. ' +
+        'Cookies se ukládají jen s vaším souhlasem a nic tím neztratíte — web funguje i bez něj. ' +
+        'Podrobnosti najdete v <a href="/gdpr">zásadách ochrany osobních údajů</a>.';
     bar.innerHTML =
       '<div class="cb-inner">' +
-        '<p class="cb-text">Používám Google Analytics, abych věděl, co na webu funguje. ' +
-        'Cookies se ukládají jen s vaším souhlasem a nic tím neztratíte — web funguje i bez něj. ' +
-        'Podrobnosti najdete v <a href="/gdpr">zásadách ochrany osobních údajů</a>.</p>' +
+        '<p class="cb-text">' + text + '</p>' +
         '<div class="cb-actions">' +
           '<button type="button" class="cb-btn cb-deny">Odmítnout</button>' +
           '<button type="button" class="cb-btn cb-accept">Přijmout</button>' +

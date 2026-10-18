@@ -130,6 +130,15 @@ ul,ol{padding:0;list-style:none}
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-left:clamp(0px,1.5vw,22px)}
 .hero__loc{display:flex;align-items:center;gap:14px;margin:38px 0 0 clamp(0px,1.5vw,22px);font:10px/1.4 var(--mono);letter-spacing:1px;text-transform:uppercase;color:#8f988f}
 .hero__loc b{color:var(--orange);font-weight:400;font-size:20px}
+.hero__note{margin:14px 0 0 clamp(0px,1.5vw,22px);font:11px/1.6 var(--mono);letter-spacing:.4px;color:#a8a99c}
+.hero__note a{color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,90,31,.35)}
+.hero__note a:hover{border-color:var(--orange)}
+.proof{background:var(--paper);border-top:1px solid rgba(16,19,16,.14);border-bottom:1px solid rgba(16,19,16,.14);padding:12px 0}
+.proof__in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 18px;font:11px/1.4 var(--mono);letter-spacing:.8px;text-transform:uppercase;color:#5f655a}
+.proof__in b{color:var(--orange);font-weight:400}
+.proof__in a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(16,19,16,.25)}
+.proof__in a:hover{color:var(--orange);border-color:var(--orange)}
+.proof__in span{color:#8f988f}
 
 /* ---------- stage (nástěnka) ---------- */
 .stage{position:relative;min-height:560px;height:min(72vh,760px);perspective:1000px;transform-style:preserve-3d}
