@@ -128,7 +128,7 @@ ul,ol{padding:0;list-style:none}
 .hero__lead{max-width:430px;margin:26px 0 24px clamp(0px,1.5vw,22px);font-size:clamp(14px,1.15vw,17.5px);line-height:1.56;color:#c6c7bc}
 .hero__lead strong{color:var(--paper-l);font-weight:800}
 .hero__cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-left:clamp(0px,1.5vw,22px)}
-.hero__loc{display:flex;align-items:center;gap:14px;margin:38px 0 0 clamp(0px,1.5vw,22px);font:10px/1.4 var(--mono);letter-spacing:1px;text-transform:uppercase;color:#8f988f}
+.hero__loc{display:flex;align-items:center;gap:14px;margin:38px 0 0 clamp(0px,1.5vw,22px);font:10px/1.4 var(--mono);letter-spacing:1px;text-transform:uppercase;color:#a8a99c}
 .hero__loc b{color:var(--orange);font-weight:400;font-size:20px}
 .hero__note{margin:14px 0 0 clamp(0px,1.5vw,22px);font:11px/1.6 var(--mono);letter-spacing:.4px;color:#a8a99c}
 .hero__note a{color:var(--orange);text-decoration:none;border-bottom:1px solid rgba(255,90,31,.35)}
@@ -138,7 +138,7 @@ ul,ol{padding:0;list-style:none}
 .proof__in b{color:var(--orange);font-weight:400}
 .proof__in a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(16,19,16,.25)}
 .proof__in a:hover{color:var(--orange);border-color:var(--orange)}
-.proof__in span{color:#8f988f}
+.proof__in span{color:#4f5549}
 
 /* ---------- stage (nástěnka) ---------- */
 .stage{position:relative;min-height:560px;height:min(72vh,760px);perspective:1000px;transform-style:preserve-3d}
@@ -435,3 +435,6 @@ h2 em{color:var(--orange);font-style:normal}
 
 .form__note{margin:10px 0 0;font-size:12px;line-height:1.5;color:#5f655a}
 .form__note a{color:var(--orange)}
+
+.btn,.nav a,.nav__cta{min-height:44px}
+.btn{display:inline-flex;align-items:center}
