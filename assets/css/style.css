@@ -376,7 +376,7 @@ h2 em{color:var(--orange);font-style:normal}
   .nav a{padding:14px 0;font-size:12px;border-bottom:1px solid rgba(233,223,201,.08)}
   .nav__cta{width:max-content;margin-top:14px;border-bottom:0!important}
   .hero{display:flex;flex-direction:column;align-items:stretch;min-height:auto;padding:104px var(--gut) 34px}
-  .hero__title{font-size:clamp(54px,15vw,98px);margin-top:20px}
+  .hero__title{font-size:clamp(38px,12.5vw,84px);line-height:1.02;margin-top:18px}
   .hero__lead{margin-top:22px}
   .hero__loc{margin-top:24px}
   .stage{height:520px;min-height:0;margin-top:18px}
@@ -429,3 +429,9 @@ h2 em{color:var(--orange);font-style:normal}
 .related__back{margin:14px 0 0;font:12px/1.4 var(--mono)}
 .related__back a{color:var(--ink);border-bottom:1px solid rgba(16,19,16,.3);text-decoration:none}
 .related__back a:hover{color:var(--orange);border-color:var(--orange)}
+
+@media print{.rv{opacity:1!important;transform:none!important}.nav,.burger,.cookie-bar{display:none!important}}
+.noscript .rv{opacity:1!important;transform:none!important}
+
+.form__note{margin:10px 0 0;font-size:12px;line-height:1.5;color:#5f655a}
+.form__note a{color:var(--orange)}

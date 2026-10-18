@@ -60,11 +60,12 @@
   .back { display:inline-block; margin-bottom:32px; font-size:15px; font-weight:600; }
   footer { border-top:1px solid var(--line); padding:28px 0; font-size:14px; color:var(--muted); }
   .footer-inner { display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+  @media
   @media (max-width:640px) { nav { display:none; } }
   /* mobilní navigace (hamburger) */
   .nav-toggle { display:none; align-items:center; justify-content:center; width:44px; height:40px; padding:0; background:#fff; border:1px solid var(--line); border-radius:9px; cursor:pointer; color:var(--ink); font-size:19px; line-height:1; }
   .nav-toggle.open { background:var(--ink); color:#fff; border-color:var(--ink); }
-   (max-width:640px) {
+  @media (max-width:640px) {
     .nav-toggle { display:flex; }
     nav { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; background:var(--paper); border-bottom:1px solid var(--line); padding:8px 24px 18px; box-shadow:0 14px 28px rgba(20,33,46,0.10); }
     nav.open { display:flex; }
@@ -104,7 +105,7 @@
     <p>Správcem osobních údajů jsem Jakub Málek, provozovatel webu jakubdigital.cz. Veškeré dotazy směřujte na <a href="mailto:jakub@jakubdigital.cz">jakub@jakubdigital.cz</a>.</p>
 
     <h2>2. Jaké údaje zpracovávám</h2>
-    <p>Kontaktním formulářem získávám pouze údaje, které sami poskytnete: jméno a příjmení, e-mail, telefon (nepovinný), obor a obsah zprávy. Údaje třetích osob do formuláře nezadávejte.</p>
+    <p>Kontaktní formulář na webu neukládá data na serveru — po odeslání otevře váš e-mailový klient a zprávu odešlete ze své schránky. Získám tak pouze údaje, které sami poskytnete: jméno, e-mail a obsah zprávy. Údaje třetích osob do formuláře nezadávejte.</p>
     <p>Dále zpracovávám technické údaje o návštěvě webu — viz část <a href="#cookies">Cookies a měření návštěvnosti</a>.</p>
 
     <h2>3. Proč údaje zpracovávám</h2>
@@ -112,7 +113,7 @@
     <p>Údaje nepoužívám k automatizovanému rozhodování ani profilování a nepředávám je třetím stranám pro jejich marketing.</p>
 
     <h2>4. Komu údaje předávám</h2>
-    <p>K doručení e-mailů využívám službu Resend (Resend, Inc.) jako zpracovatele. Web je hostován na platformě Cloudflare Pages. Návštěvnost měřím přes Google Analytics — jen s vaším souhlasem, viz níže.</p>
+    <p>E-maily zpracovává poskytovatel mé e-mailové schránky. Web je hostován na platformě Cloudflare Pages. Návštěvnost měřím přes Google Analytics — jen s vaším souhlasem, viz níže.</p>
 
     <h2>5. Jak dlouho údaje uchovávám</h2>
     <p>Údaje z formuláře uchovávám po dobu vyřízení poptávky, nejdéle 12 měsíců od poslední komunikace. Při navázání spolupráce po dobu trvání vztahu a dle právních předpisů.</p>
