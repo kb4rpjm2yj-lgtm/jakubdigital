@@ -56,3 +56,35 @@ Velké e-shopy a korporátní projekty, PPC kampaně, cold outreach, práci bez 
 - [O mně](https://jakubdigital.cz/o-mne): kdo je Jakub Málek a jak pracuje
 - [Ochrana osobních údajů](https://jakubdigital.cz/gdpr): osobní údaje, cookies a práva
 - [Články](https://jakubdigital.cz/clanky/kolik-stoji-web): kolik stojí web, GEO, výběr webdesignéra a další
+
+
+## Články
+
+
+### GEO a viditelnost v AI
+
+- Co je GEO: viditelnost v AI — https://jakubdigital.cz/clanky/co-je-geo
+- GEO audit v 5 krocích: co o vás ví AI — https://jakubdigital.cz/clanky/geo-audit-v-5-krocich
+- Doporučuje vás AI? Otestujte to — https://jakubdigital.cz/clanky/jestli-vas-ai-doporucuje
+
+### Web pro konkrétní profese
+
+- Web pro advokáta: co musí umět — https://jakubdigital.cz/clanky/web-pro-advokata
+- Web pro autoservis: zákazníci vás najdou — https://jakubdigital.cz/clanky/web-pro-autoservis
+- Web pro kavárnu: přiveďte lidi — https://jakubdigital.cz/clanky/web-pro-kavarnu
+- Web pro školu: důvěra rodičů — https://jakubdigital.cz/clanky/web-pro-skolu
+- Web pro řemeslníka: zakázky bez sítí — https://jakubdigital.cz/clanky/web-pro-remeslnika
+- Web pro makléře: ať neutíkají poptávky — https://jakubdigital.cz/clanky/web-pro-realitniho-maklere
+- Web pro politika, který přežije volby — https://jakubdigital.cz/clanky/web-pro-politika
+
+### Tvorba webu bez iluzí
+
+- Kolik stojí web v roce 2026? — Jakub Digital — https://jakubdigital.cz/clanky/kolik-stoji-web
+- Jak vybrat webdesignéra: 8 otázek — https://jakubdigital.cz/clanky/jak-vybrat-webdesignera
+- Jak napsat texty na web: 5 pravidel — https://jakubdigital.cz/clanky/jak-napsat-texty-na-web
+- Proč stock fotky škodí webu — https://jakubdigital.cz/clanky/proc-stock-fotky-skodi
+
+### Lokální byznys a sítě
+
+- Web v Liberci: víc než Facebook — https://jakubdigital.cz/clanky/web-v-liberci
+- Správa sociálních sítí, která dává smysl — https://jakubdigital.cz/clanky/sprava-socialnich-siti

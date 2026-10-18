@@ -417,3 +417,15 @@ h2 em{color:var(--orange);font-style:normal}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .rv{opacity:1;transform:none}
 }
+
+/* Související články */
+.related{max-width:760px;margin:56px auto 0;padding:26px 0 0;border-top:1px solid rgba(16,19,16,.16)}
+.related__h{font:11px/1.4 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin:0 0 14px}
+.related__list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.related__list a{display:block;padding:14px 16px;background:rgba(16,19,16,.03);border:1px solid rgba(16,19,16,.1);text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.related__list a:hover{border-color:var(--orange);transform:translateY(-1px)}
+.related__list strong{display:block;font-size:15px;line-height:1.35;margin-bottom:3px}
+.related__list span{display:block;font-size:13px;line-height:1.45;color:#5f655a}
+.related__back{margin:14px 0 0;font:12px/1.4 var(--mono)}
+.related__back a{color:var(--ink);border-bottom:1px solid rgba(16,19,16,.3);text-decoration:none}
+.related__back a:hover{color:var(--orange);border-color:var(--orange)}
