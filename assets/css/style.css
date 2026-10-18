@@ -1,3 +1,4 @@
+html,body{overflow-x:hidden}
 /* ==========================================================================
    Jakub Digital — v2 „GRAFICKÁ DÍLNA"
    Záměr: stránka jako ručně sestavený plakát / nástěnka v dílně, ne CSS grid.
@@ -173,7 +174,7 @@ ul,ol{padding:0;list-style:none}
 /* ==========================================================================
    BĚŽÍCÍ PÁS
    ========================================================================== */
-.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--orange);color:var(--ink);transform:rotate(-.65deg) scale(1.02);position:relative;z-index:5}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:var(--orange);color:var(--ink);transform:rotate(-.65deg);position:relative;z-index:5}
 .ticker__track{display:flex;width:max-content;padding:14px 0;animation:tick 28s linear infinite;font:400 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
 .ticker__track span{padding:0 25px}
 .ticker__track i{font-style:normal;color:var(--paper-l)}
