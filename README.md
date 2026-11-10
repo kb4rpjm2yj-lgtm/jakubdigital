@@ -37,7 +37,7 @@ python3 -m http.server 8000
 - Kompletní péče — 12 900 Kč/měs
 - Focení a vizuály — 3 900–5 900 Kč
 
-Nedělám e-shopy, rozsáhlé aplikace a PPC. Ceny jsou konečné (neplátce DPH). Na obsahu a provozu spolupracuji s malou podporou.
+Nedělám e-shopy, rozsáhlé aplikace, PPC, IT sítě a správu serverů. Ceny jsou konečné (neplátce DPH). Na obsahu a provozu spolupracuji s malou podporou.
 
 ## Vizuální systém
 
