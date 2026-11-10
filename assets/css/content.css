@@ -101,6 +101,7 @@ h2{
 }
 h3{font-size:18px;line-height:1.4;margin:28px 0 10px;color:var(--ink)}
 p{font-size:17px;line-height:1.72;color:#2b312a;margin:0 0 18px;max-width:70ch}
+.lead{font-size:18px;line-height:1.65;color:#2f352d;max-width:68ch}
 strong{color:var(--ink)}
 ul,ol{margin:0 0 22px;padding:0;list-style:none}
 li{position:relative;padding-left:24px;margin-bottom:10px;font-size:17px;line-height:1.65;color:#2b312a}
