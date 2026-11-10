@@ -25,12 +25,23 @@ python3 -m http.server 8000
 # → http://localhost:8000
 ```
 
-## Služby
+## Služby a ceny
 
-- Web na míru (12 000–20 000 Kč)
-- Správa sociálních sítí (4 000–6 000 Kč/měsíc)
-- Údržba webu (1 500 Kč/měsíc)
-- Viditelnost pro AI / GEO (3 000–5 000 Kč)
-- Automatizace (individuálně)
+- Jednostránkový web na míru — 18 900 Kč
+- Web na míru 3–5 stránek — 26 900 Kč
+- Web pro profesionály 5–7 stránek — 36 900 Kč
+- GEO audit (viditelnost v AI) — 6 900 Kč
+- Péče o web — 1 900 / 3 900 / 6 900 Kč měsíčně
+- GEO monitoring — 2 900 Kč měsíčně
+- Focení a vizuály — 3 900–5 900 Kč
+
+Nedělám e-shopy, rozsáhlé aplikace, PPC a správu sociálních sítí. Ceny jsou konečné (neplátce DPH).
+
+## Vizuální systém
+
+- Hlavní stránka: `assets/css/style.css` (tmavá „grafická dílna“)
+- Obsahové stránky: `assets/css/content.css` (papírová varianta stejné značky)
+- Skript obsahu: `assets/js/content.js` (mobilní menu, FAQ)
+- Cookie lišta: `analytics.js`
 
 © 2026 Jakub Digital · Liberec

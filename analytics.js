@@ -58,20 +58,20 @@
   function showBar() {
     var css = [
       '#cookie-bar{position:fixed;left:0;right:0;bottom:0;z-index:9999;',
-      'background:#14212E;color:#FAF8F5;font-family:\'Inter\',-apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;',
-      'font-size:14px;line-height:1.5;padding:16px 20px;box-shadow:0 -6px 24px rgba(0,0,0,.18);}',
-      '#cookie-bar .cb-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}',
-      '#cookie-bar .cb-text{margin:0;max-width:640px;color:rgba(250,248,245,.85);}',
-      '#cookie-bar .cb-actions{display:flex;gap:10px;flex-shrink:0;}',
-      '#cookie-bar .cb-btn{font:inherit;font-weight:600;cursor:pointer;border-radius:8px;padding:10px 18px;border:1px solid transparent;transition:background .15s,border-color .15s;}',
-      '#cookie-bar .cb-deny{background:transparent;color:#FAF8F5;border-color:rgba(250,248,245,.35);}',
-      '#cookie-bar .cb-deny:hover{border-color:rgba(250,248,245,.75);}',
-      '#cookie-bar .cb-accept{background:#E85D26;color:#fff;}',
-      '#cookie-bar .cb-accept:hover{background:#C73C05;}',
-      '#cookie-bar .cb-text a{color:#E85D26;text-decoration:underline;}',
-      '#cookie-bar .cb-text a:hover{color:#FAF8F5;}',
-      '#cookie-bar .cb-btn:focus-visible{outline:2px solid #E85D26;outline-offset:2px;}',
-      '@media(max-width:640px){#cookie-bar{padding:10px 14px;font-size:12.5px;line-height:1.45;box-shadow:0 -4px 16px rgba(0,0,0,.16);}#cookie-bar .cb-inner{gap:8px;}#cookie-bar .cb-text{max-width:none;}#cookie-bar .cb-actions{width:100%;gap:8px;}#cookie-bar .cb-btn{flex:1;padding:9px 12px;}}'
+      'background:#101310;color:#f5eddc;font-family:\'Inter\',-apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;',
+      'font-size:12.5px;line-height:1.45;border-top:2px solid #ff5a1f;box-shadow:0 -8px 24px rgba(0,0,0,.28);}',
+      '#cookie-bar .cb-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:9px 18px;}',
+      '#cookie-bar .cb-text{margin:0;flex:1 1 340px;max-width:640px;color:#cfd0c4;}',
+      '#cookie-bar .cb-actions{display:flex;gap:8px;flex-shrink:0;}',
+      '#cookie-bar .cb-btn{font:700 10px/1 \'Inter\',sans-serif;letter-spacing:1px;text-transform:uppercase;cursor:pointer;padding:9px 13px;border:1px solid transparent;transition:background .15s,border-color .15s,color .15s;}',
+      '#cookie-bar .cb-deny{background:transparent;color:#f5eddc;border-color:rgba(233,223,201,.35);}',
+      '#cookie-bar .cb-deny:hover{border-color:rgba(233,223,201,.8);}',
+      '#cookie-bar .cb-accept{background:#ff5a1f;color:#101310;}',
+      '#cookie-bar .cb-accept:hover{background:#f5eddc;}',
+      '#cookie-bar .cb-text a{color:#ff5a1f;text-decoration:underline;}',
+      '#cookie-bar .cb-text a:hover{color:#f5eddc;}',
+      '#cookie-bar .cb-btn:focus-visible{outline:2px solid #ff5a1f;outline-offset:2px;}',
+      '@media(max-width:640px){#cookie-bar .cb-inner{padding:9px 12px;gap:8px;}#cookie-bar .cb-text{flex-basis:100%;}#cookie-bar .cb-actions{width:100%;gap:6px;}#cookie-bar .cb-btn{flex:1;padding:9px 10px;}}'
     ].join('');
 
     var style = document.createElement('style');
@@ -82,12 +82,7 @@
     bar.id = 'cookie-bar';
     bar.setAttribute('role', 'dialog');
     bar.setAttribute('aria-label', 'Souhlas s analytickými cookies');
-    var short = window.matchMedia && window.matchMedia('(max-width:640px)').matches;
-    var text = short
-      ? 'Používám analytické cookies. Web funguje i bez nich. <a href="/gdpr">Detaily</a>'
-      : 'Používám Google Analytics, abych věděl, co na webu funguje. ' +
-        'Cookies se ukládají jen s vaším souhlasem a nic tím neztratíte — web funguje i bez něj. ' +
-        'Podrobnosti najdete v <a href="/gdpr">zásadách ochrany osobních údajů</a>.';
+    var text = 'Analytické cookies. Web funguje i bez nich. <a href="/gdpr">Detaily</a>';
     bar.innerHTML =
       '<div class="cb-inner">' +
         '<p class="cb-text">' + text + '</p>' +
