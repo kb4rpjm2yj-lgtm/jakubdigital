@@ -1,6 +1,6 @@
 # Jakub Digital
 
-> Malá digitální firma jednoho člověka z Liberce. Tvoří originální weby (od 18 900 Kč) a zajišťuje viditelnost v AI (GEO) pro regionální profesionály — živnostníky, malé firmy, osobnosti, obce a spolky. „Web, který najdou lidi i ChatGPT — od člověka, ne od agentury."
+> Malá digitální dílna z Liberce. Tvoří originální weby (od 18 900 Kč), obsah a sociální sítě a zajišťuje viditelnost v AI (GEO) pro regionální profesionály — živnostníky, malé firmy, osobnosti, obce a spolky. „Web, který najdou lidi i ChatGPT — od člověka, ne od agentury."
 
 ## Fakta
 
@@ -22,6 +22,9 @@
 - **Web pro profesionály 5–7 stránek**: 36 900 Kč
 - **Péče o web**: 1 900 / 3 900 / 6 900 Kč měsíčně (Start / Plus / Pro)
 - **GEO monitoring**: 2 900 Kč měsíčně (měsíční report viditelnosti v AI)
+- **Obsah a sociální sítě — Start**: 6 900 Kč měsíčně (8 příspěvků, 1 platforma, komentáře 3× týdně, report)
+- **Obsah a sociální sítě — Plus**: 9 900 Kč měsíčně (12 příspěvků, 2 platformy, 4 reels, komentáře denně, report)
+- **Kompletní péče**: 12 900 Kč měsíčně (web care + sítě Plus + GEO monitoring)
 - **Focení a vizuály**: 3 900–5 900 Kč (20–60 upravených fotek s licencí)
 
 ## Pro koho
@@ -38,7 +41,7 @@
 
 ## Co firma nedělá
 
-E-shopy, rozsáhlé aplikace, PPC kampaně, správu sociálních sítí, AI automatizace, cold outreach, práci bez zálohy a scraping AI odpovědí. Neslibuje garance pozic ve vyhledávačích ani v AI.
+E-shopy, rozsáhlé aplikace, PPC kampaně, AI automatizace, cold outreach, práci bez zálohy a scraping AI odpovědí. Neslibuje garance pozic ve vyhledávačích ani v AI.
 
 ## Kontakt
 
@@ -51,6 +54,7 @@ E-shopy, rozsáhlé aplikace, PPC kampaně, správu sociálních sítí, AI auto
 - [Domovská stránka](https://jakubdigital.cz/): přehled služeb, referencí a přístupu
 - [Tvorba webů v Liberci](https://jakubdigital.cz/tvorba-webu-liberec): tvorba webových stránek na míru pro Liberec a okolí
 - [Viditelnost v AI (GEO)](https://jakubdigital.cz/geo): úprava webu tak, aby jej ChatGPT, Gemini a další AI doporučovaly
+- [Obsah a sociální sítě](https://jakubdigital.cz/obsah-a-site): pravidelné příspěvky, komentáře a report pro firmy
 - [O mně](https://jakubdigital.cz/o-mne): kdo je Jakub Málek a jak pracuje
 - [Ochrana osobních údajů](https://jakubdigital.cz/gdpr): osobní údaje, cookies a práva
 - [Články](https://jakubdigital.cz/clanky/kolik-stoji-web): kolik stojí web, GEO, výběr webdesignéra a další

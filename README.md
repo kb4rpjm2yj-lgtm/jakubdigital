@@ -33,9 +33,11 @@ python3 -m http.server 8000
 - GEO audit (viditelnost v AI) — 6 900 Kč
 - Péče o web — 1 900 / 3 900 / 6 900 Kč měsíčně
 - GEO monitoring — 2 900 Kč měsíčně
+- Obsah a sociální sítě — Start 6 900 Kč/měs, Plus 9 900 Kč/měs
+- Kompletní péče — 12 900 Kč/měs
 - Focení a vizuály — 3 900–5 900 Kč
 
-Nedělám e-shopy, rozsáhlé aplikace, PPC a správu sociálních sítí. Ceny jsou konečné (neplátce DPH).
+Nedělám e-shopy, rozsáhlé aplikace a PPC. Ceny jsou konečné (neplátce DPH). Na obsahu a provozu spolupracuji s malou podporou.
 
 ## Vizuální systém
 

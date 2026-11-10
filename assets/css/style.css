@@ -206,11 +206,11 @@ h2 em{color:var(--orange);font-style:normal}
 /* ==========================================================================
    SLUŽBY — tři přišpendlené listy (překryv, ne mřížka)
    ========================================================================== */
-.sheets{display:grid;grid-template-columns:1.1fr .92fr 1.16fr;gap:14px;align-items:start;position:relative}
+.sheets{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;position:relative}
 .sheet{position:relative;min-height:352px;padding:24px 22px 26px;background:rgba(245,237,220,.72);border:1px solid var(--line-ink);overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .3s,background .3s}
-.sheet:nth-child(1){transform:rotate(-1.4deg)}
-.sheet:nth-child(2){transform:rotate(1.1deg);background:var(--ink);color:var(--paper);border-color:rgba(16,19,16,.6);margin-top:48px}
-.sheet:nth-child(3){transform:rotate(-.6deg);margin-top:14px}
+.sheet:nth-child(1){transform:rotate(-1.2deg)}
+.sheet:nth-child(2){transform:rotate(1deg);background:var(--ink);color:var(--paper);border-color:rgba(16,19,16,.6);margin-top:40px}
+.sheet:nth-child(3){transform:rotate(-.5deg)}
 .sheet:hover{z-index:4;transform:translateY(-13px) rotate(0) scale(1.014);box-shadow:12px 15px 0 rgba(16,19,16,.16)}
 .sheet__no{font-family:var(--script);font-size:36px;line-height:1;color:var(--orange)}
 .sheet__ico{float:right;width:46px;height:46px;color:var(--orange)}
@@ -370,6 +370,11 @@ h2 em{color:var(--orange);font-style:normal}
    RESPONSIVE
    ========================================================================== */
 @media (min-width:1520px){.hero{padding-left:max(78px,calc((100vw - 1400px)/2));padding-right:max(78px,calc((100vw - 1400px)/2))}}
+.sheet:nth-child(4){transform:rotate(.8deg);margin-top:42px}
+@media (min-width:1041px) and (max-width:1240px){
+  .sheets{grid-template-columns:1fr 1fr}
+  .sheet:nth-child(n){margin-top:0}
+}
 @media (min-width:1041px) and (max-width:1240px){
   .pin,.stage__stamp,.stage__orbit,.stage__hint{display:none}
   .board{width:88%;right:0}
@@ -403,7 +408,7 @@ h2 em{color:var(--orange);font-style:normal}
   .shead{display:block}
   .shead__aside{margin-top:20px}
   .sheets{grid-template-columns:1fr;gap:16px}
-  .sheet:nth-child(1),.sheet:nth-child(2),.sheet:nth-child(3){margin-top:0;transform:none;min-height:0}
+  .sheet:nth-child(1),.sheet:nth-child(2),.sheet:nth-child(3),.sheet:nth-child(4){margin-top:0;transform:none;min-height:0}
   .sheet h3{font-size:38px;margin-top:30px}
   .flow{grid-template-columns:1fr 1fr;row-gap:18px}
   .flow__step{min-height:150px}
