@@ -151,19 +151,46 @@
     });
   });
 
-  /* ---- formulář → FormSubmit (nativní odeslání, bez CORS) ---- */
+  /* ---- formulář → /api/contact (Pages Function + iCloud SMTP) ---- */
   const form = document.getElementById('contactForm');
   if (form) {
-    form.addEventListener('submit', () => {
-      const email = form.querySelector('[name="email"]');
-      const reply = form.querySelector('[name="_replyto"]');
-      if (email && reply) reply.value = email.value;
-      const btn = form.querySelector('button[type="submit"]');
+    const msg = document.getElementById('formMsg');
+    const btn = form.querySelector('button[type="submit"]');
+    const setMsg = (text) => { if (msg) msg.textContent = text; };
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      const d = new FormData(form);
+      const payload = {
+        name: String(d.get('name') || ''),
+        email: String(d.get('email') || ''),
+        message: String(d.get('message') || ''),
+        website: String(d.get('website') || '')
+      };
+      const original = btn ? btn.innerHTML : '';
       if (btn) { btn.disabled = true; btn.innerHTML = 'Odesílám…'; }
-    });
-    addEventListener('pageshow', () => {
-      const btn = form.querySelector('button[type="submit"]');
-      if (btn) { btn.disabled = false; btn.innerHTML = 'Poslat zprávu <span aria-hidden="true">↗</span>'; }
+      form.setAttribute('aria-busy', 'true');
+      setMsg('Odesílám zprávu…');
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || !data.ok) throw new Error(data.error || 'send_failed');
+        form.reset();
+        setMsg('Zpráva odeslána. Ozvu se do 24 hodin.');
+        if (btn) btn.innerHTML = 'Odesláno ✓';
+        setTimeout(() => {
+          if (btn) { btn.disabled = false; btn.innerHTML = original; }
+        }, 2600);
+      } catch (err) {
+        setMsg('Odeslání se nepovedlo. Napište přímo na jakub@jakubdigital.cz.');
+        if (btn) { btn.disabled = false; btn.innerHTML = original; }
+      } finally {
+        form.removeAttribute('aria-busy');
+      }
     });
   }
 

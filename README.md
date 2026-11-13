@@ -21,7 +21,7 @@ a `google-analytics.com`, jinak se GA zablokuje. Volba se pamatuje v `localStora
 
 ## Kontaktní formulář
 
-Formulář odesílá data přímo službě FormSubmit, která je doručí na `jakub@jakubdigital.cz`. Při prvním použití je potřeba kliknout na aktivační e-mail od FormSubmit; poté už zprávy chodí přímo. Bez aktivace FormSubmit zprávu nedoručí. Po odeslání se uživatel dostane na `/dekujeme`.
+Formulář posílá JSON na `/api/contact` (Cloudflare Pages Function). Funkce odešle e-mail přes iCloud SMTP (`smtp.mail.me.com:587`, STARTTLS) na `jakub@jakubdigital.cz`. Přihlašovací údaje jsou v Pages env: `SMTP_USER`, `SMTP_PASS`; adresy `CONTACT_TO`, `CONTACT_FROM`.
 
 ## Lokální spuštění
 

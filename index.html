@@ -453,7 +453,7 @@
       <p class="coord">50,7663 N · 15,0561 E — Z Liberce do celého Česka</p>
     </div>
 
-    <form class="form rv" id="contactForm" action="https://formsubmit.co/jakub@jakubdigital.cz" method="POST">
+    <form class="form rv" id="contactForm" action="/api/contact" method="post" novalidate>
       <span class="form__tape" aria-hidden="true"></span>
       <p class="form__title">Napište mi.</p>
       <p class="form__sub">Stačí pár vět. Zbytek si vyjasníme v rozhovoru.</p>
@@ -461,13 +461,8 @@
       <label class="field"><span>Kam se ozvat?</span><input name="email" type="email" autocomplete="email" placeholder="E-mail" maxlength="120" required></label>
       <label class="field"><span>Co vám běží hlavou?</span><textarea name="message" placeholder="Mám nápad na…" maxlength="5000" required></textarea></label>
       <label class="hp" aria-hidden="true">Web<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
-      <input type="hidden" name="_subject" value="Poptávka z jakubdigital.cz">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://jakubdigital.cz/dekujeme">
-      <input type="hidden" name="_replyto" id="replyto" value="">
       <div class="form__foot">
-        <p class="form__note">Odesláním se zpráva odešle na <a href="mailto:jakub@jakubdigital.cz">jakub@jakubdigital.cz</a>. Data doručí služba FormSubmit; podrobnosti v <a href="/gdpr">Ochraně údajů</a>.</p>
+        <p class="form__note">Odesláním se zpráva odešle přímo na <a href="mailto:jakub@jakubdigital.cz">jakub@jakubdigital.cz</a>. Údaje zpracuji jen pro odpověď; podrobnosti v <a href="/gdpr">Ochraně údajů</a>.</p>
         <button class="btn btn--hot" type="submit">Poslat zprávu <span aria-hidden="true">↗</span></button>
         <small>Odpovím do 24 hodin v pracovní dny.</small>
       </div>
