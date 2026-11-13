@@ -260,6 +260,13 @@ footer a:hover{color:var(--orange);border-color:var(--orange)}
   th,td{font-size:13px;padding:9px 6px}
   td.price{font-size:15px}
 }
+@media (max-width:560px){
+  .table--stack tr:first-child{display:none}
+  .table--stack tr{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+  .table--stack td{display:block;border:0;padding:3px 0;font-size:14px}
+  .table--stack td::before{content:attr(data-label);display:block;margin-bottom:2px;font:800 9px/1.4 var(--mono);letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+  .table--stack td.price{white-space:normal;font-size:18px;padding-top:6px}
+}
 @media print{
   header,footer,.nav-toggle,.cta-box,.related{display:none!important}
   body{background:#fff;color:#000}

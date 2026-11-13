@@ -7,7 +7,10 @@ Osobní web Jakuba Málka (jakubdigital.cz) — digitální servis pro profesion
 
 ## Struktura
 
-- `index.html` — celý one-page web (služby, reference, ceník, kontakt)
+- `index.html` — one-page web (služby, reference, ceník, kontakt)
+- `rezervace-a-portaly.html` — rezervace a portály pro autoservisy, spolky a wellness
+- `obsah-a-site.html`, `geo.html`, `tvorba-webu-liberec.html`, `o-mne.html` — obsahové stránky
+- `reference-*.html`, `clanky/` — reference a články
 - `analytics.js` — GA4 (G-L9LH3NKXZY) + Consent Mode v2 + cookie lišta; snippet v `<head>` každé stránky
 
 ## Analytika
@@ -36,8 +39,11 @@ python3 -m http.server 8000
 - Obsah a sociální sítě — Start 6 900 Kč/měs, Plus 9 900 Kč/měs
 - Kompletní péče — 12 900 Kč/měs
 - Focení a vizuály — 3 900–5 900 Kč
+- Rezervace — nastavení 4 900–9 900 Kč + 1 900 Kč/měs
+- Portál pro autoservisy — 19 900 Kč + 1 900 Kč/měs (pilot 14 900 Kč)
+- Portál pro spolky a kluby — 19 900 Kč + 1 900 Kč/měs (pilot 14 900 Kč)
 
-Nedělám e-shopy, rozsáhlé aplikace, PPC, IT sítě a správu serverů ani redesigny starých webů se zachováním všeho. Ceny jsou konečné (neplátce DPH). Na obsahu a provozu spolupracuji s malou podporou.
+Nedělám e-shopy, rozsáhlé aplikace, PPC, IT sítě a správu serverů, redesigny starých webů se zachováním všeho ani neprodávám autodíly. Ceny jsou konečné (neplátce DPH). Na obsahu a provozu spolupracuji s malou podporou.
 
 ## Vizuální systém
 
