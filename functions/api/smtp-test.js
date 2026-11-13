@@ -3,7 +3,7 @@ import { connect } from 'cloudflare:sockets';
 export async function onRequestGet() {
   let socket;
   try {
-    socket = connect({ hostname: 'smtp.mail.me.com', port: 465 }, { secureTransport: 'on' });
+    socket = connect({ hostname: 'smtp.mail.me.com', port: 587 }, { secureTransport: 'starttls' });
     const reader = socket.readable.getReader();
     const writer = socket.writable.getWriter();
     const dec = new TextDecoder();
