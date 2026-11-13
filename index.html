@@ -453,17 +453,18 @@
       <p class="coord">50,7663 N · 15,0561 E — Z Liberce do celého Česka</p>
     </div>
 
-    <form class="form rv" id="contactForm" novalidate>
+    <form class="form rv" id="contactForm" action="/api/contact" method="post" novalidate>
       <span class="form__tape" aria-hidden="true"></span>
       <p class="form__title">Napište mi.</p>
       <p class="form__sub">Stačí pár vět. Zbytek si vyjasníme v rozhovoru.</p>
-      <label class="field"><span>Jak vám říkat?</span><input name="name" autocomplete="name" placeholder="Jméno" required></label>
-      <label class="field"><span>Kam se ozvat?</span><input name="email" type="email" autocomplete="email" placeholder="E-mail" required></label>
-      <label class="field"><span>Co vám běží hlavou?</span><textarea name="message" placeholder="Mám nápad na…" required></textarea></label>
+      <label class="field"><span>Jak vám říkat?</span><input name="name" autocomplete="name" placeholder="Jméno" maxlength="80" required></label>
+      <label class="field"><span>Kam se ozvat?</span><input name="email" type="email" autocomplete="email" placeholder="E-mail" maxlength="120" required></label>
+      <label class="field"><span>Co vám běží hlavou?</span><textarea name="message" placeholder="Mám nápad na…" maxlength="5000" required></textarea></label>
+      <label class="hp" aria-hidden="true">Web<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
       <div class="form__foot">
-        <p class="form__note">Odesláním se otevře váš e-mailový klient. Nebo napište přímo na <a href="mailto:jakub@jakubdigital.cz">jakub@jakubdigital.cz</a>.</p>
+        <p class="form__note">Odesláním se zpráva odešle na <a href="mailto:jakub@jakubdigital.cz">jakub@jakubdigital.cz</a>. Data doručí služba FormSubmit; podrobnosti v <a href="/gdpr">Ochraně údajů</a>.</p>
         <button class="btn btn--hot" type="submit">Poslat zprávu <span aria-hidden="true">↗</span></button>
-        <small>Otevře se váš e-mailový program — nic se neposílá na server tohoto webu.</small>
+        <small>Odpovím do 24 hodin v pracovní dny.</small>
       </div>
       <p class="form__msg" id="formMsg" aria-live="polite"></p>
     </form>

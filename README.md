@@ -12,12 +12,17 @@ Osobní web Jakuba Málka (jakubdigital.cz) — digitální servis pro profesion
 - `obsah-a-site.html`, `geo.html`, `tvorba-webu-liberec.html`, `o-mne.html` — obsahové stránky
 - `reference-*.html`, `clanky/` — reference a články
 - `analytics.js` — GA4 (G-L9LH3NKXZY) + Consent Mode v2 + cookie lišta; snippet v `<head>` každé stránky
+- `functions/api/contact.js` — Cloudflare Pages Function pro kontaktní formulář; ověří data a předá je službě FormSubmit, která je doručí na jakub@jakubdigital.cz
 
 ## Analytika
 
 Google Analytics 4 přes Consent Mode v2 — cookies se ukládají až po kliknutí na „Přijmout“ v liště.
 Bez souhlasu posílá GA jen cookieless signál. CSP v `_headers` musí povolovat `googletagmanager.com`
 a `google-analytics.com`, jinak se GA zablokuje. Volba se pamatuje v `localStorage` (`jd_cookie_consent`).
+
+## Kontaktní formulář
+
+Formulář posílá JSON na `/api/contact` (Cloudflare Pages Function). Funkce data ověří a předá službě FormSubmit, která je doručí na `jakub@jakubdigital.cz`. Při prvním použití je potřeba kliknout na aktivační e-mail od FormSubmit; poté už zprávy chodí přímo. Bez aktivace FormSubmit zprávu nedoručí.
 
 ## Lokální spuštění
 
