@@ -20,21 +20,25 @@ const b64 = (s) => btoa(String.fromCharCode(...new TextEncoder().encode(s)));
 function responseReader(socket) {
   const reader = socket.readable.getReader();
   const decoder = new TextDecoder();
-  return async function read(timeout = 10000) {
-    let buffer = '';
-    const deadline = Date.now() + timeout;
-    while (Date.now() < deadline) {
-      const left = Math.max(1, deadline - Date.now());
-      const result = await Promise.race([
-        reader.read(),
-        new Promise((_, reject) => setTimeout(() => reject(new Error('smtp_timeout')), left))
-      ]);
-      if (result.done) break;
-      buffer += decoder.decode(result.value, { stream: true });
-      // hotová odpověď = řádek "250 ..." (na rozdíl od "250-...")
-      if (/(^|\r?\n)\d{3} /.test(buffer)) return buffer;
+  return {
+    async read(timeout = 10000) {
+      let buffer = '';
+      const deadline = Date.now() + timeout;
+      while (Date.now() < deadline) {
+        const left = Math.max(1, deadline - Date.now());
+        const result = await Promise.race([
+          reader.read(),
+          new Promise((_, reject) => setTimeout(() => reject(new Error('smtp_timeout')), left))
+        ]);
+        if (result.done) break;
+        buffer += decoder.decode(result.value, { stream: true });
+        if (/(^|\r?\n)\d{3} /.test(buffer)) return buffer;
+      }
+      throw new Error('smtp_timeout');
+    },
+    release() {
+      try { reader.releaseLock(); } catch {}
     }
-    throw new Error('smtp_timeout');
   };
 }
 
@@ -56,23 +60,25 @@ async function sendMail(env, data) {
 
   let socket = connect({ hostname: 'smtp.mail.me.com', port: 587 }, { secureTransport: 'starttls' });
   try {
-    let read = responseReader(socket);
+    let stream = responseReader(socket);
     let writer = socket.writable.getWriter();
-    await read(); // 220
-    await sendCommand(writer, read, 'EHLO jakubdigital.cz', '250');
-    await sendCommand(writer, read, 'STARTTLS', '220');
+    await stream.read(); // 220
+    await sendCommand(writer, stream.read, 'EHLO jakubdigital.cz', '250');
+    await sendCommand(writer, stream.read, 'STARTTLS', '220');
 
+    stream.release();
+    try { writer.releaseLock(); } catch {}
     socket = socket.startTls();
-    read = responseReader(socket);
+    stream = responseReader(socket);
     writer = socket.writable.getWriter();
-    await sendCommand(writer, read, 'EHLO jakubdigital.cz', '250');
-    await sendCommand(writer, read, 'AUTH LOGIN', '334');
-    await sendCommand(writer, read, b64(user), '334');
-    await sendCommand(writer, read, b64(pass), '235');
+    await sendCommand(writer, stream.read, 'EHLO jakubdigital.cz', '250');
+    await sendCommand(writer, stream.read, 'AUTH LOGIN', '334');
+    await sendCommand(writer, stream.read, b64(user), '334');
+    await sendCommand(writer, stream.read, b64(pass), '235');
 
-    await sendCommand(writer, read, `MAIL FROM:<${user}>`, '250');
-    await sendCommand(writer, read, `RCPT TO:<${to}>`, '250');
-    await sendCommand(writer, read, 'DATA', '354');
+    await sendCommand(writer, stream.read, `MAIL FROM:<${user}>`, '250');
+    await sendCommand(writer, stream.read, `RCPT TO:<${to}>`, '250');
+    await sendCommand(writer, stream.read, 'DATA', '354');
 
     const subject = `Poptávka z jakubdigital.cz — ${data.name}`;
     const headers = [
@@ -99,9 +105,9 @@ async function sendMail(env, data) {
       .map((line) => (line.startsWith('.') ? '.' + line : line))
       .join('\r\n');
     await writer.write(new TextEncoder().encode(raw + '\r\n.\r\n'));
-    const done = await read();
+    const done = await stream.read();
     if (!done.startsWith('250')) throw new Error('smtp_data_failed');
-    await sendCommand(writer, read, 'QUIT', '221').catch(() => {});
+    await sendCommand(writer, stream.read, 'QUIT', '221').catch(() => {});
     try { await writer.close(); } catch {}
     try { await socket.close(); } catch {}
   } catch (err) {
